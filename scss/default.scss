@@ -1,0 +1,30 @@
+@import "config";
+
+* {
+    box-sizing: border-box;
+    width: fit-content;
+    height: fit-content;
+    background-color: transparent;
+    color: $color-dark;
+    font-size: medium;
+    font-family: $font-text;
+    font-weight: 100;
+    text-align: left;
+    text-decoration: none;
+    padding: 0px;
+    border: none;
+    outline: none;
+    margin: 0px;
+    overflow: hidden;
+}
+
+ol,
+ul {
+    list-style-type: none;
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}

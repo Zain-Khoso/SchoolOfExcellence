@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&family=Overlock:wght@400;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+* {
+  box-sizing: border-box;
+  width: fit-content;
+  height: fit-content;
+  background-color: transparent;
+  color: #3d4756;
+  font-size: medium;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  text-align: left;
+  text-decoration: none;
+  padding: 0px;
+  border: none;
+  outline: none;
+  margin: 0px;
+  overflow: hidden;
+}
+
+ol,
+ul {
+  list-style-type: none;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/*# sourceMappingURL=default.css.map */
