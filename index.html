@@ -5,12 +5,436 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <!-- Favicon -->
-        <link rel="stylesheet" href="/assets/favicon.jpeg" />
+        <link
+            rel="shortcut icon"
+            href="/assets/favicon.jpeg"
+            type="image/x-icon" />
 
         <!-- CSS -->
         <link rel="stylesheet" href="/src/css/default.css" />
+        <link rel="stylesheet" href="/src/css/index.css" />
 
-        <title>Home | School Of Execllence</title>
+        <!-- JS -->
+        <script defer src="/src/js/navbar.js"></script>
+        <script defer src="/src/js/observer.js"></script>
+
+        <title>Home | School Of Excellence</title>
     </head>
-    <body></body>
+    <body>
+        <!-- Landing Page -->
+        <header class="landing-page">
+            <!-- Background -->
+            <section class="background">
+                <!-- Image -->
+                <img
+                    src="/assets/branch_sen.jpg"
+                    alt="Landing Page Image"
+                    class="bg-img" />
+
+                <!-- Filter Curtain -->
+                <div class="filter-curtain"></div>
+            </section>
+
+            <!-- Navbar -->
+            <nav id="navbar" class="navbar">
+                <!-- Branding -->
+                <a href="/index.html">
+                    <img src="/assets/logo.png" alt="Brand" class="brand-img" />
+                </a>
+
+                <!-- Navigtion -->
+                <ul class="navigation">
+                    <li class="dropdown">
+                        <h4 class="nav-item dropdown-toggle">About</h4>
+                        <div class="subnav">
+                            <a href="/index.html" class="nav-link">About Us</a>
+                            <a href="/index.html" class="nav-link"
+                                >Our Mission</a
+                            >
+                            <a href="/index.html" class="nav-link">Founder</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <h4 class="nav-item dropdown-toggle">Faculty</h4>
+                        <div class="subnav">
+                            <a href="/index.html" class="nav-link">Principal</a>
+                            <a href="/index.html" class="nav-link">Staff</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/index.html" class="nav-item">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="/index.html" class="nav-item"
+                            >Student Portal</a
+                        >
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Hero Section -->
+            <section id="hero" class="hero observable-element">
+                <div class="hero-context">
+                    <h1 class="heading">School Of Excellence</h1>
+                    <p class="subheading">
+                        SOE Provides Excellent Academic And Environment
+                        Opportunities For Creating Educated, Productive, And
+                        Responsible Citizens Of Pakistan Through Intellectual,
+                        And Personal Growth.
+                    </p>
+                    <div class="cta-group">
+                        <button class="btn">Contact Us</button
+                        ><button class="btn">Our Mission</button>
+                    </div>
+                </div>
+                <div class="hero-img">
+                    <img src="/assets/principal.png" alt="Principal" />
+                </div>
+            </section>
+        </header>
+
+        <!-- Page Content -->
+        <main class="main">
+            <!-- About Section -->
+            <section class="section about observable-element">
+                <h2 class="title">About School of Excellence</h2>
+                <div class="content-container">
+                    <h3 class="heading">Our Mission</h3>
+                    <p class="context">
+                        Mission of SOE is to establish, sustain and enhance
+                        itself as a quality-centric educational institution that
+                        provides excellent academic environment and
+                        opportunities for creating educated, productive, and
+                        responsible citizens of Pakistan through intellectual,
+                        and personal growth.
+                    </p>
+                </div>
+                <div class="content-container">
+                    <h3 class="heading">About Us</h3>
+                    <p class="context">
+                        The Education has been destroyed by many well known
+                        factors in our society. It has changed the mental
+                        approach of students and parents that there is no way to
+                        success without following the all existing malpractices.
+                        Keeping above facts in view, It was thought by well
+                        wishers and senior educationist of Sukkur city to
+                        develop School system where quality education on
+                        affording cost should be provided and students/parents
+                        understanding should be...
+                    </p>
+                </div>
+                <button class="btn">Read More...</button>
+            </section>
+
+            <!-- Availablity Section -->
+            <section class="section availablity observable-element">
+                <svg
+                    class="house"
+                    version="1.0"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 0 64 64"
+                    enable-background="new 0 0 64 64"
+                    xml:space="preserve">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g
+                        id="SVGRepo_tracerCarrier"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <path
+                            d="M62.79,29.172l-28-28C34.009,0.391,32.985,0,31.962,0s-2.047,0.391-2.828,1.172l-28,28 c-1.562,1.566-1.484,4.016,0.078,5.578c1.566,1.57,3.855,1.801,5.422,0.234L8,33.617V60c0,2.211,1.789,4,4,4h16V48h8v16h16 c2.211,0,4-1.789,4-4V33.695l1.195,1.195c1.562,1.562,3.949,1.422,5.516-0.141C64.274,33.188,64.356,30.734,62.79,29.172z"></path>
+                    </g>
+                </svg>
+                <h2 class="title">Branches Of SOE</h2>
+
+                <div class="cards-container">
+                    <div class="card">
+                        <div class="svg-container">
+                            <svg
+                                version="1.1"
+                                id="Layer_1"
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                viewBox="0 0 24 24"
+                                enable-background="new 0 0 24 24"
+                                xml:space="preserve">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g
+                                    id="SVGRepo_tracerCarrier"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path
+                                        d="M5,3v18h6v-3.5h2V21h6V3H5 M7,5h2v2H7V5 M11,5h2v2h-2V5 M15,5h2v2h-2V5 M7,9h2v2H7V9 M11,9h2v2h-2V9 M15,9h2v2h-2V9 M7,13h2 v2H7V13 M11,13h2v2h-2V13 M15,13h2v2h-2V13 M7,17h2v2H7V17 M15,17h2v2h-2V17z"></path>
+                                    <rect
+                                        fill="none"
+                                        width="24"
+                                        height="24"></rect>
+                                </g>
+                            </svg>
+                        </div>
+                        <h1 class="heading">SENIOR</h1>
+                        <div class="branch-img">
+                            <img
+                                src="/assets/branch_sen.jpg"
+                                alt="Senior Branch" />
+                        </div>
+                        <p class="context">
+                            Airport Road Sukkur <br />
+                            Class 6Th To 12Th <br />
+                            071 5804400
+                        </p>
+                    </div>
+                    <div class="card">
+                        <div class="svg-container">
+                            <svg
+                                version="1.1"
+                                id="Layer_1"
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                viewBox="0 0 24 24"
+                                enable-background="new 0 0 24 24"
+                                xml:space="preserve">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g
+                                    id="SVGRepo_tracerCarrier"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path
+                                        d="M5,3v18h6v-3.5h2V21h6V3H5 M7,5h2v2H7V5 M11,5h2v2h-2V5 M15,5h2v2h-2V5 M7,9h2v2H7V9 M11,9h2v2h-2V9 M15,9h2v2h-2V9 M7,13h2 v2H7V13 M11,13h2v2h-2V13 M15,13h2v2h-2V13 M7,17h2v2H7V17 M15,17h2v2h-2V17z"></path>
+                                    <rect
+                                        fill="none"
+                                        width="24"
+                                        height="24"></rect>
+                                </g>
+                            </svg>
+                        </div>
+                        <h1 class="heading">JUNIOR</h1>
+                        <div class="branch-img">
+                            <img
+                                src="/assets/branch_jun.jpg"
+                                alt="Junior Branch" />
+                        </div>
+                        <p class="context">
+                            Sindh Society Sukkur <br />
+                            Class One To Five <br />
+                            071 5633606
+                        </p>
+                    </div>
+                    <div class="card">
+                        <div class="svg-container">
+                            <svg
+                                version="1.1"
+                                id="Layer_1"
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                viewBox="0 0 24 24"
+                                enable-background="new 0 0 24 24"
+                                xml:space="preserve">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g
+                                    id="SVGRepo_tracerCarrier"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path
+                                        d="M5,3v18h6v-3.5h2V21h6V3H5 M7,5h2v2H7V5 M11,5h2v2h-2V5 M15,5h2v2h-2V5 M7,9h2v2H7V9 M11,9h2v2h-2V9 M15,9h2v2h-2V9 M7,13h2 v2H7V13 M11,13h2v2h-2V13 M15,13h2v2h-2V13 M7,17h2v2H7V17 M15,17h2v2h-2V17z"></path>
+                                    <rect
+                                        fill="none"
+                                        width="24"
+                                        height="24"></rect>
+                                </g>
+                            </svg>
+                        </div>
+                        <h1 class="heading">MONTESSORI</h1>
+                        <div class="branch-img">
+                            <img
+                                src="/assets/branch_mont.jpg"
+                                alt="Montessori Branch" />
+                        </div>
+                        <p class="context">
+                            Sindh Society Sukkur <br />
+                            Play Group To KG Class <br />
+                            071 5630558
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section class="cta-section observable-element">
+                <h1 class="title">
+                    We are open for <br />
+                    new addmissions.
+                </h1>
+                <div class="gradiant"></div>
+                <button class="cta">Contact</button>
+            </section>
+
+            <!-- Statistics Section -->
+            <section class="section statistics observable-element">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="423.403"
+                    height="190.089"
+                    viewBox="0 0 423.403 190.089">
+                    <path
+                        id="mainIconPathAttribute"
+                        d="M158.776,2c5.571,0,10.543,2.091,12.437,5.228l93.413,153.758,40.488-66.661c1.912-3.124,6.88-5.2,12.438-5.2h92.619c7.307,0,13.231,3.546,13.231,7.921s-5.924,7.921-13.231,7.921H326.814l-49.75,81.9c-1.9,3.133-6.871,5.218-12.437,5.218S254.089,190,252.189,186.87L158.776,33.113,118.288,99.758c-1.9,3.13-6.873,5.213-12.437,5.212H13.231C5.924,104.97,0,101.424,0,97.049s5.924-7.921,13.231-7.921H96.589l49.75-81.9C148.233,4.091,153.205,2,158.776,2Z"
+                        transform="translate(0 -2)"
+                        stroke="#1e1927"
+                        stroke-width="0"
+                        fill-rule="evenodd" />
+                </svg>
+                <h2 class="title">Statistics</h2>
+                <p class="subheading">
+                    The Number Of Students Currently Studying In School Of
+                    Excellence.
+                </p>
+                <div class="counters">
+                    <div class="counter">
+                        <h3 class="number">243</h3>
+                        <p class="label">MONTESSORI BRANCH</p>
+                    </div>
+                    <div class="counter">
+                        <h3 class="number">501</h3>
+                        <p class="label">JUNIOR BRANCH</p>
+                    </div>
+                    <div class="counter">
+                        <h3 class="number">781</h3>
+                        <p class="label">SENIOR BRANCH</p>
+                    </div>
+                    <div class="counter">
+                        <h3 class="number">1525</h3>
+                        <p class="label">TOTAL STUDENTS</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer observable-element">
+            <!-- Branding Section -->
+            <section class="section branding">
+                <img src="/assets/logo.png" alt="logo" class="brand-img" />
+                <p class="quote">
+                    &middot; An Investment In Knowledge <br />
+                    Pays The Best Interest.
+                </p>
+                <h5 class="copyright-mark">&copy; 2023 School Of Excellence</h5>
+            </section>
+
+            <!-- Links Section -->
+            <section class="section links">
+                <h2 class="title">Quick Links</h2>
+                <ul class="nav-links">
+                    <li><a href="/index.html" class="nav-link">Home</a></li>
+                    <li><a href="/index.html" class="nav-link">About</a></li>
+                    <li><a href="/index.html" class="nav-link">Faculty</a></li>
+                    <li><a href="/index.html" class="nav-link">Gallery</a></li>
+                    <li>
+                        <a href="/index.html" class="nav-link"
+                            >Student Portal</a
+                        >
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Services Section-->
+            <section class="section services">
+                <h2 class="title">We Offer</h2>
+                <ul class="services-list">
+                    <li>
+                        <h5 class="service">Comprehensive Curriculum</h5>
+                    </li>
+                    <li>
+                        <h5 class="service">Expert Faculty</h5>
+                    </li>
+                    <li>
+                        <h5 class="service">Community Engagement</h5>
+                    </li>
+                    <li>
+                        <h5 class="service">Growth Opportunities</h5>
+                    </li>
+                    <li>
+                        <h5 class="service">Chemistry Lab</h5>
+                    </li>
+                    <li>
+                        <h5 class="service">Physics Lab</h5>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Contact Section -->
+            <section class="section contacts">
+                <h2 class="title">Contact Us</h2>
+                <div class="contact">
+                    <svg
+                        class="icon"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        stroke="#fff">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g
+                            id="SVGRepo_tracerCarrier"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path
+                                d="M3 5.5C3 14.0604 9.93959 21 18.5 21C18.8862 21 19.2691 20.9859 19.6483 20.9581C20.0834 20.9262 20.3009 20.9103 20.499 20.7963C20.663 20.7019 20.8185 20.5345 20.9007 20.364C21 20.1582 21 19.9181 21 19.438V16.6207C21 16.2169 21 16.015 20.9335 15.842C20.8749 15.6891 20.7795 15.553 20.6559 15.4456C20.516 15.324 20.3262 15.255 19.9468 15.117L16.74 13.9509C16.2985 13.7904 16.0777 13.7101 15.8683 13.7237C15.6836 13.7357 15.5059 13.7988 15.3549 13.9058C15.1837 14.0271 15.0629 14.2285 14.8212 14.6314L14 16C11.3501 14.7999 9.2019 12.6489 8 10L9.36863 9.17882C9.77145 8.93713 9.97286 8.81628 10.0942 8.64506C10.2012 8.49408 10.2643 8.31637 10.2763 8.1317C10.2899 7.92227 10.2096 7.70153 10.0491 7.26005L8.88299 4.05321C8.745 3.67376 8.67601 3.48403 8.55442 3.3441C8.44701 3.22049 8.31089 3.12515 8.15802 3.06645C7.98496 3 7.78308 3 7.37932 3H4.56201C4.08188 3 3.84181 3 3.63598 3.09925C3.4655 3.18146 3.29814 3.33701 3.2037 3.50103C3.08968 3.69907 3.07375 3.91662 3.04189 4.35173C3.01413 4.73086 3 5.11378 3 5.5Z"
+                                stroke-width="0"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </g>
+                    </svg>
+                    <span class="info">071 5804400</span>
+                </div>
+                <div class="contact">
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g
+                            id="SVGRepo_tracerCarrier"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path
+                                d="M3 8L8.44992 11.6333C9.73295 12.4886 10.3745 12.9163 11.0678 13.0825C11.6806 13.2293 12.3194 13.2293 12.9322 13.0825C13.6255 12.9163 14.2671 12.4886 15.5501 11.6333L21 8M6.2 19H17.8C18.9201 19 19.4802 19 19.908 18.782C20.2843 18.5903 20.5903 18.2843 20.782 17.908C21 17.4802 21 16.9201 21 15.8V8.2C21 7.0799 21 6.51984 20.782 6.09202C20.5903 5.71569 20.2843 5.40973 19.908 5.21799C19.4802 5 18.9201 5 17.8 5H6.2C5.0799 5 4.51984 5 4.09202 5.21799C3.71569 5.40973 3.40973 5.71569 3.21799 6.09202C3 6.51984 3 7.07989 3 8.2V15.8C3 16.9201 3 17.4802 3.21799 17.908C3.40973 18.2843 3.71569 18.5903 4.09202 18.782C4.51984 19 5.07989 19 6.2 19Z"
+                                stroke="#000000"
+                                stroke-width="1"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </g>
+                    </svg>
+                    <span class="info">info@soe.edu.pk</span>
+                </div>
+                <div class="contact">
+                    <svg
+                        class="icon"
+                        viewBox="0 0 32 32"
+                        version="1.1"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g
+                            id="SVGRepo_tracerCarrier"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path
+                                d="M16.114-0.011c-6.559 0-12.114 5.587-12.114 12.204 0 6.93 6.439 14.017 10.77 18.998 0.017 0.020 0.717 0.797 1.579 0.797h0.076c0.863 0 1.558-0.777 1.575-0.797 4.064-4.672 10-12.377 10-18.998 0-6.618-4.333-12.204-11.886-12.204zM16.515 29.849c-0.035 0.035-0.086 0.074-0.131 0.107-0.046-0.032-0.096-0.072-0.133-0.107l-0.523-0.602c-4.106-4.71-9.729-11.161-9.729-17.055 0-5.532 4.632-10.205 10.114-10.205 6.829 0 9.886 5.125 9.886 10.205 0 4.474-3.192 10.416-9.485 17.657zM16.035 6.044c-3.313 0-6 2.686-6 6s2.687 6 6 6 6-2.687 6-6-2.686-6-6-6zM16.035 16.044c-2.206 0-4.046-1.838-4.046-4.044s1.794-4 4-4c2.207 0 4 1.794 4 4 0.001 2.206-1.747 4.044-3.954 4.044z"></path>
+                        </g>
+                    </svg>
+                    <span class="info"
+                        >Government Cooperative Housing <br />
+                        Society, Airport Road Sukkur.</span
+                    >
+                </div>
+            </section>
+        </footer>
+    </body>
 </html>

@@ -4,7 +4,7 @@
   width: fit-content;
   height: fit-content;
   background-color: transparent;
-  color: #3d4756;
+  color: #1e1927;
   font-size: medium;
   font-family: "Roboto", sans-serif;
   font-weight: 100;
@@ -17,6 +17,10 @@
   overflow: hidden;
 }
 
+.observable-element {
+  transition: all 1s;
+}
+
 ol,
 ul {
   list-style-type: none;
@@ -26,6 +30,22 @@ img {
   width: 100%;
   object-fit: cover;
   object-position: center;
+}
+
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e1927;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1022dc;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0c1aac;
 }
 
 /*# sourceMappingURL=default.css.map */

@@ -1,0 +1,75 @@
+@import "config";
+
+//  BUTTONS
+@mixin btn {
+    font-size: xx-large;
+    font-family: $font-subheading;
+    font-weight: 400;
+    color: $color-light;
+    padding: 10px 20px;
+    border: 2px solid;
+    border-radius: 20px;
+    transition: all 200ms ease-in-out;
+}
+//    Primary Buttons
+@mixin btn-primary {
+    @include btn();
+    background-color: $color-primary;
+    border-color: $color-primary;
+}
+@mixin btn-primary-hover {
+    background-color: darken($color-primary, 5%);
+    border-color: darken($color-primary, 5%);
+    cursor: pointer;
+}
+
+@mixin btn-primary-outline {
+    @include btn();
+    border-color: $color-primary;
+}
+@mixin btn-primary-outline-hover {
+    background-color: $color-primary;
+    cursor: pointer;
+}
+
+//    Secondary Buttons
+@mixin btn-secondary {
+    @include btn();
+    background-color: $color-secondary;
+    border-color: $color-secondary;
+}
+@mixin btn-secondary-hover {
+    background-color: darken($color-secondary, 5%);
+    border-color: darken($color-secondary, 5%);
+    cursor: pointer;
+}
+
+@mixin btn-secondary-outline {
+    @include btn();
+    border-color: $color-secondary;
+}
+@mixin btn-secondary-outline-hover {
+    background-color: $color-secondary;
+    cursor: pointer;
+}
+
+//    Dark Buttons
+@mixin btn-dark {
+    @include btn();
+    background-color: $color-dark;
+    border-color: $color-dark;
+}
+@mixin btn-dark-hover {
+    background-color: darken($color-dark, 5%);
+    border-color: darken($color-dark, 5%);
+    cursor: pointer;
+}
+
+@mixin btn-dark-outline {
+    @include btn();
+    border-color: $color-dark;
+}
+@mixin btn-dark-outline-hover {
+    background-color: $color-dark;
+    cursor: pointer;
+}

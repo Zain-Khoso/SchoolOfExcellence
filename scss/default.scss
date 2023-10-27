@@ -18,6 +18,10 @@
     overflow: hidden;
 }
 
+.observable-element {
+    transition: all 1s;
+}
+
 ol,
 ul {
     list-style-type: none;
@@ -27,4 +31,21 @@ img {
     width: 100%;
     object-fit: cover;
     object-position: center;
+}
+
+// Scrollbar.
+::-webkit-scrollbar {
+    width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+    background: $color-dark;
+}
+
+::-webkit-scrollbar-thumb {
+    background: lighten($color-primary, 5%);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: darken($color-primary, 5%);
 }
