@@ -13,13 +13,15 @@ const animationObserverOps = {
 const showTheElement = function (entries) {
     const [entry] = entries;
 
+    if (!entry.isIntersecting) return;
+
     const targetElem = entry.target;
 
     // Showing the elements.
     targetElem.style.transform = "translateY(0px)";
     targetElem.style.opacity = 1;
 
-    // Deactivacting the observer.
+    // Deleting the observer for current element.
     animationObserver.unobserve(targetElem);
 };
 
