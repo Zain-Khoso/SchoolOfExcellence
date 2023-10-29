@@ -19,11 +19,11 @@ body {
 
             width: 100%;
             height: 100%;
+            z-index: -20;
 
             .bg-img {
                 position: absolute;
                 inset: 0;
-                z-index: -20;
 
                 width: 100%;
                 height: 100%;
@@ -32,7 +32,6 @@ body {
             .filter-curtain {
                 position: absolute;
                 inset: 0;
-                z-index: -15;
 
                 width: 100%;
                 height: 100%;
@@ -128,7 +127,7 @@ body {
         .section {
             width: 100%;
             height: 100vh;
-            margin-top: 50px;
+            padding: 5rem 0;
 
             .title {
                 width: 100%;
@@ -137,7 +136,6 @@ body {
                 font-weight: 600;
                 color: $color-primary;
                 text-align: center;
-                padding: 30px 0px;
             }
 
             .title:hover {
@@ -151,7 +149,7 @@ body {
             justify-content: space-around;
             align-items: center;
 
-            width: 1080px;
+            width: 1280px;
             margin: 0px auto;
 
             .content-container {
@@ -187,10 +185,13 @@ body {
 
             background-color: lighten($color-primary, 50%);
 
+            > .title {
+                margin-top: 2rem;
+            }
+
             .house {
                 width: 100px;
                 fill: $color-primary;
-                padding-top: 30px;
             }
 
             .cards-container {
@@ -323,6 +324,7 @@ body {
         .statistics {
             display: flex;
             flex-direction: column;
+            gap: 3rem;
 
             width: 100%;
             height: fit-content;
@@ -341,6 +343,7 @@ body {
                 text-align: center;
                 color: $color-dark;
                 margin: 0px auto;
+                margin-top: -30px;
             }
 
             .counters {
@@ -350,7 +353,7 @@ body {
                 align-items: center;
 
                 width: 100%;
-                margin: 100px 0;
+                margin-top: 3rem;
 
                 .counter {
                     .number {
@@ -370,114 +373,5 @@ body {
         }
     }
 
-    .footer {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-
-        width: 100%;
-        height: 25rem;
-        background-color: $color-dark;
-
-        .section {
-            width: 25%;
-            height: 100%;
-
-            .title {
-                font-size: 40px;
-                font-family: $font-subheading;
-                font-weight: 600;
-                color: $color-light;
-                padding: 30px 0;
-            }
-
-            .title:hover {
-                cursor: default;
-            }
-        }
-
-        .branding {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
-
-            .brand-img {
-                width: 10rem;
-            }
-
-            .quote,
-            .copyright-mark {
-                font-size: x-large;
-                font-family: $font-subheading;
-                font-weight: 400;
-                color: $color-light;
-                text-align: center;
-            }
-
-            .copyright-mark {
-                font-family: $font-text;
-            }
-
-            .copyright-mark:hover {
-                cursor: default;
-            }
-        }
-
-        .links > .nav-links {
-            .nav-link {
-                display: inline-block;
-
-                font-size: xx-large;
-                font-weight: 400;
-                color: rgba($color-secondary, 0.6);
-                margin-bottom: 10px;
-                transition: all 200ms ease-in-out;
-            }
-
-            .nav-link:hover {
-                color: $color-secondary;
-            }
-        }
-
-        .services > .services-list {
-            .service {
-                display: inline-block;
-
-                font-size: x-large;
-                font-weight: 400;
-                color: rgba($color-light, 0.6);
-                margin-bottom: 5px;
-            }
-        }
-
-        .contacts {
-            display: flex;
-            flex-direction: column;
-
-            .contact {
-                display: flex;
-                align-items: center;
-
-                width: 100%;
-                margin-bottom: 20px;
-
-                .icon {
-                    width: 2rem;
-                    height: 2rem;
-                    fill: $color-light;
-                }
-
-                .info {
-                    display: inline-block;
-                    font-size: x-large;
-                    font-weight: 300;
-                    color: $color-light;
-                    text-align: left;
-                    margin-left: 15px;
-                }
-            }
-        }
-    }
+    @import "footer";
 }
