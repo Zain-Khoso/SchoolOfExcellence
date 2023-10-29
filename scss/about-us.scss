@@ -1,0 +1,206 @@
+@import "config";
+@import "utils";
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: $color-light;
+    overflow-y: auto;
+
+    .landing-page {
+        position: relative;
+
+        width: 100%;
+        height: 50%;
+
+        .background {
+            position: absolute;
+            inset: 0;
+
+            width: 100%;
+            height: 100%;
+            z-index: -20;
+
+            .bg-img {
+                position: absolute;
+                inset: 0;
+
+                width: 100%;
+                height: 100%;
+            }
+
+            .filter-curtain {
+                position: absolute;
+                inset: 0;
+
+                width: 100%;
+                height: 100%;
+                background-color: rgba(black, 0.6);
+                backdrop-filter: blur(5px);
+            }
+        }
+
+        @import "navbar";
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10rem;
+
+            width: 100%;
+            height: calc(100% - 100px);
+
+            .page-title {
+                font-size: 100px;
+                font-family: $font-heading;
+                font-weight: 900;
+                line-height: 5rem;
+                color: $color-light;
+                // background-color: rgba($color-primary, 0.3);
+                padding: 1rem 10rem;
+                border-radius: 1rem;
+                transform: translateY(-50px);
+            }
+        }
+    }
+
+    .main {
+        width: 100%;
+
+        .section {
+            width: 100%;
+            padding: 3rem 0;
+
+            .title {
+                width: 100%;
+                font-size: 4rem;
+                font-family: $font-subheading;
+                font-weight: 600;
+                text-align: center;
+                color: $color-primary;
+            }
+
+            .title:hover {
+                cursor: default;
+            }
+        }
+
+        .about-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            gap: 3rem;
+
+            max-width: 1440px;
+            margin: 0px auto;
+
+            .content-container {
+                width: 100%;
+
+                .heading {
+                    font-size: 40px;
+                    font-family: $font-subheading;
+                    font-weight: 400;
+                    color: $color-primary;
+                    margin-bottom: 1rem;
+                }
+
+                .context {
+                    font-size: xx-large;
+                    font-weight: 300;
+                }
+            }
+
+            .btn {
+                @include btn-primary;
+            }
+            .btn:hover,
+            .btn:focus {
+                @include btn-primary-hover;
+            }
+        }
+
+        .authorities-section {
+            width: 100%;
+            text-align: center;
+            background-color: lighten($color-primary, 50%);
+
+            padding-bottom: 5rem;
+
+            .title {
+                margin-bottom: 3rem;
+            }
+
+            .cards-container {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                row-gap: 2rem;
+                justify-content: space-evenly;
+
+                width: 100%;
+                max-width: 1440px;
+                margin: auto;
+                overflow: visible;
+
+                .card {
+                    width: 35rem;
+                    height: 40rem;
+                    background-color: $color-dark;
+                    padding: 2rem 1rem;
+                    border-radius: 1rem;
+                    transition: all 300ms;
+
+                    .head {
+                        display: flex;
+                        flex-direction: row;
+                        gap: 1rem;
+
+                        .picture {
+                            width: 6rem;
+                            border-radius: 50%;
+                        }
+
+                        .headings {
+                            .heading {
+                                font-size: larger;
+                                font-weight: 400;
+                                text-transform: uppercase;
+                                color: $color-secondary;
+                            }
+                            .name {
+                                font-size: xx-large;
+                                font-weight: 600;
+                                text-transform: capitalize;
+                                color: $color-light;
+                            }
+                        }
+                    }
+
+                    .context {
+                        width: 100%;
+                        font-size: x-large;
+                        font-weight: 400;
+                        text-transform: capitalize;
+                        letter-spacing: 2px;
+                        line-height: 2rem;
+                        color: $color-light;
+                        padding: 0 0.5rem;
+                        margin-top: 1rem;
+                    }
+                }
+
+                .card:hover {
+                    cursor: default;
+                    transform: translateY(-20px);
+                    box-shadow: 0 0 60px $color-dark;
+                }
+            }
+        }
+    }
+
+    @import "footer";
+}
