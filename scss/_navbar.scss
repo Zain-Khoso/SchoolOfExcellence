@@ -35,10 +35,6 @@
 
             > .nav-item:hover {
                 color: $color-light;
-                cursor: default;
-            }
-
-            > a.nav-item:hover {
                 cursor: pointer;
             }
         }

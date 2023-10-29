@@ -3,7 +3,9 @@
 // Elem Selections.
 const elem_Navbar = document.getElementById("navbar");
 const elem_Hero = document.getElementById("hero");
-const elem_DropdownTriggers = [...document.querySelectorAll("h4.nav-item")];
+const elem_DropdownTriggers = [
+    ...document.querySelectorAll(".dropdown-toggle"),
+];
 
 // Variables.
 const observerOptions = {
