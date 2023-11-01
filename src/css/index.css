@@ -197,13 +197,19 @@ body .main .section {
   height: 100vh;
   padding: 5rem 0;
 }
+body .main .section .section-svg {
+  width: 5rem;
+  height: 5rem;
+  fill: #0e1ec4;
+  margin: 0 auto;
+}
 body .main .section .title {
   width: 100%;
-  font-size: 50px;
+  font-size: 4rem;
   font-family: "Overlock", sans-serif;
   font-weight: 600;
-  color: #0e1ec4;
   text-align: center;
+  color: #0e1ec4;
 }
 body .main .section .title:hover {
   cursor: default;
@@ -327,6 +333,193 @@ body .main .availablity .cards-container .card:hover {
   transform: translateY(-20px);
   box-shadow: 0 0 60px black;
 }
+body .main .faculty {
+  padding: 5rem;
+}
+body .main .faculty .title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+body .main .faculty .title .section-svg {
+  margin: 0;
+  padding: 0;
+}
+body .main .faculty .slider {
+  position: relative;
+  width: 100rem;
+  height: 47rem;
+  border-radius: 2rem;
+  margin: 6rem auto;
+  box-shadow: 0 0 1.5rem rgba(30, 25, 39, 0.3);
+  overflow: visible;
+}
+body .main .faculty .slider .slider-modes {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  overflow: visible;
+  transition: all 300ms;
+}
+body .main .faculty .slider .slider-modes .mode {
+  font-size: xx-large;
+  font-family: "Overlock", sans-serif;
+  font-weight: 400;
+  color: #fcf7ff;
+  padding: 10px 20px;
+  border: 2px solid;
+  border-radius: 20px;
+  transition: all 200ms ease-in-out;
+  border-color: #0e1ec4;
+  width: 18rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #0e1ec4;
+  background-color: #fcf7ff;
+  z-index: 3;
+  transform: translateY(-50%);
+  transition: all 300ms;
+}
+body .main .faculty .slider .slider-modes .mode:hover {
+  cursor: pointer;
+}
+body .main .faculty .slider .slider-modes .active-mode {
+  color: #fcf7ff;
+  background-color: #0e1ec4;
+  transform: translateY(-70%);
+}
+body .main .faculty .slider .dots {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+}
+body .main .faculty .slider .dots .dot {
+  width: 1rem;
+  height: 1rem;
+  background-color: rgba(30, 25, 39, 0.2);
+  border-radius: 50%;
+  transition: all 200ms;
+}
+body .main .faculty .slider .dots .dot:hover {
+  background-color: rgba(30, 25, 39, 0.3);
+  cursor: pointer;
+}
+body .main .faculty .slider .dots .active-dot {
+  background-color: rgba(30, 25, 39, 0.5);
+}
+body .main .faculty .slider .dots .active-dot:hover {
+  background-color: rgba(30, 25, 39, 0.5);
+}
+body .main .faculty .slider .control {
+  position: absolute;
+  top: 50%;
+  font-size: 3rem;
+  color: rgba(14, 30, 196, 0.6);
+  background-color: rgba(30, 25, 39, 0.2);
+  padding: 0.2rem 0.5rem;
+  border-radius: 50%;
+  z-index: 3;
+  transform: translateY(-50%);
+  transition: all 200ms;
+}
+body .main .faculty .slider .control:hover {
+  color: #0e1ec4;
+  background-color: rgba(30, 25, 39, 0.3);
+  cursor: pointer;
+}
+body .main .faculty .slider .prev {
+  left: 2rem;
+}
+body .main .faculty .slider .next {
+  right: 2rem;
+}
+body .main .faculty .slider .slides-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+body .main .faculty .slider .slides-container .slide {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  width: 100%;
+  height: 100%;
+  padding: 5rem 8rem;
+  transition: all 500ms ease;
+}
+body .main .faculty .slider .slides-container .slide .pfp-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 15rem;
+  height: 100%;
+}
+body .main .faculty .slider .slides-container .slide .pfp-container .pfp {
+  width: 12rem;
+  height: 12rem;
+  border: 2px solid #0e1ec4;
+  border-radius: 50%;
+}
+body .main .faculty .slider .slides-container .slide .context-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 2rem 0;
+}
+body .main .faculty .slider .slides-container .slide .context-container .subheading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #0e1ec4;
+  margin-bottom: -0.7rem;
+}
+body .main .faculty .slider .slides-container .slide .context-container .heading {
+  font-size: 3rem;
+  font-family: "Overlock", sans-serif;
+  font-weight: 800;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+}
+body .main .faculty .slider .slides-container .slide .context-container .context {
+  font-size: 2rem;
+  font-weight: 400;
+  word-spacing: 2px;
+  line-height: 2.5rem;
+  margin: 3rem 0;
+}
+body .main .faculty .slider .slides-container .slide .context-container .contacts {
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+}
+body .main .faculty .slider .slides-container .slide .context-container .contacts .contact {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+body .main .faculty .slider .slides-container .dummy-slide {
+  background: rgb(209, 205, 205);
+  background: linear-gradient(125deg, rgb(209, 205, 205) 20%, rgb(252, 252, 252) 80%);
+  z-index: -1;
+  border-radius: 2rem;
+}
 body .main .cta-section {
   display: flex;
   flex-direction: row;
@@ -385,8 +578,8 @@ body .main .statistics {
   height: fit-content;
   text-align: center;
 }
-body .main .statistics > svg {
-  fill: #0e1ec4;
+body .main .statistics .section-svg {
+  width: 20rem;
   margin: 0 auto;
 }
 body .main .statistics > .subheading {

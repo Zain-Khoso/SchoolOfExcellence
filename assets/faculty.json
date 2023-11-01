@@ -1,0 +1,74 @@
+{
+    "administration": [
+        {
+            "role": "founder",
+            "pfp": "/assets/profile_pics/founder.jpg",
+            "name": "Mr. Jamal Uddin Unar",
+            "description": "Mr. Jamal uddin Unar the Founder of School of Excellence Sukkur is a veteran personality and a source of inspiration for those who wish to touch the climax in their life struggle. He has done bachelors in Civil Engineering from Mehran University in 1979 and Masters in Construction Management from King Fahad University, Saudi Arabia in 1996. He devoted 30 years of services in field of Engineering. He also rendered his services at NED University Karachi, as Assistant Professor from 1980 to 1982.",
+            "email": "jamaludinab@hotmail.com",
+            "phone": "03012994074"
+        },
+        {
+            "role": "principal",
+            "pfp": "/assets/profile_pics/principal.jpg",
+            "name": "Mr. Muhammad Servech Unar",
+            "description": "Mr. Servech is serving as Proncipal of School of Excellence Sukkur, He has done his bachelors in Electrical Engineering from Mehran University in 2013.",
+            "email": "servechab@gmail.com",
+            "phone": "03311351776"
+        }
+    ],
+
+    "teachers": [
+        {
+            "role": "English Lecturer",
+            "pfp": "/assets/profile_pics/EnglishLecturer.jpg",
+            "name": "Mr. Muhammad Kashif Mughal",
+            "description": "Mr. Muhammad Kashif Mughal. A veteran, dedicated, professional and debonair icon, hails from Sukkur. He did his MA in Englsih Literature from SALU khairpur with distinction. He is rendering his services as Head of Department of Englsih Faculty at School of Excellence. He is ambitious and eager to reform educational drawbacks with innovative strategies.",
+            "email": "mughalkashif755@gmail.com",
+            "phone": "03337155843"
+        },
+        {
+            "role": "Maths Teacher",
+            "pfp": "/assets/profile_pics/MathsTeacher.jpg",
+            "name": "Mr. Abdul Haleem Gilal",
+            "description": "Abdul Haleem Gilal is a dedicated teacher at School of Excellence. He has done his BS(MATHEMATICS) and has teaching experience of three years. He is now rendering his services as a Teacher of Mathematics in our school.",
+            "email": "haleem.gilal@gmail.com",
+            "phone": "0333-2441367"
+        },
+        {
+            "role": "Physics Teacher",
+            "pfp": "/assets/profile_pics/PhysicsTeacher.jpg",
+            "name": "Mr. Fahadullah Memon",
+            "description": "Mr. Fahadullah has done his BS Physics from SALU khairpur, And also DAE one year in Electrical. Interested in the field of Electronics; Atomic and Molecular physics.",
+            "email": "memonshayan107@yahoo.com",
+            "phone": "03342383050"
+        },
+        {
+            "role": "Sport Teacher",
+            "pfp": "/assets/profile_pics/SportTeacher.jpg",
+            "name": "Mr. Irshad Ali Chohan",
+            "description": "Mr. Irshad Ali Chohan is dedicated, punctual and sincere teacher. He has passed his B.Sc from Shah Abdul Latif University khairpur and also done Taekwondo marshal arts course, black belt 2DAN and has eight years experience.",
+            "email": "irshadchohan22@gmail.com",
+            "phone": "03123489887"
+        },
+        {
+            "role": "English Teacher",
+            "pfp": "/assets/profile_pics/EnglishTeacher.jpg",
+            "name": "Mr. Muhammad Usman Sahito",
+            "description": "Having done B.S Commerce, Master in English and currently doing M.S Commerce from Shah Abdul Latif University and two years working experience as a teacher.",
+            "email": "usmansahito49@gmail.com",
+            "phone": "03123434404"
+        }
+    ],
+
+    "staff": [
+        {
+            "role": "Accounts Officer",
+            "pfp": "/assets/profile_pics/AccountsOfficer.jpg",
+            "name": "Mr. Farhan Khan",
+            "description": "Mr. Farhan Khan Shoro is working with School of Excellence as Accounts Officer since Last Year, he possess good Knowledge about his Work. having 7 Years experience of Accounts. Qualification MA. Economics.",
+            "email": "farhan.shoro@yahoo.com",
+            "phone": "0300-3185088"
+        }
+    ]
+}
