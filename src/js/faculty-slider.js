@@ -12,6 +12,7 @@ const elem_dotsContainer = document.querySelector(".dots");
 
 // Variables.
 const slidesData = {};
+const touchData = [];
 
 // Functions.
 const repositionTheSlides = function (currSlideIndex) {
@@ -127,6 +128,11 @@ const changeSlides = function (event) {
     });
 };
 
+const handleKeyboardControls = function (event) {
+    if (event.key === "ArrowLeft") goToPrevSlide();
+    else if (event.key === "ArrowRight") goToNextSlide();
+};
+
 // Getting the slides data and setting up the default slides.
 (async function () {
     const req = await fetch("/assets/faculty.json");
@@ -141,8 +147,9 @@ const changeSlides = function (event) {
     }
 
     // Attaching EventListeners for the slider.
+    elem_sliderModesContainer.addEventListener("click", changeSlides);
     elem_prevBtn.addEventListener("click", goToPrevSlide);
     elem_nextBtn.addEventListener("click", goToNextSlide);
-    elem_sliderModesContainer.addEventListener("click", changeSlides);
     elem_dotsContainer.addEventListener("click", goToSlide);
+    document.addEventListener("keydown", handleKeyboardControls);
 })();
