@@ -1,0 +1,200 @@
+@import "config";
+@import "utils";
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: $color-light;
+    overflow-y: auto;
+
+    .landing-page {
+        position: relative;
+
+        width: 100%;
+        height: 50%;
+
+        .background {
+            position: absolute;
+            inset: 0;
+
+            width: 100%;
+            height: 100%;
+            z-index: -20;
+
+            .bg-img {
+                position: absolute;
+                inset: 0;
+
+                width: 100%;
+                height: 100%;
+            }
+
+            .filter-curtain {
+                position: absolute;
+                inset: 0;
+
+                width: 100%;
+                height: 100%;
+                background-color: rgba(black, 0.6);
+                backdrop-filter: blur(5px);
+            }
+        }
+
+        @import "navbar";
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10rem;
+
+            width: 100%;
+            height: calc(100% - 100px);
+
+            .page-title {
+                font-size: 100px;
+                font-family: $font-heading;
+                font-weight: 900;
+                line-height: 5rem;
+                color: $color-light;
+                padding: 1rem 10rem;
+                border-radius: 1rem;
+                transform: translateY(-50px);
+            }
+        }
+    }
+
+    .main {
+        width: 100%;
+
+        .section {
+            width: 100%;
+            padding: 3rem 0;
+
+            .title {
+                width: 100%;
+                font-size: 4rem;
+                font-family: $font-subheading;
+                font-weight: 600;
+                text-align: center;
+                color: $color-primary;
+            }
+
+            .title:hover {
+                cursor: default;
+            }
+
+            .subtitle {
+                width: 100%;
+                font-size: 1.5rem;
+                font-weight: 400;
+                text-align: center;
+            }
+
+            .subtitle:hover {
+                cursor: default;
+            }
+        }
+
+        .albums-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+
+            width: 100%;
+            padding: 3rem 0;
+
+            .album {
+                width: 30%;
+                overflow: visible;
+
+                .album-title {
+                    width: 100%;
+                    font-size: xx-large;
+                    font-weight: 600;
+                    text-align: center;
+                    color: $color-primary;
+                    margin-bottom: 1rem;
+                }
+
+                .thumbnail {
+                    box-shadow: 0 0 2rem rgba($color-dark, 0.3);
+                    aspect-ratio: 16/9;
+                    border-radius: 1rem;
+                    transition: all 400ms;
+                }
+            }
+
+            .album:hover {
+                cursor: pointer;
+            }
+
+            .active .thumbnail {
+                transform: translateY(-1rem);
+                box-shadow: 0 1rem 2rem rgba($color-dark, 0.7);
+            }
+        }
+
+        .live-album {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+
+            width: 100%;
+            height: 70vh;
+
+            .img-reel {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 2rem;
+
+                width: 30%;
+                height: 100%;
+                background-color: $color-dark;
+                padding: 2rem 0;
+                border-radius: 1rem;
+                overflow-y: auto;
+
+                .img-container {
+                    width: 45%;
+                    aspect-ratio: 16/9;
+                    border-radius: 0.5rem;
+                }
+
+                .img-container:hover {
+                    border: 1px solid rgba($color-light, 0.4);
+                    cursor: pointer;
+                }
+
+                .img-container-active {
+                    border: 1px solid lighten($color-light, 50%);
+                }
+            }
+
+            .img-reel::-webkit-scrollbar {
+                width: 0;
+            }
+
+            .carousel {
+                position: relative;
+
+                width: calc(60% + (10% / 4));
+                height: 100%;
+                aspect-ratio: 16/9;
+                border-radius: 1rem;
+
+                img {
+                    position: absolute;
+                    inset: 0;
+                    transition: all 500ms ease;
+                }
+            }
+        }
+    }
+
+    @import "footer";
+}

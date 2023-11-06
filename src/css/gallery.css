@@ -1,0 +1,321 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&family=Overlock:wght@400;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fcf7ff;
+  overflow-y: auto;
+}
+body .landing-page {
+  position: relative;
+  width: 100%;
+  height: 50%;
+}
+body .landing-page .background {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -20;
+}
+body .landing-page .background .bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+body .landing-page .background .filter-curtain {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+}
+body .landing-page .navbar {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  padding: 20px 100px;
+  z-index: 10;
+}
+body .landing-page .navbar .brand-img {
+  width: 120px;
+}
+body .landing-page .navbar .navigation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 50px;
+}
+body .landing-page .navbar .navigation li > .nav-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: xx-large;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: rgba(252, 247, 255, 0.6);
+  transition: all 200ms;
+}
+body .landing-page .navbar .navigation li > .nav-item:hover {
+  color: #fcf7ff;
+  cursor: pointer;
+}
+body .landing-page .navbar .navigation .dropdown .nav-item::after {
+  content: "⮟";
+  font-size: large;
+  margin: 5px;
+}
+body .landing-page .navbar .navigation .dropdown .subnav {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  background-color: #fcf7ff;
+  padding: 1.5rem;
+  border: 1px solid black;
+  border-radius: 1rem;
+  opacity: 0;
+  transition: all 300ms;
+}
+body .landing-page .navbar .navigation .dropdown .subnav .nav-link {
+  pointer-events: none;
+  font-size: xx-large;
+  font-weight: 400;
+  color: #1e1927;
+  transition: opacity 200ms;
+}
+body .landing-page .navbar .navigation .dropdown .subnav .nav-link:hover {
+  color: #00b4ff;
+}
+body .landing-page .navbar .navigation .dropdown .active {
+  opacity: 1;
+}
+body .landing-page .navbar .navigation .dropdown .active .nav-link {
+  pointer-events: all;
+}
+body .landing-page .sticky-navbar {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(18, 15, 23, 0.9);
+}
+body .landing-page .hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+  width: 100%;
+  height: calc(100% - 100px);
+}
+body .landing-page .hero .page-title {
+  font-size: 100px;
+  font-family: "Catamaran", sans-serif;
+  font-weight: 900;
+  line-height: 5rem;
+  color: #fcf7ff;
+  padding: 1rem 10rem;
+  border-radius: 1rem;
+  transform: translateY(-50px);
+}
+body .main {
+  width: 100%;
+}
+body .main .section {
+  width: 100%;
+  padding: 3rem 0;
+}
+body .main .section .title {
+  width: 100%;
+  font-size: 4rem;
+  font-family: "Overlock", sans-serif;
+  font-weight: 600;
+  text-align: center;
+  color: #0e1ec4;
+}
+body .main .section .title:hover {
+  cursor: default;
+}
+body .main .section .subtitle {
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-align: center;
+}
+body .main .section .subtitle:hover {
+  cursor: default;
+}
+body .main .albums-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 3rem 0;
+}
+body .main .albums-container .album {
+  width: 30%;
+  overflow: visible;
+}
+body .main .albums-container .album .album-title {
+  width: 100%;
+  font-size: xx-large;
+  font-weight: 600;
+  text-align: center;
+  color: #0e1ec4;
+  margin-bottom: 1rem;
+}
+body .main .albums-container .album .thumbnail {
+  box-shadow: 0 0 2rem rgba(30, 25, 39, 0.3);
+  aspect-ratio: 16/9;
+  border-radius: 1rem;
+  transition: all 400ms;
+}
+body .main .albums-container .album:hover {
+  cursor: pointer;
+}
+body .main .albums-container .active .thumbnail {
+  transform: translateY(-1rem);
+  box-shadow: 0 1rem 2rem rgba(30, 25, 39, 0.7);
+}
+body .main .live-album {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 70vh;
+}
+body .main .live-album .img-reel {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  width: 30%;
+  height: 100%;
+  background-color: #1e1927;
+  padding: 2rem 0;
+  border-radius: 1rem;
+  overflow-y: auto;
+}
+body .main .live-album .img-reel .img-container {
+  width: 45%;
+  aspect-ratio: 16/9;
+  border-radius: 0.5rem;
+}
+body .main .live-album .img-reel .img-container:hover {
+  border: 1px solid rgba(252, 247, 255, 0.4);
+  cursor: pointer;
+}
+body .main .live-album .img-reel .img-container-active {
+  border: 1px solid white;
+}
+body .main .live-album .img-reel::-webkit-scrollbar {
+  width: 0;
+}
+body .main .live-album .carousel {
+  position: relative;
+  width: 62.5%;
+  height: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 1rem;
+}
+body .main .live-album .carousel img {
+  position: absolute;
+  inset: 0;
+  transition: all 500ms ease;
+}
+body .footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  height: 25rem;
+  background-color: #1e1927;
+}
+body .footer .section {
+  width: 25%;
+  height: 100%;
+}
+body .footer .section .title {
+  font-size: 40px;
+  font-family: "Overlock", sans-serif;
+  font-weight: 600;
+  color: #fcf7ff;
+  padding: 30px 0;
+}
+body .footer .section .title:hover {
+  cursor: default;
+}
+body .footer .branding {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+body .footer .branding .brand-img {
+  width: 10rem;
+}
+body .footer .branding .quote,
+body .footer .branding .copyright-mark {
+  font-size: x-large;
+  font-family: "Overlock", sans-serif;
+  font-weight: 400;
+  color: #fcf7ff;
+  text-align: center;
+}
+body .footer .branding .copyright-mark {
+  font-family: "Roboto", sans-serif;
+}
+body .footer .branding .copyright-mark:hover {
+  cursor: default;
+}
+body .footer .links > .nav-links .nav-link {
+  display: inline-block;
+  font-size: xx-large;
+  font-weight: 400;
+  color: rgba(0, 180, 255, 0.6);
+  margin-bottom: 10px;
+  transition: all 200ms ease-in-out;
+}
+body .footer .links > .nav-links .nav-link:hover {
+  color: #00b4ff;
+}
+body .footer .services > .services-list .service {
+  display: inline-block;
+  font-size: x-large;
+  font-weight: 400;
+  color: rgba(252, 247, 255, 0.6);
+  margin-bottom: 5px;
+}
+body .footer .contacts {
+  display: flex;
+  flex-direction: column;
+}
+body .footer .contacts .contact {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+body .footer .contacts .contact .icon {
+  width: 2rem;
+  height: 2rem;
+  fill: #fcf7ff;
+}
+body .footer .contacts .contact .info {
+  display: inline-block;
+  font-size: x-large;
+  font-weight: 300;
+  color: #fcf7ff;
+  text-align: left;
+  margin-left: 15px;
+}
+
+/*# sourceMappingURL=gallery.css.map */

@@ -12,13 +12,14 @@
 
         <!-- CSS -->
         <link rel="stylesheet" href="/src/css/default.css" />
-        <link rel="stylesheet" href="/src/css/about-us.css" />
+        <link rel="stylesheet" href="/src/css/gallery.css" />
 
         <!-- JS -->
         <script defer src="/src/js/navbar.js"></script>
         <script defer src="/src/js/observer.js"></script>
+        <script defer src="/src/js/album-slider.js"></script>
 
-        <title>About | School Of Excellence</title>
+        <title>Gallery | School Of Excellence</title>
     </head>
     <body>
         <!-- Landing Page -->
@@ -84,110 +85,39 @@
 
         <!-- Page Content -->
         <main class="main">
-            <!-- About Section -->
-            <section class="section about-section" id="origin">
-                <h2 class="title">Our Origin</h2>
-                <div class="content-container">
-                    <h3 class="heading">Our Story</h3>
-                    <p class="context">
-                        The Education has been destroyed by many well known
-                        factors in our society. It has changed the mental
-                        approach of students and parents that there is no way to
-                        success without following the all existing malpractices.
-                        Keeping above facts in view, It was thought by well
-                        wishers and senior educationist of Sukkur city to
-                        develop School system where quality education on
-                        affording cost should be provided and students/parents
-                        understanding should be changed that success can only be
-                        achieved by getting quality education with innovative
-                        ways without malpractices. With this vision the School
-                        of Excellence was established in 2006. School of
-                        Excellence started functioning on 15th August 2006 from
-                        class one to class five with seven teachers and 03
-                        students, The number of student increased within short
-                        span of time and reached up to 63 students. The famous
-                        Educationist were the members of selection board for
-                        teachers of this school, They have decided that masters
-                        degree holders with 1st division from any HEC approved
-                        university will be selected as a teacher after passing
-                        the written test and demonstration. By the Grace of
-                        Almighty ALLAH, with these rules and regulations, hard
-                        working, Dedicated, Experienced teachers was appointed
-                        in this School. The admissions increased in every
-                        session and parents appreciation and demand has forced
-                        us to increase the capacity of school and also level
-                        from Montessori to College level, Now School of
-                        Excellence is having classes from P.G to Intermediate
-                        level and separate classes for Boys and Girls from class
-                        4 to Intermediate. Our aim is to prepare students to
-                        compete on national and international level and Prove
-                        that quality education and hard working is the only key
-                        to success.
-                    </p>
-                </div>
-                <div class="content-container">
-                    <h3 class="heading">Our Mission</h3>
-                    <p class="context">
-                        Mission of SOE is to establish, sustain and enhance
-                        itself as a quality-centric educational institution that
-                        provides excellent academic environment and
-                        opportunities for creating educated, productive, and
-                        responsible citizens of Pakistan through intellectual,
-                        and personal growth.
-                    </p>
-                </div>
-            </section>
+            <!-- Albums Section -->
+            <section class="section album-section">
+                <h2 class="title">SOE Event Gallery</h2>
+                <h4 class="subtitle">Choose any album to view it.</h4>
 
-            <!-- Authorities Section -->
-            <section class="section authorities-section" id="authorities">
-                <h1 class="title">Authorities</h1>
-                <div class="cards-container observable-element">
-                    <div class="card">
-                        <div class="head">
-                            <img
-                                src="/assets/profile_pics/founder.jpg"
-                                alt="Founder"
-                                class="picture" />
-                            <div class="headings">
-                                <h3 class="heading">Founder</h3>
-                                <h2 class="name">Mr. Jamal Uddin Unar</h2>
-                            </div>
-                        </div>
-                        <p class="context">
-                            I visualize a terrific and excellent future of
-                            School of Excellence which would gratify the needs
-                            of thousands of young students whose rich
-                            intellectual potentialities would be allowed to
-                            explore properly in SOE. The dynamic minds of the
-                            region will certainly contribute to make SOE a true
-                            seat of learning and sanctuary of peace, serenity
-                            and harmony.
-                        </p>
-                    </div>
-                    <div class="card">
-                        <div class="head">
-                            <img
-                                src="/assets/profile_pics/principal.jpg"
-                                alt="Principal"
-                                class="picture" />
-                            <div class="headings">
-                                <h3 class="heading">Principal</h3>
-                                <h2 class="name">Mr. Muhammad Servech</h2>
-                            </div>
-                        </div>
-                        <p class="context">
-                            The quest of purposeful knowledge symbolizes the
-                            only object of education that can't be substituted
-                            by any other aim. As a student here, you are a
-                            member of a privileged and distinguished cluster.
-                            Learning at our school is based on the fundamental
-                            principles of life. Teaching the children to be
-                            courageous, confident, disciplined, responsible and
-                            loyal one is the first precedence at SOE. Education
-                            at our school provides a foundation for a lifetime
-                            learning to become radiant stars of future.
-                        </p>
-                    </div>
+                <div class="albums-container">
+                    <button class="album active" data-album="annual_func_2015">
+                        <h3 class="album-title">Annual Function 2015</h3>
+                        <img
+                            src="/assets/gallery/annual_func_2015/1.jpg"
+                            alt="Thumbnail"
+                            class="thumbnail" />
+                    </button>
+                    <button class="album" data-album="exams">
+                        <h3 class="album-title">Annual Examination</h3>
+                        <img
+                            src="/assets/gallery/exams/1.jpg"
+                            alt="Thumbnail"
+                            class="thumbnail" />
+                    </button>
+                    <button class="album" data-album="annual_func_2016">
+                        <h3 class="album-title">Annual Function 2016</h3>
+                        <img
+                            src="/assets/gallery/annual_func_2016/1.jpg"
+                            alt="Thumbnail"
+                            class="thumbnail" />
+                    </button>
+                </div>
+
+                <div class="live-album observable-element">
+                    <div class="img-reel"></div>
+
+                    <div class="carousel"></div>
                 </div>
             </section>
         </main>
