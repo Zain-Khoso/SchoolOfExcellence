@@ -1,0 +1,161 @@
+@import "config";
+@import "utils";
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: $color-light;
+    overflow-y: auto;
+
+    .landing-page {
+        position: relative;
+
+        width: 100%;
+        height: 50%;
+
+        .background {
+            position: absolute;
+            inset: 0;
+
+            width: 100%;
+            height: 100%;
+            z-index: -20;
+
+            .bg-img {
+                position: absolute;
+                inset: 0;
+
+                width: 100%;
+                height: 100%;
+            }
+
+            .filter-curtain {
+                position: absolute;
+                inset: 0;
+
+                width: 100%;
+                height: 100%;
+                background-color: rgba(black, 0.6);
+                backdrop-filter: blur(5px);
+            }
+        }
+
+        @import "navbar";
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10rem;
+
+            width: 100%;
+            height: calc(100% - 100px);
+
+            .page-title {
+                font-size: 100px;
+                font-family: $font-heading;
+                font-weight: 900;
+                line-height: 5rem;
+                color: $color-light;
+                padding: 1rem 10rem;
+                border-radius: 1rem;
+                transform: translateY(-50px);
+            }
+        }
+    }
+
+    .main {
+        width: 100%;
+
+        .results {
+            width: 100%;
+            min-height: 70vh;
+            padding: 4rem 6rem;
+
+            .subtitle {
+                width: 100%;
+
+                font-size: xx-large;
+                font-weight: 400;
+                text-align: center;
+            }
+
+            .title {
+                width: 100%;
+
+                font-size: 3rem;
+                font-weight: 600;
+                text-align: center;
+                color: $color-primary;
+            }
+
+            .result-filters-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+
+                width: 100%;
+                margin: 3rem 0;
+
+                .context {
+                    font-size: xx-large;
+                    font-weight: 400;
+                }
+
+                .result-filters {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 2rem;
+
+                    .selection {
+                        font-size: xx-large;
+                        font-weight: 500;
+                        text-align: center;
+                        padding: 0.3rem;
+                        border: 2px solid $color-dark;
+                        border-radius: 0.8rem;
+
+                        .option {
+                            font-size: xx-large;
+                            font-weight: 400;
+                        }
+                    }
+                    .selection:hover {
+                        cursor: pointer;
+                    }
+
+                    .filter-btn {
+                        @include btn-dark-outline;
+                        font-size: xx-large;
+                        font-family: $font-text;
+                        font-weight: 600;
+                        color: $color-dark;
+                    }
+                    .filter-btn:hover {
+                        @include btn-dark-outline-hover;
+                        color: $color-light;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .pdf-view-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+
+                .pdf-view {
+                    width: 50%;
+                    aspect-ratio: 9/10;
+                    margin: auto;
+                }
+            }
+        }
+    }
+
+    @import "footer";
+}
