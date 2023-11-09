@@ -53,9 +53,9 @@ body {
             height: calc(100% - 100px);
 
             .page-title {
-                font-size: 100px;
+                font-size: 8rem;
                 font-family: $font-heading;
-                font-weight: 900;
+                font-weight: 700;
                 line-height: 5rem;
                 color: $color-light;
                 padding: 1rem 10rem;
@@ -68,27 +68,13 @@ body {
     .main {
         width: 100%;
 
+        .section {
+            @include section;
+        }
+
         .results {
-            width: 100%;
-            min-height: 70vh;
-            padding: 4rem 6rem;
-
-            .subtitle {
-                width: 100%;
-
-                font-size: xx-large;
-                font-weight: 400;
-                text-align: center;
-            }
-
-            .title {
-                width: 100%;
-
-                font-size: 3rem;
-                font-weight: 600;
-                text-align: center;
-                color: $color-primary;
-            }
+            height: fit-content;
+            min-height: 60vh;
 
             .result-filters-container {
                 display: flex;
@@ -101,7 +87,7 @@ body {
 
                 .context {
                     font-size: xx-large;
-                    font-weight: 400;
+                    font-weight: 600;
                 }
 
                 .result-filters {
@@ -114,7 +100,7 @@ body {
                         font-size: xx-large;
                         font-weight: 500;
                         text-align: center;
-                        padding: 0.3rem;
+                        padding: 1rem 2rem;
                         border: 2px solid $color-dark;
                         border-radius: 0.8rem;
 
@@ -128,16 +114,11 @@ body {
                     }
 
                     .filter-btn {
-                        @include btn-dark-outline;
-                        font-size: xx-large;
-                        font-family: $font-text;
-                        font-weight: 600;
-                        color: $color-dark;
+                        @include btn-svg-dark;
                     }
-                    .filter-btn:hover {
-                        @include btn-dark-outline-hover;
-                        color: $color-light;
-                        cursor: pointer;
+                    .filter-btn:hover,
+                    .filter-btn:focus {
+                        @include btn-svg-dark-hover;
                     }
                 }
             }
