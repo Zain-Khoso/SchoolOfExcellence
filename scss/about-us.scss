@@ -53,9 +53,9 @@ body {
             height: calc(100% - 100px);
 
             .page-title {
-                font-size: 100px;
+                font-size: 8rem;
                 font-family: $font-heading;
-                font-weight: 900;
+                font-weight: 700;
                 line-height: 5rem;
                 color: $color-light;
                 padding: 1rem 10rem;
@@ -69,133 +69,191 @@ body {
         width: 100%;
 
         .section {
-            width: 100%;
-            padding: 3rem 0;
-
-            .title {
-                width: 100%;
-                font-size: 4rem;
-                font-family: $font-subheading;
-                font-weight: 600;
-                text-align: center;
-                color: $color-primary;
-            }
-
-            .title:hover {
-                cursor: default;
-            }
+            @include section;
         }
 
         .about-section {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
-            gap: 3rem;
+            height: fit-content;
 
-            max-width: 1440px;
-            margin: 0px auto;
+            .section-header {
+                .title-container {
+                    gap: 1rem;
 
-            .content-container {
-                width: 100%;
-
-                .heading {
-                    font-size: 40px;
-                    font-family: $font-subheading;
-                    font-weight: 400;
-                    color: $color-primary;
-                    margin-bottom: 1rem;
+                    margin-left: -2rem;
                 }
-
-                .context {
-                    font-size: xx-large;
+                .subtitle {
                     font-weight: 300;
                 }
             }
 
-            .btn {
-                @include btn-primary;
-            }
-            .btn:hover,
-            .btn:focus {
-                @include btn-primary-hover;
+            .section-main {
+                display: flex;
+                flex-direction: column;
+                gap: 5rem;
+
+                max-width: 1440px;
+                max-height: calc(100% - 10rem);
+                margin: auto;
+
+                .content-container {
+                    width: 100%;
+
+                    .heading {
+                        font-size: 3rem;
+                        font-weight: 400;
+                        color: $color-primary;
+                    }
+                    .context {
+                        font-size: 2rem;
+                        font-weight: 400;
+                    }
+                }
             }
         }
 
         .authorities-section {
-            width: 100%;
-            text-align: center;
-            background-color: lighten($color-primary, 50%);
+            background-color: lighten($color-primary, 55%);
 
-            padding-bottom: 5rem;
-
-            .title {
-                margin-bottom: 3rem;
-            }
-
-            .cards-container {
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                row-gap: 2rem;
-                justify-content: space-evenly;
-
-                width: 100%;
+            .section-main {
                 max-width: 1440px;
+                height: calc(100% - 12rem);
                 margin: auto;
                 overflow: visible;
 
-                .card {
-                    width: 35rem;
-                    height: 40rem;
-                    background-color: $color-dark;
-                    padding: 2rem 1rem;
-                    border-radius: 1rem;
-                    transition: all 300ms;
+                .cards-container {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
 
-                    .head {
-                        display: flex;
-                        flex-direction: row;
-                        gap: 1rem;
+                    width: 100%;
+                    height: 100%;
+                    margin: auto;
+                    overflow: visible;
 
-                        .picture {
-                            width: 6rem;
-                            border-radius: 50%;
+                    .card {
+                        width: 100%;
+                        height: fit-content;
+                        background-color: $color-dark;
+                        padding: 2rem 3rem;
+                        border-radius: 1rem;
+                        transition: all 300ms;
+
+                        .head {
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            gap: 1rem;
+
+                            .picture {
+                                width: 6rem;
+                                border-radius: 50%;
+                            }
+
+                            .headings {
+                                .heading {
+                                    font-size: larger;
+                                    font-weight: 400;
+                                    text-transform: uppercase;
+                                    color: $color-secondary;
+                                }
+                                .name {
+                                    font-size: xx-large;
+                                    font-weight: 600;
+                                    letter-spacing: 2px;
+                                    text-transform: capitalize;
+                                    color: $color-light;
+                                }
+                            }
                         }
 
-                        .headings {
-                            .heading {
-                                font-size: larger;
-                                font-weight: 400;
-                                text-transform: uppercase;
-                                color: $color-secondary;
-                            }
-                            .name {
-                                font-size: xx-large;
-                                font-weight: 600;
-                                text-transform: capitalize;
-                                color: $color-light;
-                            }
+                        .context {
+                            width: 100%;
+                            font-size: x-large;
+                            font-weight: 400;
+                            text-transform: capitalize;
+                            letter-spacing: 1px;
+                            line-height: 2rem;
+                            color: $color-light;
+                            margin-top: 1rem;
                         }
                     }
 
-                    .context {
-                        width: 100%;
-                        font-size: x-large;
-                        font-weight: 400;
-                        text-transform: capitalize;
-                        letter-spacing: 2px;
-                        line-height: 2rem;
-                        color: $color-light;
-                        padding: 0 0.5rem;
-                        margin-top: 1rem;
+                    .card:hover {
+                        cursor: default;
+                        transform: translateY(-1rem);
+                        box-shadow: 0 0 2rem $color-dark;
+                    }
+                }
+            }
+        }
+
+        .facilities-section {
+            .section-header {
+                .title-container {
+                    overflow: visible;
+                    .svg-container {
+                        margin-top: -1.5rem;
+                    }
+                }
+            }
+
+            .section-main {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+
+                max-width: 1440px;
+                height: calc(100% - 12rem);
+                margin: auto;
+
+                .feature-tags-container {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: space-evenly;
+                    gap: 4rem;
+
+                    width: 100%;
+
+                    .feature-tag {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        gap: 2rem;
+
+                        width: 35rem;
+                        background-color: lighten($color-primary, 30%);
+                        padding: 1rem 2rem;
+                        border-radius: 2rem;
+
+                        .svg-container {
+                            width: 4rem;
+                            height: 4rem;
+                            padding: 0.5rem;
+
+                            svg {
+                                width: 100%;
+                                height: 100%;
+                                stroke-width: 0.5rem;
+                                fill: $color-dark;
+                                stroke: $color-dark;
+                            }
+                        }
+
+                        .text {
+                            font-size: xx-large;
+                            font-weight: 600;
+                        }
                     }
                 }
 
-                .card:hover {
-                    cursor: default;
-                    transform: translateY(-20px);
-                    box-shadow: 0 0 60px $color-dark;
+                .btn {
+                    @include btn-svg-primary;
+                }
+                .btn:hover,
+                .btn:active {
+                    @include btn-svg-primary-hover;
                 }
             }
         }
