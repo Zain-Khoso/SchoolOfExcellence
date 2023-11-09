@@ -1,14 +1,49 @@
 //  BUTTONS
+
+// Parent Simple Button
 @mixin btn {
     font-size: xx-large;
-    font-family: $font-subheading;
     font-weight: 400;
     color: $color-light;
-    padding: 10px 20px;
+    padding: 1rem 1.5rem;
     border: 2px solid;
-    border-radius: 20px;
+    border-radius: 1rem;
     transition: all 200ms ease-in-out;
 }
+
+// Parent Svg Button.
+@mixin btn-svg {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+
+    padding: 1rem 1.5rem;
+    border: 2px solid;
+    border-radius: 1rem;
+    transition: all 200ms ease-in-out;
+
+    .text {
+        font-size: 2rem;
+        font-weight: 400;
+        letter-spacing: 1px;
+        color: $color-light;
+    }
+
+    .svg-container {
+        width: 2rem;
+        height: 2rem;
+
+        > svg {
+            width: 100%;
+            height: 100%;
+            fill: $color-light;
+            stroke: $color-light;
+        }
+    }
+}
+
 //    Primary Buttons
 @mixin btn-primary {
     @include btn();
@@ -70,4 +105,127 @@
 @mixin btn-dark-outline-hover {
     background-color: $color-dark;
     cursor: pointer;
+}
+
+//    Svg Primary Buttons.
+@mixin btn-svg-primary {
+    @include btn-svg;
+
+    background-color: $color-primary;
+    border-color: $color-primary;
+
+    .text {
+        color: $color-light;
+    }
+
+    .svg-container {
+        > svg {
+            fill: $color-light;
+            stroke: $color-light;
+        }
+    }
+}
+@mixin btn-svg-primary-hover {
+    background-color: darken($color-primary, 5%);
+    border-color: darken($color-primary, 5%);
+}
+
+//    Svg Primary Buttons.
+@mixin btn-svg-secondary {
+    @include btn-svg;
+
+    background-color: $color-secondary;
+    border-color: $color-secondary;
+
+    .text {
+        color: $color-light;
+    }
+
+    .svg-container {
+        > svg {
+            fill: $color-light;
+            stroke: $color-light;
+        }
+    }
+}
+@mixin btn-svg-secondary-hover {
+    background-color: darken($color-secondary, 5%);
+    border-color: darken($color-secondary, 5%);
+}
+
+//    Svg Primary Buttons.
+@mixin btn-svg-dark {
+    @include btn-svg;
+
+    background-color: $color-dark;
+    border-color: $color-dark;
+
+    .text {
+        color: $color-light;
+    }
+
+    .svg-container {
+        > svg {
+            fill: $color-light;
+            stroke: $color-light;
+        }
+    }
+}
+@mixin btn-svg-dark-hover {
+    background-color: darken($color-dark, 5%);
+    border-color: darken($color-dark, 5%);
+}
+
+// Section.
+@mixin section {
+    width: 100%;
+    height: 100vh;
+    padding: 3rem;
+
+    .section-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+
+        width: 100%;
+        height: 10rem;
+        margin-bottom: 2rem;
+
+        .title-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+
+            width: 100%;
+
+            .svg-container {
+                width: 5rem;
+                height: 5rem;
+
+                > svg {
+                    width: 100%;
+                    fill: $color-primary;
+                }
+            }
+
+            .title {
+                font-size: 4rem;
+                font-family: $font-subheading;
+                font-weight: 600;
+                color: $color-primary;
+            }
+
+            .title:hover {
+                cursor: default;
+            }
+        }
+        .subtitle {
+            font-size: xx-large;
+            font-weight: 400;
+        }
+    }
 }
