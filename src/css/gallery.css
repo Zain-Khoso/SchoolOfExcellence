@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&family=Overlock:wght@400;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&family=Titillium+Web:wght@200;300;400;600;700;900&display=swap");
 body {
   width: 100vw;
   height: 100vh;
@@ -114,12 +114,11 @@ body .landing-page .hero {
   height: calc(100% - 100px);
 }
 body .landing-page .hero .page-title {
-  font-size: 100px;
-  font-family: "Catamaran", sans-serif;
-  font-weight: 900;
-  line-height: 5rem;
+  font-size: 8rem;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 700;
+  line-height: 10rem;
   color: #fcf7ff;
-  padding: 1rem 10rem;
   border-radius: 1rem;
   transform: translateY(-50px);
 }
@@ -128,40 +127,67 @@ body .main {
 }
 body .main .section {
   width: 100%;
-  padding: 3rem 0;
+  height: 100vh;
+  padding: 3rem;
 }
-body .main .section .title {
+body .main .section .section-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
   width: 100%;
+  height: 10rem;
+  margin-bottom: 2rem;
+}
+body .main .section .section-header .title-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+body .main .section .section-header .title-container .svg-container {
+  width: 5rem;
+  height: 5rem;
+}
+body .main .section .section-header .title-container .svg-container > svg {
+  width: 100%;
+  fill: #0e1ec4;
+}
+body .main .section .section-header .title-container .title {
   font-size: 4rem;
-  font-family: "Overlock", sans-serif;
+  font-family: "Comfortaa", sans-serif;
   font-weight: 600;
-  text-align: center;
   color: #0e1ec4;
 }
-body .main .section .title:hover {
+body .main .section .section-header .title-container .title:hover {
   cursor: default;
 }
-body .main .section .subtitle {
-  width: 100%;
-  font-size: 1.5rem;
+body .main .section .section-header .subtitle {
+  font-size: xx-large;
   font-weight: 400;
-  text-align: center;
 }
-body .main .section .subtitle:hover {
-  cursor: default;
+body .main .album-section {
+  height: fit-content;
 }
-body .main .albums-container {
+body .main .album-section .section-header .title-container .svg-container > svg {
+  fill: none;
+  stroke: #0e1ec4;
+}
+body .main .album-section .albums-container {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   width: 100%;
   padding: 3rem 0;
 }
-body .main .albums-container .album {
+body .main .album-section .albums-container .album {
   width: 30%;
   overflow: visible;
 }
-body .main .albums-container .album .album-title {
+body .main .album-section .albums-container .album .album-title {
   width: 100%;
   font-size: xx-large;
   font-weight: 600;
@@ -169,20 +195,20 @@ body .main .albums-container .album .album-title {
   color: #0e1ec4;
   margin-bottom: 1rem;
 }
-body .main .albums-container .album .thumbnail {
+body .main .album-section .albums-container .album .thumbnail {
   box-shadow: 0 0 2rem rgba(30, 25, 39, 0.3);
   aspect-ratio: 16/9;
   border-radius: 1rem;
   transition: all 400ms;
 }
-body .main .albums-container .album:hover {
+body .main .album-section .albums-container .album:hover {
   cursor: pointer;
 }
-body .main .albums-container .active .thumbnail {
+body .main .album-section .albums-container .active .thumbnail {
   transform: translateY(-1rem);
   box-shadow: 0 1rem 2rem rgba(30, 25, 39, 0.7);
 }
-body .main .live-album {
+body .main .album-section .live-album {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -190,7 +216,7 @@ body .main .live-album {
   width: 100%;
   height: 70vh;
 }
-body .main .live-album .img-reel {
+body .main .album-section .live-album .img-reel {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -203,29 +229,29 @@ body .main .live-album .img-reel {
   border-radius: 1rem;
   overflow-y: auto;
 }
-body .main .live-album .img-reel .img-container {
+body .main .album-section .live-album .img-reel .img-container {
   width: 45%;
   aspect-ratio: 16/9;
   border-radius: 0.5rem;
 }
-body .main .live-album .img-reel .img-container:hover {
+body .main .album-section .live-album .img-reel .img-container:hover {
   border: 1px solid rgba(252, 247, 255, 0.4);
   cursor: pointer;
 }
-body .main .live-album .img-reel .img-container-active {
+body .main .album-section .live-album .img-reel .img-container-active {
   border: 1px solid white;
 }
-body .main .live-album .img-reel::-webkit-scrollbar {
+body .main .album-section .live-album .img-reel::-webkit-scrollbar {
   width: 0;
 }
-body .main .live-album .carousel {
+body .main .album-section .live-album .carousel {
   position: relative;
   width: 62.5%;
   height: 100%;
   aspect-ratio: 16/9;
   border-radius: 1rem;
 }
-body .main .live-album .carousel img {
+body .main .album-section .live-album .carousel img {
   position: absolute;
   inset: 0;
   transition: all 500ms ease;
@@ -245,7 +271,7 @@ body .footer .section {
 }
 body .footer .section .title {
   font-size: 40px;
-  font-family: "Overlock", sans-serif;
+  font-family: "Comfortaa", sans-serif;
   font-weight: 600;
   color: #fcf7ff;
   padding: 30px 0;
@@ -265,7 +291,7 @@ body .footer .branding .brand-img {
 body .footer .branding .quote,
 body .footer .branding .copyright-mark {
   font-size: x-large;
-  font-family: "Overlock", sans-serif;
+  font-family: "Comfortaa", sans-serif;
   font-weight: 400;
   color: #fcf7ff;
   text-align: center;
