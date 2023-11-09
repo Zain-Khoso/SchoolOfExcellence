@@ -189,6 +189,7 @@ body .landing-page .hero .hero-context .cta-group .btn:nth-child(1):hover,
 body .landing-page .hero .hero-context .cta-group .btn:nth-child(1):focus {
   background-color: #0c1aac;
   border-color: #0c1aac;
+  cursor: pointer;
 }
 body .landing-page .hero .hero-context .cta-group .btn:nth-child(2) {
   font-size: xx-large;
@@ -319,6 +320,7 @@ body .main .about .section-main .btn:hover,
 body .main .about .section-main .btn:focus {
   background-color: #0c1aac;
   border-color: #0c1aac;
+  cursor: pointer;
 }
 body .main .availablity {
   background-color: #d5d8fc;
@@ -668,6 +670,7 @@ body .main .cta-section .cta .svg-container {
 body .main .cta-section .cta:hover {
   background-color: #00a2e6;
   border-color: #00a2e6;
+  cursor: pointer;
 }
 body .main .statistics {
   height: fit-content;

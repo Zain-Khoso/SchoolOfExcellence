@@ -353,6 +353,7 @@ body .main .facilities-section .section-main .btn:hover,
 body .main .facilities-section .section-main .btn:active {
   background-color: #0c1aac;
   border-color: #0c1aac;
+  cursor: pointer;
 }
 body .footer {
   display: flex;

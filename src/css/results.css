@@ -247,6 +247,7 @@ body .main .results .result-filters-container .result-filters .filter-btn:hover,
 body .main .results .result-filters-container .result-filters .filter-btn:focus {
   background-color: #120f17;
   border-color: #120f17;
+  cursor: pointer;
 }
 body .main .results .pdf-view-container {
   display: flex;
