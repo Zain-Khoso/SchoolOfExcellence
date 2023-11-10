@@ -112,7 +112,7 @@ body {
         }
 
         .authorities-section {
-            background-color: lighten($color-primary, 55%);
+            background-color: lighten($color-primary, 50%);
 
             .section-main {
                 max-width: 1440px;
@@ -215,6 +215,7 @@ body {
                     gap: 4rem;
 
                     width: 100%;
+                    overflow: visible;
 
                     .feature-tag {
                         display: flex;
@@ -226,6 +227,7 @@ body {
                         background-color: lighten($color-primary, 30%);
                         padding: 1rem 2rem;
                         border-radius: 2rem;
+                        transition: all 200ms ease-in;
 
                         .svg-container {
                             width: 4rem;
@@ -245,6 +247,11 @@ body {
                             font-size: xx-large;
                             font-weight: 600;
                         }
+                    }
+
+                    .feature-tag:hover {
+                        transform: translateY(-0.2rem);
+                        box-shadow: 0.1rem 0.5rem 0.5rem rgba($color-dark, 0.3);
                     }
                 }
 

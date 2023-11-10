@@ -201,7 +201,7 @@ body .main .about-section .section-main .content-container .context {
   font-weight: 400;
 }
 body .main .authorities-section {
-  background-color: #edeefe;
+  background-color: #d5d8fc;
 }
 body .main .authorities-section .section-main {
   max-width: 1440px;
@@ -286,6 +286,7 @@ body .main .facilities-section .section-main .feature-tags-container {
   justify-content: space-evenly;
   gap: 4rem;
   width: 100%;
+  overflow: visible;
 }
 body .main .facilities-section .section-main .feature-tags-container .feature-tag {
   display: flex;
@@ -296,6 +297,7 @@ body .main .facilities-section .section-main .feature-tags-container .feature-ta
   background-color: #7681f5;
   padding: 1rem 2rem;
   border-radius: 2rem;
+  transition: all 200ms ease-in;
 }
 body .main .facilities-section .section-main .feature-tags-container .feature-tag .svg-container {
   width: 4rem;
@@ -312,6 +314,10 @@ body .main .facilities-section .section-main .feature-tags-container .feature-ta
 body .main .facilities-section .section-main .feature-tags-container .feature-tag .text {
   font-size: xx-large;
   font-weight: 600;
+}
+body .main .facilities-section .section-main .feature-tags-container .feature-tag:hover {
+  transform: translateY(-0.2rem);
+  box-shadow: 0.5rem 1rem 1rem rgba(30, 25, 39, 0.3);
 }
 body .main .facilities-section .section-main .btn {
   display: flex;
