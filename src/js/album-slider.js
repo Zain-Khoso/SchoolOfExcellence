@@ -6,7 +6,6 @@ const elem_liveAlbum = document.querySelector(".live-album");
 const elem_albums = Array.from(elem_albumsContainer.querySelectorAll(".album"));
 const elem_imgReel = elem_liveAlbum.querySelector(".img-reel");
 const elem_carousel = elem_liveAlbum.querySelector(".carousel");
-const elem_carouselImages = Array.from(elem_carousel.querySelectorAll("img"));
 
 // Page Data.
 const intervals = [];
@@ -16,20 +15,21 @@ const totalNumberOfSlides = 10;
 let sliderTouchStart = 0;
 
 // Functions.
-const repositionTheSlides = function (currSlideIndex) {
+const repositionTheSlides = function () {
+    const activeSlideIndex = 4;
+    const liveImgs = Array.from(elem_carousel.querySelectorAll("img"));
+
     // Positioning all the slides correctly to their new position.
-    elem_carousel.querySelectorAll("img").forEach((slide, index) => {
+    liveImgs.forEach((slide, index) => {
         slide.style.transform = `translateX(${
-            rectOfCarousel.width * (index - currSlideIndex)
+            rectOfCarousel.width * (index - activeSlideIndex)
         }px)`;
-        currSlideIndex === index
-            ? slide.classList.add("active")
-            : slide.classList.remove("active");
     });
 
     // Activiting the img in the img reel accordingly.
-    elem_imgReel.querySelectorAll(".img-container").forEach((slide, index) => {
-        currSlideIndex === index
+    elem_imgReel.querySelectorAll(".img-container").forEach((slide) => {
+        liveImgs.at(activeSlideIndex).getAttribute("src") ===
+        slide.children[0].getAttribute("src")
             ? slide.classList.add("img-container-active")
             : slide.classList.remove("img-container-active");
     });
@@ -64,29 +64,25 @@ const loadSlides = function (batchName) {
     }
 
     // Positioning the slides properly.
-    repositionTheSlides(0);
+    repositionTheSlides();
 };
 
 const goToNextSlide = function () {
-    const elem_slides = elem_carousel.querySelectorAll("img");
-    const elem_currActiveSlide = elem_carousel.querySelector(".active");
-    let nextSlideIndex =
-        Array.from(elem_slides).indexOf(elem_currActiveSlide) + 1;
+    const elem_slides = Array.from(elem_carousel.querySelectorAll("img"));
+    const elem_removed = elem_slides.shift();
+    elem_removed.remove();
+    elem_carousel.appendChild(elem_removed);
 
-    if (nextSlideIndex === elem_slides.length) nextSlideIndex = 0;
-
-    repositionTheSlides(nextSlideIndex);
+    repositionTheSlides();
 };
 
 const goToPrevSlide = function () {
-    const elem_slides = elem_carousel.querySelectorAll("img");
-    const elem_currActiveSlide = elem_carousel.querySelector(".active");
-    let prevSlideIndex =
-        Array.from(elem_slides).indexOf(elem_currActiveSlide) - 1;
+    const elem_slides = Array.from(elem_carousel.querySelectorAll("img"));
+    const elem_removed = elem_slides.pop();
+    elem_removed.remove();
+    elem_carousel.insertBefore(elem_removed, elem_carousel.children[0]);
 
-    if (prevSlideIndex < 0) prevSlideIndex = elem_slides.length - 1;
-
-    repositionTheSlides(prevSlideIndex);
+    repositionTheSlides();
 };
 
 const goToSlide = function (event) {
@@ -94,10 +90,38 @@ const goToSlide = function (event) {
         elem_imgReel.querySelectorAll(".img-container")
     );
     const targetElem = event.target.closest(".img-container");
+    const elem_slides = Array.from(elem_carousel.querySelectorAll("img"));
 
+    // Hadling event bubbling properly.
     if (!reelImgs.includes(targetElem)) return;
 
-    repositionTheSlides(reelImgs.indexOf(targetElem));
+    // Getting the index of slides which were moved.
+    const clickedSlideIndex = elem_slides.findIndex((elem) => {
+        return (
+            elem.getAttribute("src") ===
+            targetElem.querySelector("img").getAttribute("src")
+        );
+    });
+    const numOfMovedSlides = clickedSlideIndex - 5;
+
+    // Repositioning the slides inside thier container.
+    if (numOfMovedSlides >= 0) {
+        const elem_removed = elem_slides.slice(0, numOfMovedSlides + 1);
+
+        elem_removed.forEach((elem) => {
+            elem.remove();
+            elem_carousel.appendChild(elem);
+        });
+    } else {
+        const elem_removed = elem_slides.slice(numOfMovedSlides + 1);
+        console.log("YES!");
+        elem_removed.forEach((elem) => {
+            elem.remove();
+            elem_carousel.insertBefore(elem, elem_carousel.children[0]);
+        });
+    }
+
+    repositionTheSlides();
 
     resetSliderInterval();
 };
