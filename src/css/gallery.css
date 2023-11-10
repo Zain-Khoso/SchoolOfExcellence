@@ -257,91 +257,190 @@ body .main .album-section .live-album .carousel img {
   transition: all 500ms ease;
 }
 body .footer {
+  width: 100%;
+  background-color: #1e1927;
+}
+body .footer .content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 2rem 0;
+}
+body .footer .content .content-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+body .footer .content .content-list .title {
+  font-size: 3rem;
+  font-weight: 400;
+  color: rgba(252, 247, 255, 0.7);
+  margin-bottom: 1rem;
+}
+body .footer .content .content-list .nav-link {
+  font-size: 1.7rem;
+  font-weight: 400;
+  color: rgba(0, 180, 255, 0.8);
+  padding-left: 5px;
+  transition: all 200ms;
+}
+body .footer .content .content-list .nav-link:hover,
+body .footer .content .content-list .nav-link:active {
+  color: #00b4ff;
+}
+body .footer .content .content-list .item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+}
+body .footer .content .content-list .item .svg-container {
+  width: 2rem;
+  height: 2rem;
+}
+body .footer .content .content-list .item .svg-container > svg {
+  width: 100%;
+  height: 100%;
+  fill: rgba(252, 247, 255, 0.7);
+  stroke: rgba(252, 247, 255, 0.7);
+  transition: all 200ms;
+}
+body .footer .content .content-list .item .text {
+  font-size: 1.7rem;
+  font-weight: 300;
+  color: rgba(252, 247, 255, 0.6);
+  padding-left: 5px;
+  transition: all 200ms;
+}
+body .footer .content .content-list .item:hover {
+  cursor: default;
+}
+body .footer .content .content-list .item:hover .svg-container > svg {
+  fill: #fcf7ff;
+  stroke: #fcf7ff;
+}
+body .footer .content .content-list .item:hover .text {
+  color: #fcf7ff;
+}
+body .footer .content .content-list .creds-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-start;
-  width: 100%;
-  height: 25rem;
-  background-color: #1e1927;
-}
-body .footer .section {
-  width: 25%;
-  height: 100%;
-}
-body .footer .section .title {
-  font-size: 40px;
-  font-family: "Comfortaa", sans-serif;
-  font-weight: 600;
-  color: #fcf7ff;
-  padding: 30px 0;
-}
-body .footer .section .title:hover {
-  cursor: default;
-}
-body .footer .branding {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
   align-items: center;
+  width: 25rem;
+  height: 4rem;
+  background-color: rgba(252, 247, 255, 0.9);
+  border: 2px solid #00b4ff;
+  border-radius: 3rem;
+  margin-bottom: 3rem;
 }
-body .footer .branding .brand-img {
-  width: 10rem;
-}
-body .footer .branding .quote,
-body .footer .branding .copyright-mark {
-  font-size: x-large;
-  font-family: "Comfortaa", sans-serif;
-  font-weight: 400;
-  color: #fcf7ff;
-  text-align: center;
-}
-body .footer .branding .copyright-mark {
-  font-family: "Roboto", sans-serif;
-}
-body .footer .branding .copyright-mark:hover {
-  cursor: default;
-}
-body .footer .links > .nav-links .nav-link {
-  display: inline-block;
+body .footer .content .content-list .creds-container .email {
+  flex: 1;
+  height: 100%;
   font-size: xx-large;
   font-weight: 400;
-  color: rgba(0, 180, 255, 0.6);
-  margin-bottom: 10px;
-  transition: all 200ms ease-in-out;
+  padding: 0.5rem 1rem;
 }
-body .footer .links > .nav-links .nav-link:hover {
-  color: #00b4ff;
-}
-body .footer .services > .services-list .service {
-  display: inline-block;
-  font-size: x-large;
-  font-weight: 400;
-  color: rgba(252, 247, 255, 0.6);
-  margin-bottom: 5px;
-}
-body .footer .contacts {
+body .footer .content .content-list .creds-container .btn {
   display: flex;
-  flex-direction: column;
-}
-body .footer .contacts .contact {
-  display: flex;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  width: 100%;
-  margin-bottom: 20px;
+  gap: 0.5rem;
+  padding: 1rem 1.5rem;
+  border: 2px solid;
+  border-radius: 1rem;
+  transition: all 200ms ease-in-out;
+  background-color: #00b4ff;
+  border-color: #00b4ff;
+  height: 100%;
+  padding: 0 1rem;
+  border-radius: 0;
 }
-body .footer .contacts .contact .icon {
+body .footer .content .content-list .creds-container .btn .text {
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #fcf7ff;
+}
+body .footer .content .content-list .creds-container .btn .svg-container {
   width: 2rem;
   height: 2rem;
-  fill: #fcf7ff;
 }
-body .footer .contacts .contact .info {
-  display: inline-block;
-  font-size: x-large;
-  font-weight: 300;
+body .footer .content .content-list .creds-container .btn .svg-container > svg {
+  width: 100%;
+  height: 100%;
+  fill: #fcf7ff;
+  stroke: #fcf7ff;
+}
+body .footer .content .content-list .creds-container .btn .text {
   color: #fcf7ff;
-  text-align: left;
-  margin-left: 15px;
+}
+body .footer .content .content-list .creds-container .btn .svg-container > svg {
+  fill: #fcf7ff;
+  stroke: #fcf7ff;
+}
+body .footer .content .content-list .creds-container .btn:hover,
+body .footer .content .content-list .creds-container .btn:focus {
+  background-color: #00a2e6;
+  border-color: #00a2e6;
+  cursor: pointer;
+}
+body .footer .content .content-list .quote {
+  width: 100%;
+  font-size: x-large;
+  font-weight: 400;
+  text-align: center;
+  color: rgba(252, 247, 255, 0.6);
+}
+body .footer .branding-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-height: 10rem;
+  background-color: #2a2337;
+  padding: 0 3rem;
+}
+body .footer .branding-bar .brand-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+body .footer .branding-bar .brand-container .img-container {
+  width: 8rem;
+  height: fit-content;
+}
+body .footer .branding-bar .brand-container .copyrights {
+  font-size: x-large;
+  font-weight: 400;
+  color: rgba(252, 247, 255, 0.8);
+}
+body .footer .branding-bar .socials-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+body .footer .branding-bar .socials-container .btn {
+  width: 3rem;
+  height: 3rem;
+}
+body .footer .branding-bar .socials-container .btn > svg {
+  width: 100%;
+  height: 100%;
+  fill: rgba(0, 180, 255, 0.5);
+  stroke: rgba(0, 180, 255, 0.5);
+  transition: all 200ms;
+}
+body .footer .branding-bar .socials-container .btn:hover > svg {
+  fill: #00b4ff;
+  stroke: #00b4ff;
 }
 
 /*# sourceMappingURL=gallery.css.map */

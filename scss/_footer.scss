@@ -1,109 +1,181 @@
 .footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-
     width: 100%;
-    height: 25rem;
     background-color: $color-dark;
 
-    .section {
-        width: 25%;
-        height: 100%;
-
-        .title {
-            font-size: 40px;
-            font-family: $font-subheading;
-            font-weight: 600;
-            color: $color-light;
-            padding: 30px 0;
-        }
-
-        .title:hover {
-            cursor: default;
-        }
-    }
-
-    .branding {
+    .content {
         display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
+        flex-direction: row;
+        justify-content: space-evenly;
 
-        .brand-img {
-            width: 10rem;
-        }
+        width: 100%;
+        padding: 2rem 0;
 
-        .quote,
-        .copyright-mark {
-            font-size: x-large;
-            font-family: $font-subheading;
-            font-weight: 400;
-            color: $color-light;
-            text-align: center;
-        }
-
-        .copyright-mark {
-            font-family: $font-text;
-        }
-
-        .copyright-mark:hover {
-            cursor: default;
-        }
-    }
-
-    .links > .nav-links {
-        .nav-link {
-            display: inline-block;
-
-            font-size: xx-large;
-            font-weight: 400;
-            color: rgba($color-secondary, 0.6);
-            margin-bottom: 10px;
-            transition: all 200ms ease-in-out;
-        }
-
-        .nav-link:hover {
-            color: $color-secondary;
-        }
-    }
-
-    .services > .services-list {
-        .service {
-            display: inline-block;
-
-            font-size: x-large;
-            font-weight: 400;
-            color: rgba($color-light, 0.6);
-            margin-bottom: 5px;
-        }
-    }
-
-    .contacts {
-        display: flex;
-        flex-direction: column;
-
-        .contact {
+        .content-list {
             display: flex;
-            align-items: center;
+            flex-direction: column;
+            gap: 0.8rem;
 
-            width: 100%;
-            margin-bottom: 20px;
-
-            .icon {
-                width: 2rem;
-                height: 2rem;
-                fill: $color-light;
+            .title {
+                font-size: 3rem;
+                font-weight: 400;
+                color: rgba($color-light, 0.7);
+                margin-bottom: 1rem;
             }
 
-            .info {
-                display: inline-block;
+            .nav-link {
+                font-size: 1.7rem;
+                font-weight: 400;
+                color: rgba($color-secondary, 0.8);
+                padding-left: 5px;
+                transition: all 200ms;
+            }
+
+            .nav-link:hover,
+            .nav-link:active {
+                color: $color-secondary;
+            }
+
+            .item {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 0.3rem;
+
+                .svg-container {
+                    width: 2rem;
+                    height: 2rem;
+
+                    > svg {
+                        width: 100%;
+                        height: 100%;
+                        fill: rgba($color-light, 0.7);
+                        stroke: rgba($color-light, 0.7);
+                        transition: all 200ms;
+                    }
+                }
+
+                .text {
+                    font-size: 1.7rem;
+                    font-weight: 300;
+                    color: rgba($color-light, 0.6);
+                    padding-left: 5px;
+                    transition: all 200ms;
+                }
+            }
+
+            .item:hover {
+                cursor: default;
+
+                .svg-container {
+                    > svg {
+                        fill: $color-light;
+                        stroke: $color-light;
+                    }
+                }
+
+                .text {
+                    color: $color-light;
+                }
+            }
+
+            .creds-container {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+
+                width: 25rem;
+                height: 4rem;
+                background-color: rgba($color-light, 0.9);
+                border: 2px solid $color-secondary;
+                border-radius: 3rem;
+                margin-bottom: 3rem;
+
+                .email {
+                    flex: 1;
+
+                    height: 100%;
+                    font-size: xx-large;
+                    font-weight: 400;
+                    padding: 0.5rem 1rem;
+                }
+
+                .btn {
+                    @include btn-svg-secondary;
+                    height: 100%;
+                    padding: 0 1rem;
+                    border-radius: 0;
+                }
+                .btn:hover,
+                .btn:focus {
+                    @include btn-svg-secondary-hover;
+                }
+            }
+
+            .quote {
+                width: 100%;
                 font-size: x-large;
-                font-weight: 300;
-                color: $color-light;
-                text-align: left;
-                margin-left: 15px;
+                font-weight: 400;
+                text-align: center;
+                color: rgba($color-light, 0.6);
+            }
+        }
+    }
+
+    .branding-bar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 100%;
+        min-height: 10rem;
+        background-color: lighten($color-dark, 5%);
+        padding: 0 3rem;
+
+        .brand-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+
+            .img-container {
+                width: 8rem;
+                height: fit-content;
+            }
+
+            .copyrights {
+                font-size: x-large;
+                font-weight: 400;
+                color: rgba($color-light, 0.8);
+            }
+        }
+
+        .socials-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 2rem;
+
+            .btn {
+                width: 3rem;
+                height: 3rem;
+
+                > svg {
+                    width: 100%;
+                    height: 100%;
+                    fill: rgba($color-secondary, 0.5);
+                    stroke: rgba($color-secondary, 0.5);
+                    transition: all 200ms;
+                }
+            }
+            .btn:hover {
+                > svg {
+                    fill: $color-secondary;
+                    stroke: $color-secondary;
+                }
             }
         }
     }
