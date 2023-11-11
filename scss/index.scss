@@ -92,6 +92,7 @@ body {
 
                     width: 100%;
                     margin-top: 30px;
+                    overflow: visible;
 
                     .btn:nth-child(1) {
                         @include btn-svg-primary;
@@ -100,9 +101,20 @@ body {
                     .btn:nth-child(1):hover,
                     .btn:nth-child(1):focus {
                         @include btn-svg-primary-hover;
+
+                        .text {
+                            color: $color-light;
+                        }
+
+                        .svg-container > svg {
+                            fill: $color-light;
+                            stroke: $color-light;
+                        }
                     }
                     .btn:nth-child(2) {
                         @include btn-primary-outline;
+
+                        color: $color-light;
                     }
 
                     .btn:nth-child(2):hover,
@@ -533,6 +545,14 @@ body {
 
             .cta:hover {
                 @include btn-svg-secondary-hover;
+
+                .text {
+                    color: $color-light;
+                }
+                .svg-container > svg {
+                    fill: $color-light;
+                    stroke: $color-light;
+                }
             }
         }
 

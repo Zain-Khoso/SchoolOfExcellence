@@ -263,18 +263,7 @@ body {
                 }
                 .btn:hover,
                 .btn:active {
-                    background-color: transparent;
-                    border: 5px solid none;
-                    outline: 5px solid $color-primary;
-
-                    .svg-container > svg {
-                        fill: $color-primary;
-                        stroke: $color-primary;
-                    }
-
-                    .text {
-                        color: $color-primary;
-                    }
+                    @include btn-svg-primary-hover;
                 }
             }
         }

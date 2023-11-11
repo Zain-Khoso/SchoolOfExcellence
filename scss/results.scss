@@ -84,6 +84,7 @@ body {
 
                 width: 100%;
                 margin: 3rem 0;
+                overflow: visible;
 
                 .context {
                     font-size: xx-large;
@@ -95,6 +96,8 @@ body {
                     flex-direction: row;
                     align-items: center;
                     gap: 2rem;
+
+                    overflow: visible;
 
                     .selection {
                         font-size: xx-large;
@@ -115,6 +118,10 @@ body {
 
                     .filter-btn {
                         @include btn-svg-dark;
+
+                        .svg-container > svg {
+                            stroke-width: 0.2px;
+                        }
                     }
                     .filter-btn:hover,
                     .filter-btn:focus {

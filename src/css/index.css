@@ -148,6 +148,7 @@ body .landing-page .hero .hero-context .cta-group {
   gap: 100px;
   width: 100%;
   margin-top: 30px;
+  overflow: visible;
 }
 body .landing-page .hero .hero-context .cta-group .btn:nth-child(1) {
   display: flex;
@@ -156,17 +157,14 @@ body .landing-page .hero .hero-context .cta-group .btn:nth-child(1) {
   align-items: center;
   gap: 0.5rem;
   padding: 1rem 1.5rem;
-  border: 2px solid;
   border-radius: 1rem;
   transition: all 200ms ease-in-out;
   background-color: #0e1ec4;
-  border-color: #0e1ec4;
 }
 body .landing-page .hero .hero-context .cta-group .btn:nth-child(1) .text {
   font-size: 2rem;
   font-weight: 400;
   letter-spacing: 1px;
-  color: #fcf7ff;
 }
 body .landing-page .hero .hero-context .cta-group .btn:nth-child(1) .svg-container {
   width: 2rem;
@@ -175,8 +173,6 @@ body .landing-page .hero .hero-context .cta-group .btn:nth-child(1) .svg-contain
 body .landing-page .hero .hero-context .cta-group .btn:nth-child(1) .svg-container > svg {
   width: 100%;
   height: 100%;
-  fill: #fcf7ff;
-  stroke: #fcf7ff;
 }
 body .landing-page .hero .hero-context .cta-group .btn:nth-child(1) .text {
   color: #fcf7ff;
@@ -187,23 +183,44 @@ body .landing-page .hero .hero-context .cta-group .btn:nth-child(1) .svg-contain
 }
 body .landing-page .hero .hero-context .cta-group .btn:nth-child(1):hover,
 body .landing-page .hero .hero-context .cta-group .btn:nth-child(1):focus {
-  background-color: #0c1aac;
-  border-color: #0c1aac;
+  background-color: transparent;
+  outline: 3px solid #0e1ec4;
   cursor: pointer;
 }
-body .landing-page .hero .hero-context .cta-group .btn:nth-child(2) {
-  font-size: xx-large;
-  font-weight: 400;
+body .landing-page .hero .hero-context .cta-group .btn:nth-child(1):hover .text,
+body .landing-page .hero .hero-context .cta-group .btn:nth-child(1):focus .text {
+  color: #0e1ec4;
+}
+body .landing-page .hero .hero-context .cta-group .btn:nth-child(1):hover .svg-container > svg,
+body .landing-page .hero .hero-context .cta-group .btn:nth-child(1):focus .svg-container > svg {
+  fill: #0e1ec4;
+  stroke: #0e1ec4;
+}
+body .landing-page .hero .hero-context .cta-group .btn:nth-child(1):hover .text,
+body .landing-page .hero .hero-context .cta-group .btn:nth-child(1):focus .text {
   color: #fcf7ff;
+}
+body .landing-page .hero .hero-context .cta-group .btn:nth-child(1):hover .svg-container > svg,
+body .landing-page .hero .hero-context .cta-group .btn:nth-child(1):focus .svg-container > svg {
+  fill: #fcf7ff;
+  stroke: #fcf7ff;
+}
+body .landing-page .hero .hero-context .cta-group .btn:nth-child(2) {
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 1px;
   padding: 1rem 1.5rem;
-  border: 2px solid;
   border-radius: 1rem;
-  transition: all 200ms ease-in-out;
-  border-color: #0e1ec4;
+  transition: all 200ms ease-in;
+  color: #0e1ec4;
+  outline: 3px solid #0e1ec4;
+  color: #fcf7ff;
 }
 body .landing-page .hero .hero-context .cta-group .btn:nth-child(2):hover,
 body .landing-page .hero .hero-context .cta-group .btn:nth-child(2):focus {
+  color: #fcf7ff;
   background-color: #0e1ec4;
+  outline: none;
   cursor: pointer;
 }
 body .landing-page .hero .hero-img {
@@ -287,17 +304,14 @@ body .main .about .section-main .btn {
   align-items: center;
   gap: 0.5rem;
   padding: 1rem 1.5rem;
-  border: 2px solid;
   border-radius: 1rem;
   transition: all 200ms ease-in-out;
   background-color: #0e1ec4;
-  border-color: #0e1ec4;
 }
 body .main .about .section-main .btn .text {
   font-size: 2rem;
   font-weight: 400;
   letter-spacing: 1px;
-  color: #fcf7ff;
 }
 body .main .about .section-main .btn .svg-container {
   width: 2rem;
@@ -306,8 +320,6 @@ body .main .about .section-main .btn .svg-container {
 body .main .about .section-main .btn .svg-container > svg {
   width: 100%;
   height: 100%;
-  fill: #fcf7ff;
-  stroke: #fcf7ff;
 }
 body .main .about .section-main .btn .text {
   color: #fcf7ff;
@@ -318,9 +330,18 @@ body .main .about .section-main .btn .svg-container > svg {
 }
 body .main .about .section-main .btn:hover,
 body .main .about .section-main .btn:focus {
-  background-color: #0c1aac;
-  border-color: #0c1aac;
+  background-color: transparent;
+  outline: 3px solid #0e1ec4;
   cursor: pointer;
+}
+body .main .about .section-main .btn:hover .text,
+body .main .about .section-main .btn:focus .text {
+  color: #0e1ec4;
+}
+body .main .about .section-main .btn:hover .svg-container > svg,
+body .main .about .section-main .btn:focus .svg-container > svg {
+  fill: #0e1ec4;
+  stroke: #0e1ec4;
 }
 body .main .availablity {
   background-color: #d5d8fc;
@@ -426,14 +447,14 @@ body .main .faculty .section-main .slider .slider-modes {
   transition: all 300ms;
 }
 body .main .faculty .section-main .slider .slider-modes .mode {
-  font-size: xx-large;
+  font-size: 2rem;
   font-weight: 400;
-  color: #fcf7ff;
+  letter-spacing: 1px;
   padding: 1rem 1.5rem;
-  border: 2px solid;
   border-radius: 1rem;
-  transition: all 200ms ease-in-out;
-  border-color: #0e1ec4;
+  transition: all 200ms ease-in;
+  color: #0e1ec4;
+  outline: 3px solid #0e1ec4;
   width: 18rem;
   font-weight: 600;
   letter-spacing: 1px;
@@ -630,18 +651,15 @@ body .main .cta-section .cta {
   align-items: center;
   gap: 0.5rem;
   padding: 1rem 1.5rem;
-  border: 2px solid;
   border-radius: 1rem;
   transition: all 200ms ease-in-out;
   background-color: #00b4ff;
-  border-color: #00b4ff;
   z-index: 3;
 }
 body .main .cta-section .cta .text {
   font-size: 2rem;
   font-weight: 400;
   letter-spacing: 1px;
-  color: #fcf7ff;
 }
 body .main .cta-section .cta .svg-container {
   width: 2rem;
@@ -650,8 +668,6 @@ body .main .cta-section .cta .svg-container {
 body .main .cta-section .cta .svg-container > svg {
   width: 100%;
   height: 100%;
-  fill: #fcf7ff;
-  stroke: #fcf7ff;
 }
 body .main .cta-section .cta .text {
   color: #fcf7ff;
@@ -668,9 +684,23 @@ body .main .cta-section .cta .svg-container {
   height: 2rem;
 }
 body .main .cta-section .cta:hover {
-  background-color: #00a2e6;
-  border-color: #00a2e6;
+  background-color: transparent;
+  outline: 3px solid #00b4ff;
   cursor: pointer;
+}
+body .main .cta-section .cta:hover .text {
+  color: #00b4ff;
+}
+body .main .cta-section .cta:hover .svg-container > svg {
+  fill: #00b4ff;
+  stroke: #00b4ff;
+}
+body .main .cta-section .cta:hover .text {
+  color: #fcf7ff;
+}
+body .main .cta-section .cta:hover .svg-container > svg {
+  fill: #fcf7ff;
+  stroke: #fcf7ff;
 }
 body .main .statistics {
   height: fit-content;
@@ -797,11 +827,9 @@ body .footer .content .content-list .creds-container .btn {
   align-items: center;
   gap: 0.5rem;
   padding: 1rem 1.5rem;
-  border: 2px solid;
   border-radius: 1rem;
   transition: all 200ms ease-in-out;
   background-color: #00b4ff;
-  border-color: #00b4ff;
   height: 100%;
   padding: 0 1rem;
   border-radius: 0;
@@ -810,7 +838,6 @@ body .footer .content .content-list .creds-container .btn .text {
   font-size: 2rem;
   font-weight: 400;
   letter-spacing: 1px;
-  color: #fcf7ff;
 }
 body .footer .content .content-list .creds-container .btn .svg-container {
   width: 2rem;
@@ -819,8 +846,6 @@ body .footer .content .content-list .creds-container .btn .svg-container {
 body .footer .content .content-list .creds-container .btn .svg-container > svg {
   width: 100%;
   height: 100%;
-  fill: #fcf7ff;
-  stroke: #fcf7ff;
 }
 body .footer .content .content-list .creds-container .btn .text {
   color: #fcf7ff;
@@ -831,9 +856,18 @@ body .footer .content .content-list .creds-container .btn .svg-container > svg {
 }
 body .footer .content .content-list .creds-container .btn:hover,
 body .footer .content .content-list .creds-container .btn:focus {
-  background-color: #00a2e6;
-  border-color: #00a2e6;
+  background-color: transparent;
+  outline: 3px solid #00b4ff;
   cursor: pointer;
+}
+body .footer .content .content-list .creds-container .btn:hover .text,
+body .footer .content .content-list .creds-container .btn:focus .text {
+  color: #00b4ff;
+}
+body .footer .content .content-list .creds-container .btn:hover .svg-container > svg,
+body .footer .content .content-list .creds-container .btn:focus .svg-container > svg {
+  fill: #00b4ff;
+  stroke: #00b4ff;
 }
 body .footer .content .content-list .quote {
   width: 100%;

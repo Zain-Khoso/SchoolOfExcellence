@@ -329,17 +329,14 @@ body .main .facilities-section .section-main .btn {
   align-items: center;
   gap: 0.5rem;
   padding: 1rem 1.5rem;
-  border: 2px solid;
   border-radius: 1rem;
   transition: all 200ms ease-in-out;
   background-color: #0e1ec4;
-  border-color: #0e1ec4;
 }
 body .main .facilities-section .section-main .btn .text {
   font-size: 2rem;
   font-weight: 400;
   letter-spacing: 1px;
-  color: #fcf7ff;
 }
 body .main .facilities-section .section-main .btn .svg-container {
   width: 2rem;
@@ -348,8 +345,6 @@ body .main .facilities-section .section-main .btn .svg-container {
 body .main .facilities-section .section-main .btn .svg-container > svg {
   width: 100%;
   height: 100%;
-  fill: #fcf7ff;
-  stroke: #fcf7ff;
 }
 body .main .facilities-section .section-main .btn .text {
   color: #fcf7ff;
@@ -361,17 +356,17 @@ body .main .facilities-section .section-main .btn .svg-container > svg {
 body .main .facilities-section .section-main .btn:hover,
 body .main .facilities-section .section-main .btn:active {
   background-color: transparent;
-  border: 5px solid none;
-  outline: 5px solid #0e1ec4;
+  outline: 3px solid #0e1ec4;
+  cursor: pointer;
+}
+body .main .facilities-section .section-main .btn:hover .text,
+body .main .facilities-section .section-main .btn:active .text {
+  color: #0e1ec4;
 }
 body .main .facilities-section .section-main .btn:hover .svg-container > svg,
 body .main .facilities-section .section-main .btn:active .svg-container > svg {
   fill: #0e1ec4;
   stroke: #0e1ec4;
-}
-body .main .facilities-section .section-main .btn:hover .text,
-body .main .facilities-section .section-main .btn:active .text {
-  color: #0e1ec4;
 }
 body .footer {
   width: 100%;
@@ -466,11 +461,9 @@ body .footer .content .content-list .creds-container .btn {
   align-items: center;
   gap: 0.5rem;
   padding: 1rem 1.5rem;
-  border: 2px solid;
   border-radius: 1rem;
   transition: all 200ms ease-in-out;
   background-color: #00b4ff;
-  border-color: #00b4ff;
   height: 100%;
   padding: 0 1rem;
   border-radius: 0;
@@ -479,7 +472,6 @@ body .footer .content .content-list .creds-container .btn .text {
   font-size: 2rem;
   font-weight: 400;
   letter-spacing: 1px;
-  color: #fcf7ff;
 }
 body .footer .content .content-list .creds-container .btn .svg-container {
   width: 2rem;
@@ -488,8 +480,6 @@ body .footer .content .content-list .creds-container .btn .svg-container {
 body .footer .content .content-list .creds-container .btn .svg-container > svg {
   width: 100%;
   height: 100%;
-  fill: #fcf7ff;
-  stroke: #fcf7ff;
 }
 body .footer .content .content-list .creds-container .btn .text {
   color: #fcf7ff;
@@ -500,9 +490,18 @@ body .footer .content .content-list .creds-container .btn .svg-container > svg {
 }
 body .footer .content .content-list .creds-container .btn:hover,
 body .footer .content .content-list .creds-container .btn:focus {
-  background-color: #00a2e6;
-  border-color: #00a2e6;
+  background-color: transparent;
+  outline: 3px solid #00b4ff;
   cursor: pointer;
+}
+body .footer .content .content-list .creds-container .btn:hover .text,
+body .footer .content .content-list .creds-container .btn:focus .text {
+  color: #00b4ff;
+}
+body .footer .content .content-list .creds-container .btn:hover .svg-container > svg,
+body .footer .content .content-list .creds-container .btn:focus .svg-container > svg {
+  fill: #00b4ff;
+  stroke: #00b4ff;
 }
 body .footer .content .content-list .quote {
   width: 100%;
