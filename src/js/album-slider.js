@@ -12,17 +12,16 @@ const intervals = [];
 const sliderTouches = [];
 const rectOfCarousel = elem_carousel.getBoundingClientRect();
 const totalNumberOfSlides = 10;
-let sliderTouchStart = 0;
 
 // Functions.
-const repositionTheSlides = function () {
+const repositionTheSlides = function (positionAdj = 0) {
     const activeSlideIndex = 4;
     const liveImgs = Array.from(elem_carousel.querySelectorAll("img"));
 
     // Positioning all the slides correctly to their new position.
     liveImgs.forEach((slide, index) => {
         slide.style.transform = `translateX(${
-            rectOfCarousel.width * (index - activeSlideIndex)
+            rectOfCarousel.width * (index - activeSlideIndex) - positionAdj
         }px)`;
     });
 
@@ -114,7 +113,7 @@ const goToSlide = function (event) {
         });
     } else {
         const elem_removed = elem_slides.slice(numOfMovedSlides + 1);
-        console.log("YES!");
+
         elem_removed.forEach((elem) => {
             elem.remove();
             elem_carousel.insertBefore(elem, elem_carousel.children[0]);
@@ -157,11 +156,17 @@ const resetSliderInterval = function () {
 };
 
 const handleTouch = function (event) {
-    const sliderTouchEnd = event.changedTouches[0].clientX;
+    sliderTouches.push(event.changedTouches[0].clientX);
 
-    if (sliderTouchStart > sliderTouchEnd) goToNextSlide();
-    else if (sliderTouchStart < sliderTouchEnd) goToPrevSlide();
-    else return;
+    const firstTouch = sliderTouches.at(0);
+    const lastTouch = sliderTouches.at(-1);
+
+    repositionTheSlides(firstTouch - lastTouch);
+
+    if (event.type === "touchend") {
+        firstTouch > lastTouch ? goToNextSlide() : goToPrevSlide();
+        sliderTouches.splice(0, sliderTouches.length);
+    }
 
     resetSliderInterval();
 };
@@ -176,8 +181,5 @@ resetSliderInterval();
 elem_albumsContainer.addEventListener("click", changeSlides);
 document.addEventListener("keydown", handleKeyboardControls);
 elem_imgReel.addEventListener("click", goToSlide);
-elem_carousel.addEventListener(
-    "touchstart",
-    (e) => (sliderTouchStart = e.touches[0].clientX)
-);
+elem_carousel.addEventListener("touchmove", handleTouch);
 elem_carousel.addEventListener("touchend", handleTouch);
