@@ -1,0 +1,225 @@
+@import "config";
+@import "utils";
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: $color-light;
+    overflow-y: auto;
+
+    .landing-page {
+        position: relative;
+
+        width: 100%;
+        height: 50%;
+
+        .background {
+            position: absolute;
+            inset: 0;
+
+            width: 100%;
+            height: 100%;
+            z-index: -20;
+
+            .bg-img {
+                position: absolute;
+                inset: 0;
+
+                width: 100%;
+                height: 100%;
+            }
+
+            .filter-curtain {
+                position: absolute;
+                inset: 0;
+
+                width: 100%;
+                height: 100%;
+                background-color: rgba(black, 0.6);
+                backdrop-filter: blur(5px);
+            }
+        }
+
+        @import "navbar";
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10rem;
+
+            width: 100%;
+            height: calc(100% - 100px);
+
+            .page-title {
+                font-size: 8rem;
+                font-family: $font-heading;
+                font-weight: 700;
+                line-height: 5rem;
+                color: $color-light;
+                padding: 1rem 10rem;
+                border-radius: 1rem;
+                transform: translateY(-50px);
+            }
+        }
+    }
+
+    .main {
+        position: relative;
+
+        width: 100%;
+        height: 100vh;
+        padding: 5rem 0;
+
+        .contact-section {
+            position: absolute;
+            inset: 0;
+            top: 50%;
+            left: 50%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            width: 80%;
+            min-width: 40rem;
+            height: 80%;
+            background-color: $color-light;
+            border-radius: 3rem;
+            transform: translate(-50%, calc(-50% + 25px));
+
+            box-shadow: 0 0 1rem rgba($color-dark, 0.2);
+
+            .contents {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+
+                width: 60%;
+                height: 100%;
+                padding: 3rem 5rem;
+
+                .heading {
+                    font-size: 4rem;
+                    font-weight: 700;
+                    font-family: $font-heading;
+                    color: $color-primary;
+                }
+
+                .contact {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 2rem;
+
+                    width: 40rem;
+                    height: 6rem;
+                    padding: 2rem 1.5rem;
+                    border-radius: 1.5rem;
+                    outline: 3px solid transparent;
+                    box-shadow: 0 0 0.5rem rgba($color-dark, 0.2);
+                    transition: all 200ms ease-in;
+
+                    .svg-container {
+                        width: 4rem;
+                        height: 4rem;
+
+                        > svg {
+                            width: 100%;
+                            height: 100%;
+                            fill: $color-primary;
+                            stroke: $color-primary;
+                        }
+                    }
+
+                    .entry {
+                        flex: 1;
+                        height: 5rem;
+                        font-size: 2rem;
+                        font-weight: 400;
+                    }
+                }
+
+                .contact:focus-within,
+                .contact:hover {
+                    border-color: transparent;
+                    outline-offset: 0.5rem;
+                    outline-color: $color-primary;
+                }
+
+                .message {
+                    width: 40rem;
+                    resize: none;
+                    font-size: 2rem;
+                    font-weight: 400;
+                    padding: 2rem 1.5rem;
+                    border-radius: 1.5rem;
+                    outline: 3px solid transparent;
+                    box-shadow: 0 0 0.5rem rgba($color-dark, 0.2);
+
+                    transition: all 200ms ease-in;
+                }
+
+                .message:focus,
+                .message:hover {
+                    border-color: transparent;
+                    outline-offset: 0.5rem;
+                    outline-color: $color-primary;
+                }
+
+                .checkbox {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 1rem;
+
+                    width: 40rem;
+                    padding-left: 1rem;
+
+                    .entry {
+                        width: 2rem;
+                        height: 2rem;
+                    }
+
+                    .text {
+                        font-size: 1.5rem;
+                        font-family: $font-subheading;
+                        font-weight: 600;
+                    }
+                }
+
+                .btn {
+                    @include btn-primary;
+                    width: 50%;
+                    text-align: center;
+                    padding: 1.5rem 0;
+                }
+
+                .btn:hover,
+                .btn:focus {
+                    @include btn-primary-hover;
+                }
+            }
+
+            .img-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+
+                width: 40%;
+                height: 100%;
+                background-color: $color-primary;
+                border-radius: 3rem;
+
+                > img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+    @import "footer";
+}
