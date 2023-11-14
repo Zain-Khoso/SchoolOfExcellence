@@ -11,7 +11,9 @@ body {
         position: relative;
 
         width: 100%;
+        max-width: $breakpoint-large;
         height: 50%;
+        margin: auto;
 
         .background {
             position: absolute;
@@ -73,8 +75,6 @@ body {
         }
 
         .about-section {
-            height: fit-content;
-
             .section-header {
                 .title-container {
                     gap: 1rem;
@@ -92,7 +92,7 @@ body {
                 gap: 5rem;
 
                 max-width: 1440px;
-                max-height: calc(100% - 10rem);
+                min-height: calc(100% - 18rem);
                 margin: auto;
 
                 .content-container {
@@ -115,8 +115,9 @@ body {
             background-color: lighten($color-primary, 50%);
 
             .section-main {
-                max-width: 1440px;
-                height: calc(100% - 12rem);
+                max-width: $breakpoint-medium;
+                height: fit-content;
+                min-height: calc(100vh - 18rem);
                 margin: auto;
                 overflow: visible;
 
@@ -126,7 +127,7 @@ body {
                     justify-content: space-evenly;
 
                     width: 100%;
-                    height: 100%;
+                    height: calc(100vh - 18rem);
                     margin: auto;
                     overflow: visible;
 
@@ -188,6 +189,9 @@ body {
         }
 
         .facilities-section {
+            height: fit-content;
+            min-height: fit-content;
+
             .section-header {
                 .title-container {
                     overflow: visible;
@@ -202,11 +206,13 @@ body {
                 flex-direction: column;
                 justify-content: space-evenly;
                 align-items: center;
-                gap: 2rem;
+                gap: 5rem;
 
                 max-width: 1440px;
-                height: calc(100% - 12rem);
-                margin: auto;
+                height: fit-content;
+                min-height: calc(100% - 18rem);
+                margin: 4rem auto;
+                overflow: visible;
 
                 .feature-tags-container {
                     display: flex;

@@ -9,7 +9,9 @@ body {
 body .landing-page {
   position: relative;
   width: 100%;
+  max-width: 1920px;
   height: 50%;
+  margin: auto;
 }
 body .landing-page .background {
   position: absolute;
@@ -126,8 +128,10 @@ body .landing-page .hero .page-title {
 body .main {
   position: relative;
   width: 100%;
+  max-width: 1920px;
   height: 100vh;
   padding: 5rem 0;
+  margin: auto;
 }
 body .main .contact-section {
   position: absolute;
@@ -265,7 +269,10 @@ body .main .contact-section .img-container > img {
 }
 body .footer {
   width: 100%;
+  max-width: 1920px;
+  height: fit-content;
   background-color: #1e1927;
+  margin: auto;
 }
 body .footer .content {
   display: flex;

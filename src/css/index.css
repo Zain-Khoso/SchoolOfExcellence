@@ -9,7 +9,10 @@ body {
 body .landing-page {
   position: relative;
   width: 100%;
-  height: 100%;
+  max-width: 1920px;
+  height: fit-content;
+  min-height: 100vh;
+  margin: auto;
 }
 body .landing-page .background {
   position: absolute;
@@ -233,8 +236,11 @@ body .main {
 }
 body .main .section {
   width: 100%;
-  height: 100vh;
+  max-width: 1920px;
+  height: fit-content;
+  min-height: 100vh;
   padding: 3rem;
+  margin: auto;
 }
 body .main .section .section-header {
   display: flex;
@@ -280,8 +286,10 @@ body .main .about .section-main {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  width: 1440px;
-  height: calc(100% - 10rem);
+  width: 100%;
+  max-width: 1280px;
+  height: fit-content;
+  min-height: calc(100vh - 18rem);
   margin: 0px auto;
 }
 body .main .about .section-main .content-container {
@@ -353,7 +361,8 @@ body .main .availablity .section-main {
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
-  min-height: calc(100% - 10rem);
+  height: fit-content;
+  min-height: calc(100vh - 18rem);
 }
 body .main .availablity .section-main .card {
   position: relative;
@@ -417,15 +426,14 @@ body .main .availablity .section-main .card:hover {
   box-shadow: 0 1rem 2rem #1e1927;
   cursor: pointer;
 }
-body .main .faculty {
-  height: fit-content;
-  min-height: 100vh;
-}
 body .main .faculty .section-main {
   display: flex;
   align-items: center;
   width: 100%;
-  min-height: calc(100% - 16rem);
+  height: fit-content;
+  min-height: calc(100% - 18rem);
+  margin: auto;
+  overflow: visible;
 }
 body .main .faculty .section-main .slider {
   position: relative;
@@ -612,8 +620,10 @@ body .main .cta-section {
   align-items: center;
   justify-content: space-around;
   width: 100%;
+  max-width: 1920px;
   height: 20rem;
   background-color: #0b1794;
+  margin: auto;
 }
 body .main .cta-section .gradiant {
   position: absolute;
@@ -704,6 +714,7 @@ body .main .cta-section .cta:hover .svg-container > svg {
 }
 body .main .statistics {
   height: fit-content;
+  min-height: fit-content;
 }
 body .main .statistics .section-main {
   display: flex;
@@ -712,7 +723,6 @@ body .main .statistics .section-main {
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
-  min-height: calc(100% - 10rem);
 }
 body .main .statistics .section-main .counters {
   display: flex;
@@ -736,7 +746,10 @@ body .main .statistics .section-main .counters .counter .label {
 }
 body .footer {
   width: 100%;
+  max-width: 1920px;
+  height: fit-content;
   background-color: #1e1927;
+  margin: auto;
 }
 body .footer .content {
   display: flex;

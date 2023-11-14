@@ -1,6 +1,9 @@
 .footer {
     width: 100%;
+    max-width: $breakpoint-large;
+    height: fit-content;
     background-color: $color-dark;
+    margin: auto;
 
     .content {
         display: flex;
