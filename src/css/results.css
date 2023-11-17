@@ -75,7 +75,7 @@ body .landing-page .navbar .navigation .dropdown .nav-item::after {
 }
 body .landing-page .navbar .navigation .dropdown .subnav {
   position: fixed;
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 1.2rem;
   background-color: #fcf7ff;
@@ -96,6 +96,7 @@ body .landing-page .navbar .navigation .dropdown .subnav .nav-link:hover {
   color: #00b4ff;
 }
 body .landing-page .navbar .navigation .dropdown .active {
+  display: flex;
   opacity: 1;
 }
 body .landing-page .navbar .navigation .dropdown .active .nav-link {

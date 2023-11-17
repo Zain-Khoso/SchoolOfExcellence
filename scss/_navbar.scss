@@ -48,7 +48,7 @@
 
             .subnav {
                 position: fixed;
-                display: flex;
+                display: none;
                 flex-direction: column;
                 gap: 1.2rem;
 
@@ -73,6 +73,7 @@
             }
 
             .active {
+                display: flex;
                 opacity: 1;
 
                 .nav-link {
