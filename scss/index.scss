@@ -194,6 +194,7 @@ body {
                 width: 100%;
                 height: fit-content;
                 min-height: calc(100vh - 18rem);
+                overflow: visible;
 
                 .card {
                     position: relative;
@@ -538,7 +539,6 @@ body {
             .cta {
                 @include btn-svg-secondary;
 
-                // margin-right: 5rem;
                 z-index: 3;
 
                 .text {
@@ -607,3 +607,6 @@ body {
 
     @import "footer";
 }
+
+// Responsiveness.
+@import "index_responsiveness";

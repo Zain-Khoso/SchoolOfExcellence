@@ -75,17 +75,6 @@ body {
         }
 
         .about-section {
-            .section-header {
-                .title-container {
-                    gap: 1rem;
-
-                    margin-left: -2rem;
-                }
-                .subtitle {
-                    font-weight: 300;
-                }
-            }
-
             .section-main {
                 display: flex;
                 flex-direction: column;
@@ -127,7 +116,8 @@ body {
                     justify-content: space-evenly;
 
                     width: 100%;
-                    height: calc(100vh - 18rem);
+                    height: fit-content;
+                    min-height: calc(100vh - 18rem);
                     margin: auto;
                     overflow: visible;
 
@@ -189,18 +179,6 @@ body {
         }
 
         .facilities-section {
-            height: fit-content;
-            min-height: fit-content;
-
-            .section-header {
-                .title-container {
-                    overflow: visible;
-                    .svg-container {
-                        margin-top: -1.5rem;
-                    }
-                }
-            }
-
             .section-main {
                 display: flex;
                 flex-direction: column;
@@ -277,3 +255,6 @@ body {
 
     @import "footer";
 }
+
+// Responsiveness.
+@import "about-us_responsiveness";

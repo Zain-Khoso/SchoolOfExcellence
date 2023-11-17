@@ -1,0 +1,294 @@
+@media (max-width: calc($breakpoint-large - 1px)) {
+    body {
+        .landing-page {
+            @import "navbar_responsiveness";
+
+            .hero {
+                height: calc(100vh - 5rem);
+
+                .hero-context {
+                    margin-left: 4rem;
+
+                    .heading {
+                        width: fit-content;
+                        max-width: 35rem;
+                        width: 100%;
+                        font-size: 3rem;
+                        line-height: 4rem;
+                    }
+
+                    .subheading {
+                        width: fit-content;
+                        max-width: 35rem;
+                        font-size: large;
+                        font-weight: 400;
+                        line-height: 1.4rem;
+                    }
+
+                    .cta-group {
+                        gap: 5rem;
+
+                        width: fit-content;
+                        max-width: 35rem;
+                        margin-top: 1.5rem;
+
+                        .btn:nth-child(1) {
+                            @include btn-svg-primary;
+
+                            padding: 0.8rem 1rem;
+
+                            .svg-container {
+                                width: 1.2rem;
+                                height: 1.2rem;
+                            }
+
+                            .text {
+                                font-size: 1.3rem;
+                            }
+                        }
+
+                        .btn:nth-child(2) {
+                            @include btn-primary-outline;
+
+                            font-size: 1.3rem;
+                            color: $color-light;
+                            padding: 0.8rem 1rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        .main {
+            width: 100%;
+
+            .section {
+                padding: 2rem;
+
+                .section-header {
+                    gap: 0.2rem;
+
+                    height: 8rem;
+                    margin-bottom: 1rem;
+
+                    .title-container {
+                        gap: 1rem;
+
+                        .svg-container {
+                            width: 3rem;
+                            height: 3rem;
+                        }
+
+                        .title {
+                            font-size: 2rem;
+                        }
+                    }
+
+                    .subtitle {
+                        font-size: 1.3rem;
+                    }
+                }
+            }
+
+            .about {
+                .section-main {
+                    min-height: calc(100vh - 12rem);
+
+                    .content-container {
+                        width: 100%;
+
+                        .heading {
+                            font-size: x-large;
+                            margin-bottom: 0;
+                        }
+
+                        .context {
+                            font-size: 1.3rem;
+                        }
+                    }
+
+                    .btn {
+                        @include btn-svg-primary;
+
+                        padding: 0.8rem 1rem;
+
+                        .svg-container {
+                            width: 1.2rem;
+                            height: 1.2rem;
+                        }
+
+                        .text {
+                            font-size: 1.3rem;
+                        }
+                    }
+                }
+            }
+
+            .availablity {
+                .section-main {
+                    max-width: 60rem;
+                    min-height: calc(100vh - 12rem);
+                    margin-inline: auto;
+
+                    .card {
+                        width: 18rem;
+                        padding: 1rem;
+
+                        .svg-container {
+                            width: 4rem;
+                            padding: 0.7rem;
+                            border-width: 1px;
+                        }
+
+                        .heading {
+                            font-size: x-large;
+                            margin: 0;
+                            margin-top: 2rem;
+                        }
+
+                        .branch-img {
+                            aspect-ratio: 16/9;
+                            margin: 2rem 0;
+                        }
+
+                        .context {
+                            font-size: 1.3rem;
+                            line-height: 1.5rem;
+                            margin-top: 0rem;
+                        }
+                    }
+
+                    .card:hover {
+                        transform: translateY(-0.8rem);
+                        box-shadow: 0 0.8rem 2rem rgba($color-dark, 0.5);
+                    }
+                }
+            }
+
+            .faculty {
+                .section-main {
+                    min-height: calc(100% - 12rem);
+
+                    .slider {
+                        width: 65rem;
+                        height: 30rem;
+
+                        .slider-modes {
+                            .mode {
+                                width: 12rem;
+                                font-size: 1.3rem;
+                                text-align: center;
+                                padding: 0.8rem 1rem;
+                            }
+
+                            .active-mode {
+                                transform: translateY(-60%);
+                            }
+                        }
+
+                        .dots {
+                            bottom: 0.5rem;
+                            gap: 0.5rem;
+
+                            .dot {
+                                width: 0.8rem;
+                                height: 0.8rem;
+                            }
+                        }
+
+                        .control {
+                            width: 2rem;
+                            height: 2rem;
+                        }
+
+                        .slides-container {
+                            .slide {
+                                gap: 1rem;
+
+                                padding: 3rem 5rem;
+
+                                .pfp-container {
+                                    width: 8rem;
+
+                                    .pfp {
+                                        width: 6rem;
+                                        height: 6rem;
+                                    }
+                                }
+
+                                .context-container {
+                                    padding: 1rem 0;
+
+                                    .subheading {
+                                        font-size: medium;
+                                    }
+                                    .heading {
+                                        font-size: xx-large;
+                                    }
+                                    .context {
+                                        font-size: 1.3rem;
+                                        line-height: 1.5rem;
+                                        margin: 1rem 0;
+                                    }
+                                    .contacts {
+                                        gap: 2rem;
+
+                                        .contact {
+                                            font-size: medium;
+                                            font-weight: 600;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .cta-section {
+                height: 12rem;
+
+                .title {
+                    font-size: 3.5rem;
+                    line-height: 4rem;
+                }
+
+                .cta {
+                    .text {
+                        font-size: large;
+                    }
+
+                    .svg-container {
+                        width: 1.5rem;
+                        height: 1.5rem;
+                    }
+                }
+            }
+
+            .statistics {
+                height: fit-content;
+                min-height: fit-content;
+
+                .section-main {
+                    .counters {
+                        max-width: 60rem;
+                        margin-top: 2rem;
+
+                        .counter {
+                            .number {
+                                font-size: 1.8rem;
+                                font-weight: 800;
+                            }
+
+                            .label {
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @import "footer_responsiveness";
+    }
+}

@@ -1,0 +1,79 @@
+.footer {
+    .content {
+        padding: 2rem 0;
+        justify-content: space-around;
+
+        .content-list {
+            gap: 0.5rem;
+
+            .title {
+                font-size: x-large;
+                margin-bottom: 0.2rem;
+            }
+
+            .nav-link {
+                font-size: 1rem;
+            }
+
+            .item {
+                gap: 0.1rem;
+
+                .svg-container {
+                    width: 1.3rem;
+                    height: 1.3rem;
+                }
+
+                .text {
+                    max-width: 20rem;
+                    font-size: 1rem;
+                }
+            }
+
+            .creds-container {
+                width: 15rem;
+                height: 2.5rem;
+                border-radius: 2rem;
+                margin-bottom: 1rem;
+
+                .email {
+                    font-size: 1rem;
+                    padding: 0.3rem 1rem;
+                }
+
+                .btn {
+                    padding: 0.8rem 0.3rem;
+                }
+            }
+
+            .quote {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    .branding-bar {
+        min-height: 6rem;
+        padding: 0 2rem;
+
+        .brand-container {
+            gap: 1rem;
+
+            .img-container {
+                width: 5rem;
+            }
+
+            .copyrights {
+                font-size: 1.3rem;
+            }
+        }
+
+        .socials-container {
+            gap: 1.5rem;
+
+            .btn {
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+        }
+    }
+}
