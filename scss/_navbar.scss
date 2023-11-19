@@ -1,92 +1,269 @@
-.navbar {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-
-    width: 100%;
-    height: 100px;
-    padding: 20px 100px;
-    z-index: 10;
-
-    .brand-img {
-        width: 120px;
-    }
-
-    .navigation {
+@mixin navbar {
+    .navbar {
+        position: relative;
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
         align-items: center;
-        gap: 50px;
 
-        li {
-            > .nav-item {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
+        width: 100%;
+        height: 5rem;
+        padding: 0.5rem 5rem;
+        z-index: 10;
 
-                font-size: xx-large;
-                font-family: $font-text;
-                font-weight: 400;
-                color: rgba($color-light, 0.6);
-                transition: all 200ms;
-            }
+        a {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
 
-            > .nav-item:hover {
-                color: $color-light;
-                cursor: pointer;
+            width: fit-content;
+            height: fit-content;
+
+            .brand-img {
+                width: 6rem;
             }
         }
 
-        .dropdown {
-            .nav-item::after {
-                content: "\2b9f";
-                font-size: large;
-                margin: 5px;
-            }
+        .navigation {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 2rem;
 
-            .subnav {
-                position: fixed;
-                display: none;
-                flex-direction: column;
-                gap: 1.2rem;
+            li {
+                > .nav-item {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
 
-                background-color: $color-light;
-                padding: 1.5rem;
-                border: 1px solid black;
-                border-radius: 1rem;
-                opacity: 0;
-                transition: all 300ms;
-
-                .nav-link {
-                    pointer-events: none;
-                    font-size: xx-large;
+                    font-size: 2rem;
+                    font-family: $font-text;
                     font-weight: 400;
-                    color: $color-dark;
-                    transition: opacity 200ms;
+                    color: rgba($color-light, 0.6);
+                    transition: all 200ms ease-in;
                 }
 
-                .nav-link:hover {
-                    color: $color-secondary;
+                > .nav-item:hover {
+                    color: $color-light;
+                    cursor: pointer;
                 }
             }
 
-            .active {
-                display: flex;
-                opacity: 1;
+            .dropdown {
+                .nav-item::after {
+                    content: "\2b9f";
+                    font-size: 1rem;
+                    margin: 0.2rem;
+                }
 
-                .nav-link {
-                    pointer-events: all;
+                .subnav {
+                    position: fixed;
+                    display: none;
+                    flex-direction: column;
+                    gap: 1rem;
+
+                    background-color: $color-light;
+                    padding: 1.5rem;
+                    border: 1px solid $color-dark;
+                    border-radius: 1rem;
+                    opacity: 0;
+                    transition: all 300ms;
+
+                    .nav-link {
+                        pointer-events: none;
+                        font-size: 2rem;
+                        font-weight: 400;
+                        color: $color-dark;
+                        transition: opacity 200ms;
+                    }
+
+                    .nav-link:hover {
+                        color: $color-secondary;
+                    }
+                }
+
+                .active {
+                    display: flex;
+                    opacity: 1;
+
+                    .nav-link {
+                        pointer-events: all;
+                    }
+                }
+            }
+        }
+
+        .offcanvas-toggler {
+            display: none;
+            width: 1.5rem;
+            height: 1.5rem;
+
+            > svg {
+                width: 100%;
+                height: 100%;
+                fill: $color-light;
+                stroke: $color-light;
+            }
+        }
+    }
+
+    .sticky-navbar {
+        position: fixed;
+        inset: 0;
+
+        background-color: rgba(darken($color-dark, 5%), 0.9);
+    }
+
+    .offcanvas {
+        display: none;
+        position: fixed;
+        inset: 0;
+
+        width: min(70vw, 18rem);
+        height: 100vh;
+        background-color: $color-light;
+        border-right: 1px solid $color-dark;
+        border-top-right-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        z-index: 50;
+
+        .heading {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+
+            width: 100%;
+            background-color: $color-dark;
+            padding: 0.6rem 0.8rem;
+
+            .brand {
+                width: 4rem;
+            }
+
+            .btn-close {
+                width: 1.3rem;
+                height: 1.3rem;
+
+                > svg {
+                    width: 100%;
+                    height: 100%;
+                    fill: $color-light;
+                    stroke: $color-light;
+                }
+            }
+        }
+
+        .navigation {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+
+            width: 100%;
+            padding: 2rem 0;
+
+            .container {
+                display: flex;
+                flex-direction: column;
+                gap: 0.2rem;
+
+                .sublink {
+                    font-size: 1rem;
+                    font-weight: 400;
+                    color: darken($color-secondary, 15%);
+                    padding-left: 1.5rem;
+                }
+            }
+            .link {
+                font-size: 1.2rem;
+                font-weight: 500;
+                color: darken($color-secondary, 15%);
+                padding-left: 1rem;
+            }
+        }
+    }
+}
+
+@mixin navbar-medium {
+    .navbar {
+        height: 5rem;
+        padding: 1rem 3rem;
+
+        a .brand-img {
+            width: 5rem;
+        }
+
+        .navigation {
+            gap: 2rem;
+
+            li > .nav-item {
+                font-size: 1.5rem;
+                font-weight: 400;
+            }
+
+            .dropdown {
+                .nav-item::after {
+                    font-size: 1.2rem;
+                }
+
+                .subnav .nav-link {
+                    font-size: 1.5rem;
                 }
             }
         }
     }
 }
 
-.sticky-navbar {
-    position: fixed;
-    inset: 0;
+@mixin navbar-small {
+    .navbar {
+        height: 3rem;
+        padding: 0.3rem 3rem;
 
-    background-color: rgba(darken($color-dark, 5%), 0.9);
+        a .brand-img {
+            width: 4rem;
+        }
+
+        .navigation {
+            gap: 2rem;
+
+            li > .nav-item {
+                font-size: 1.2rem;
+            }
+
+            .dropdown {
+                .nav-item::after {
+                    font-size: 1rem;
+                }
+
+                .subnav {
+                    gap: 0.5rem;
+                    padding: 1rem;
+                    .nav-link {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@mixin navbar-tablet {
+    .navbar {
+        height: 2.5rem;
+        padding: 0.3rem 1.5rem;
+
+        a .brand-img {
+            width: 3rem;
+        }
+
+        .navigation {
+            display: none;
+        }
+
+        .offcanvas-toggler {
+            display: flex;
+        }
+    }
 }
