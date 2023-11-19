@@ -35,6 +35,6 @@ const animationObserver = new IntersectionObserver(
 animationElements.forEach((elem) => {
     animationObserver.observe(elem);
 
-    elem.style.transform = "translateY(200px)";
+    elem.style.transform = "translateY(25%)";
     elem.style.opacity = 0;
 });
