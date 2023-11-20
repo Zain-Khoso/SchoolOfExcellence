@@ -1,5 +1,7 @@
 @import "config";
 @import "utils";
+@import "navbar";
+@import "footer";
 
 body {
     width: 100vw;
@@ -11,7 +13,6 @@ body {
         position: relative;
 
         width: 100%;
-        max-width: $breakpoint-large;
         height: 50%;
         margin: auto;
 
@@ -37,31 +38,32 @@ body {
 
                 width: 100%;
                 height: 100%;
-                background-color: rgba(black, 0.6);
+                background-color: rgba(black, 0.68);
                 backdrop-filter: blur(5px);
             }
         }
 
-        @import "navbar";
+        @include navbar;
 
         .hero {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             justify-content: center;
             align-items: center;
-            gap: 10rem;
+
+            position: relative;
 
             width: 100%;
-            height: calc(100% - 100px);
+            height: calc(50vh - 5rem);
 
             .page-title {
-                font-size: 8rem;
+                font-size: 6rem;
                 font-family: $font-heading;
                 font-weight: 700;
-                line-height: 10rem;
+                letter-spacing: 2px;
+                line-height: 1;
                 color: $color-light;
-                border-radius: 1rem;
-                transform: translateY(-50px);
+                transform: translateY(-50%);
             }
         }
     }
@@ -74,14 +76,11 @@ body {
         }
 
         .album-section {
-            height: fit-content;
-
-            .section-header .title-container .svg-container {
-                > svg {
-                    fill: none;
-                    stroke: $color-primary;
-                }
+            .section-header .title-container .svg-container > svg {
+                fill: none;
+                stroke: $color-primary;
             }
+
             .albums-container {
                 display: flex;
                 flex-direction: row;
@@ -89,6 +88,7 @@ body {
 
                 width: 100%;
                 padding: 3rem 0;
+                overflow: visible;
 
                 .album {
                     width: 30%;
@@ -96,8 +96,8 @@ body {
 
                     .album-title {
                         width: 100%;
-                        font-size: xx-large;
-                        font-weight: 600;
+                        font-size: 2rem;
+                        font-weight: 500;
                         text-align: center;
                         color: $color-primary;
                         margin-bottom: 1rem;
@@ -129,6 +129,7 @@ body {
 
                 width: 100%;
                 height: 70vh;
+                margin: auto;
 
                 .img-reel {
                     display: flex;
@@ -140,7 +141,7 @@ body {
                     width: 30%;
                     height: 100%;
                     background-color: $color-dark;
-                    padding: 2rem 0;
+                    padding: 2rem;
                     border-radius: 1rem;
                     overflow-y: auto;
 
@@ -161,7 +162,7 @@ body {
                 }
 
                 .img-reel::-webkit-scrollbar {
-                    width: 0;
+                    display: none;
                 }
 
                 .carousel {
@@ -175,14 +176,223 @@ body {
                         position: absolute;
                         inset: 0;
                         transition: all 500ms ease;
+
+                        object-fit: cover;
+                        object-position: center;
                     }
                 }
             }
         }
     }
 
-    @import "footer";
+    @include footer;
 }
 
-// Responsoveness.
-@import "gallery_responsiveness";
+////////////// Responsiveness.
+
+/// 1640px
+@media screen and (max-width: 1640px) {
+    body {
+        @include footer-medium;
+    }
+}
+
+/// 1440px
+@media screen and (max-width: calc($breakpoint-medium)) {
+    body {
+        .landing-page {
+            @include navbar-medium;
+
+            .hero {
+                height: calc(50vh - calc(5rem));
+
+                .page-title {
+                    font-size: 4rem;
+                }
+            }
+        }
+
+        .main {
+            .section {
+                @include section-medium;
+            }
+
+            .album-section {
+                .albums-container {
+                    padding: 1rem 0;
+
+                    .album {
+                        width: 25%;
+
+                        .album-title {
+                            font-size: 1.8rem;
+                        }
+                    }
+
+                    .active .thumbnail {
+                        transform: translateY(-0.5rem);
+                        box-shadow: 0 1rem 1rem rgba($color-dark, 0.4);
+                    }
+                }
+
+                .live-album .img-reel {
+                    gap: 1rem;
+
+                    padding: 1rem 0;
+                }
+            }
+        }
+    }
+}
+
+/// 1280px
+@media screen and (max-width: 1280px) {
+    body {
+        .main .album-section {
+            .albums-container .album .album-title {
+                font-size: 1.5rem;
+            }
+
+            .live-album {
+                flex-direction: column-reverse;
+                gap: 1rem;
+
+                width: 90%;
+                max-width: 1024px;
+                height: fit-content;
+
+                .img-reel {
+                    justify-content: flex-start;
+                    flex-wrap: nowrap;
+
+                    width: 100%;
+
+                    background-color: $color-dark;
+                    padding: 1rem;
+                    border-radius: 1rem;
+                    overflow-x: auto;
+                    overflow-y: hidden;
+
+                    .img-container {
+                        min-width: 20%;
+                    }
+                }
+
+                .carousel {
+                    width: 80%;
+                }
+            }
+        }
+    }
+
+    @include footer-small;
+}
+::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+/// 1024px || Tablet
+@media screen and (max-width: calc($breakpoint-small - 1px)) {
+    body {
+        .landing-page {
+            @include navbar-tablet;
+
+            .hero {
+                height: calc(50vh - calc(2.5rem / 2));
+
+                .page-title {
+                    font-size: 3rem;
+                }
+            }
+        }
+
+        .main {
+            .section {
+                @include section-tablet;
+            }
+
+            .album-section {
+                padding: 0.5rem;
+                .albums-container .album {
+                    width: 30%;
+
+                    .album-title {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+
+        @include footer-tablet;
+    }
+    ::-webkit-scrollbar {
+        width: 0.2rem;
+    }
+}
+
+/// 481 || Mobile
+@media screen and (max-width: $breakpoint-mobile) {
+    body {
+        .landing-page {
+            .navbar {
+                padding-inline: 1rem;
+            }
+
+            .hero .page-title {
+                font-size: 2.5rem;
+            }
+        }
+
+        .main {
+            .section {
+                @include section-mobile;
+            }
+
+            .album-section {
+                padding: 0.3rem;
+
+                .albums-container .album {
+                    width: 30%;
+
+                    .thumbnail {
+                        border-radius: 0.5rem;
+                    }
+
+                    .album-title {
+                        font-size: 0.8rem;
+                    }
+                }
+
+                .live-album {
+                    .img-reel {
+                        gap: 0.5rem;
+
+                        padding: 0.5rem;
+                        border-radius: 0.5rem;
+
+                        .img-container {
+                            border-radius: 0.3rem;
+                        }
+                    }
+
+                    .carousel {
+                        border-radius: 0.5rem;
+                    }
+                }
+            }
+        }
+
+        @include footer-mobile;
+    }
+}
+
+/// Orientation
+@media screen and (orientation: portrait) {
+    body .main .section {
+        min-height: fit-content;
+
+        .section-main {
+            min-height: fit-content;
+        }
+    }
+}
