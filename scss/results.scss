@@ -1,5 +1,7 @@
 @import "config";
 @import "utils";
+@import "navbar";
+@import "footer";
 
 body {
     width: 100vw;
@@ -11,7 +13,6 @@ body {
         position: relative;
 
         width: 100%;
-        max-width: $breakpoint-large;
         height: 50%;
         margin: auto;
 
@@ -37,32 +38,32 @@ body {
 
                 width: 100%;
                 height: 100%;
-                background-color: rgba(black, 0.6);
+                background-color: rgba(black, 0.68);
                 backdrop-filter: blur(5px);
             }
         }
 
-        @import "navbar";
+        @include navbar;
 
         .hero {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             justify-content: center;
             align-items: center;
-            gap: 10rem;
+
+            position: relative;
 
             width: 100%;
-            height: calc(100% - 100px);
+            height: calc(50vh - 5rem);
 
             .page-title {
-                font-size: 8rem;
+                font-size: 6rem;
                 font-family: $font-heading;
                 font-weight: 700;
-                line-height: 5rem;
+                letter-spacing: 2px;
+                line-height: 1;
                 color: $color-light;
-                padding: 1rem 10rem;
-                border-radius: 1rem;
-                transform: translateY(-50px);
+                transform: translateY(-50%);
             }
         }
     }
@@ -102,15 +103,10 @@ body {
                     overflow: visible;
 
                     .selection {
-                        font-size: xx-large;
-                        font-weight: 500;
-                        text-align: center;
-                        padding: 1rem 2rem;
-                        border: 2px solid $color-dark;
-                        border-radius: 0.8rem;
+                        @include btn-outline($color-dark, $color-dark);
 
                         .option {
-                            font-size: xx-large;
+                            font-size: 2rem;
                             font-weight: 400;
                         }
                     }
@@ -119,7 +115,7 @@ body {
                     }
 
                     .filter-btn {
-                        @include btn-svg-dark;
+                        @include btn-svg($color-light, $color-dark);
 
                         .svg-container > svg {
                             stroke-width: 0.2px;
@@ -127,7 +123,7 @@ body {
                     }
                     .filter-btn:hover,
                     .filter-btn:focus {
-                        @include btn-svg-dark-hover;
+                        @include btn-svg-hover($color-dark);
                     }
                 }
             }
@@ -147,8 +143,196 @@ body {
         }
     }
 
-    @import "footer";
+    @include footer;
 }
 
-// Responsiveness.
-@import "results_responsiveness";
+////////////// Responsiveness.
+
+/// 1640px
+@media screen and (max-width: 1640px) {
+    body {
+        @include footer-medium;
+    }
+}
+
+/// 1440px
+@media screen and (max-width: calc($breakpoint-medium)) {
+    body {
+        .landing-page {
+            @include navbar-medium;
+
+            .hero {
+                height: calc(50vh - calc(5rem));
+
+                .page-title {
+                    font-size: 4rem;
+                }
+            }
+        }
+
+        .main {
+            .section {
+                @include section-medium;
+            }
+
+            .results {
+                .result-filters-container {
+                    .context {
+                        font-size: 1.5rem;
+                    }
+
+                    .result-filters {
+                        .selection {
+                            @include btn-outline-medium(
+                                $color-dark,
+                                $color-dark
+                            );
+
+                            .option {
+                                font-size: 1.5rem;
+                            }
+                        }
+
+                        .filter-btn {
+                            @include btn-svg-medium($color-light, $color-dark);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/// 1280px
+@media screen and (max-width: 1280px) {
+    body {
+        @include footer-small;
+    }
+    ::-webkit-scrollbar {
+        width: 0.5rem;
+    }
+}
+
+/// 1024px || Tablet
+@media screen and (max-width: calc($breakpoint-small - 1px)) {
+    body {
+        .landing-page {
+            @include navbar-tablet;
+
+            .hero {
+                height: calc(50vh - calc(2.5rem / 2));
+
+                .page-title {
+                    font-size: 3rem;
+                }
+            }
+        }
+
+        .main {
+            .section {
+                @include section-tablet;
+            }
+
+            .results {
+                .result-filters-container {
+                    gap: 0.5rem;
+
+                    .context {
+                        font-size: 0.8rem;
+                    }
+
+                    .result-filters {
+                        justify-content: center;
+                        align-items: center;
+                        gap: 0.5rem;
+                        flex-wrap: wrap;
+
+                        .selection {
+                            @include btn-outline-tablet(
+                                $color-dark,
+                                $color-dark
+                            );
+
+                            .option {
+                                font-size: 0.8rem;
+                            }
+                        }
+
+                        .filter-btn {
+                            @include btn-svg-tablet($color-light, $color-dark);
+                        }
+                    }
+                }
+            }
+        }
+
+        @include footer-tablet;
+    }
+    ::-webkit-scrollbar {
+        width: 0.2rem;
+    }
+}
+
+/// 481 || Mobile
+@media screen and (max-width: $breakpoint-mobile) {
+    body {
+        .landing-page {
+            .navbar {
+                padding-inline: 1rem;
+            }
+
+            .hero .page-title {
+                font-size: 2.5rem;
+            }
+        }
+
+        .main {
+            .section {
+                @include section-mobile;
+            }
+
+            .results {
+                .result-filters-container {
+                    margin: 1.5rem 0;
+
+                    .context {
+                        font-size: 0.9rem;
+                        text-align: center;
+                    }
+
+                    .result-filters {
+                        .selection {
+                            @include btn-outline-mobile(
+                                $color-dark,
+                                $color-dark
+                            );
+
+                            border-width: 1.5px;
+
+                            .option {
+                                font-size: 0.6rem;
+                            }
+                        }
+
+                        .filter-btn {
+                            @include btn-svg-mobile($color-light, $color-dark);
+                        }
+                    }
+                }
+            }
+        }
+
+        @include footer-mobile;
+    }
+}
+
+/// Orientation
+@media screen and (orientation: portrait) {
+    body .main .section {
+        min-height: fit-content;
+
+        .section-main {
+            min-height: fit-content;
+        }
+    }
+}
