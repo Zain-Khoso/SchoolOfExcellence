@@ -6,6 +6,9 @@ const elem_Hero = document.getElementById("hero");
 const elem_DropdownTriggers = [
     ...document.querySelectorAll(".dropdown-toggle"),
 ];
+const elem_offcanvas = document.querySelector(".offcanvas");
+const elem_offcanvasBlanket = document.querySelector(".offcanvas-blanket");
+const elem_offcanvasTriggers = document.querySelectorAll(".offcanvas-trigger");
 
 // Variables.
 const observerOptions = {
@@ -31,6 +34,11 @@ const hideDropdown = function (event) {
     document.body.removeEventListener("mouseover", hideDropdown);
 };
 
+const toggleOffcanvas = function () {
+    elem_offcanvas.classList.toggle("offcanvas-active");
+    elem_offcanvasBlanket.classList.toggle("offcanvas-blanket-active");
+};
+
 // Observer.
 const observer = new IntersectionObserver(toggleNavbar, observerOptions);
 observer.observe(elem_Hero);
@@ -54,3 +62,7 @@ elem_Navbar.addEventListener("mouseover", function (event) {
         hideDropdown.bind({ dropdownComponents: dropdownComponents })
     );
 });
+elem_offcanvasTriggers.forEach((elem) => {
+    elem.addEventListener("click", toggleOffcanvas);
+});
+elem_offcanvasBlanket.addEventListener("click", toggleOffcanvas);
