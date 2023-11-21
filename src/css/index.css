@@ -336,6 +336,7 @@ body .main .section .section-header .title-container {
   align-items: center;
   gap: 1rem;
   width: 100%;
+  padding-right: 1rem;
 }
 body .main .section .section-header .title-container .svg-container {
   width: 4rem;
@@ -357,6 +358,7 @@ body .main .section .section-header .title-container .title:hover {
 body .main .section .section-header .subtitle {
   font-size: 1.8rem;
   font-weight: 500;
+  text-align: center;
 }
 body .main .section .section-main {
   width: 100%;
@@ -379,7 +381,6 @@ body .main .about .section-main .content-container .heading {
   font-size: 2rem;
   font-weight: 500;
   color: #0e1ec4;
-  margin-bottom: 0;
 }
 body .main .about .section-main .content-container .context {
   font-size: 1.8rem;
@@ -1179,7 +1180,6 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
 }
 @media screen and (max-width: 1919px) {
   body .landing-page .navbar {
-    height: 5rem;
     padding: 1rem 3rem;
   }
   body .landing-page .navbar a .brand-img {
@@ -1197,9 +1197,6 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
   }
   body .landing-page .navbar .navigation .dropdown .subnav .nav-link {
     font-size: 1.5rem;
-  }
-  body .landing-page .hero {
-    height: calc(100vh - 5rem);
   }
   body .landing-page .hero .hero-context {
     width: 50%;
@@ -1430,6 +1427,7 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
   }
   body .main .section .section-header .title-container {
     gap: 0.5rem;
+    padding-right: 0.25rem;
   }
   body .main .section .section-header .subtitle {
     font-size: 1.2rem;
@@ -1729,6 +1727,7 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
   body .main .section .section-header {
     gap: 0;
     height: 3rem;
+    padding-right: 0;
     margin-bottom: 0.5rem;
   }
   body .main .section .section-header .title-container {
@@ -1986,14 +1985,6 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
   body .main .section {
     padding: 0.5rem;
   }
-  body .main .section .section-header {
-    gap: 0;
-    height: 3rem;
-    margin-bottom: 0.5rem;
-  }
-  body .main .section .section-header .title-container {
-    gap: 0.5rem;
-  }
   body .main .section .section-header .title-container .title {
     font-size: 1rem;
     letter-spacing: 0;
@@ -2003,9 +1994,7 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     height: 1.2rem;
   }
   body .main .section .section-header .subtitle {
-    font-size: 0.8rem;
     letter-spacing: 0;
-    text-align: center;
   }
   body .main .section .section-main {
     min-height: calc(100vh - 5rem);
@@ -2188,6 +2177,14 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
   }
   body .footer .content .content-list:nth-child(3) {
     display: flex;
+  }
+}
+@media screen and (orientation: portrait) {
+  body .main .section {
+    min-height: fit-content;
+  }
+  body .main .section .section-main {
+    min-height: fit-content;
   }
 }
 

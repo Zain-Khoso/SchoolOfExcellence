@@ -9,7 +9,6 @@ body {
 body .landing-page {
   position: relative;
   width: 100%;
-  max-width: 1920px;
   height: 50%;
   margin: auto;
 }
@@ -743,7 +742,6 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
 }
 @media screen and (max-width: 1440px) {
   body .landing-page .navbar {
-    height: 5rem;
     padding: 1rem 3rem;
   }
   body .landing-page .navbar a .brand-img {

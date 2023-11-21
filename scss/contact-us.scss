@@ -322,7 +322,7 @@ body {
                         font-size: 1rem;
                         padding: 1rem;
                         border-radius: 0.8rem;
-                        outline-width: 1px;
+                        outline-width: 2px;
                     }
 
                     .message:focus,
@@ -375,15 +375,11 @@ body {
 
         .main {
             .contact-section {
+                padding: 0;
                 .contents {
-                    .contact {
-                        width: 90%;
-                    }
-
-                    .message {
-                        width: 90%;
-                    }
-
+                    padding: 1rem 2rem;
+                    .contact,
+                    .message,
                     .checkbox {
                         width: 90%;
                     }
@@ -453,6 +449,7 @@ body {
             .contact-section {
                 .contents {
                     width: 100%;
+                    padding: 0.8rem;
 
                     .heading {
                         font-size: 1.5rem;
@@ -461,6 +458,7 @@ body {
                     .contact,
                     .message {
                         padding: 0.5rem 0.8rem;
+                        outline-width: 1.5px;
 
                         .svg-container {
                             width: 1.5rem;
@@ -477,7 +475,8 @@ body {
                     .contact,
                     .message,
                     .checkbox {
-                        width: 90%;
+                        width: 100%;
+                        min-width: 0;
                     }
 
                     .btn {

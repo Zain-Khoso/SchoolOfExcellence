@@ -643,7 +643,6 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
 }
 @media screen and (max-width: 1440px) {
   body .landing-page .navbar {
-    height: 5rem;
     padding: 1rem 3rem;
   }
   body .landing-page .navbar a .brand-img {
@@ -874,7 +873,7 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     width: 30%;
   }
   body .main .album-section .albums-container .album .album-title {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
   body .footer .content {
     padding: 0.5rem;
@@ -946,7 +945,7 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     font-size: 2.5rem;
   }
   body .main .section {
-    padding: 0.5rem;
+    padding: 1rem 0.5rem;
   }
   body .main .section .section-header .title-container .title {
     font-size: 1rem;
@@ -962,28 +961,36 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
   body .main .section .section-main {
     min-height: calc(100vh - 5rem);
   }
-  body .main .album-section {
-    padding: 0.3rem;
+  body .main .album-section .albums-container {
+    flex-wrap: wrap;
+    row-gap: 1rem;
   }
   body .main .album-section .albums-container .album {
     width: 30%;
+    min-width: 8rem;
   }
   body .main .album-section .albums-container .album .thumbnail {
     border-radius: 0.5rem;
   }
   body .main .album-section .albums-container .album .album-title {
     font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+  }
+  body .main .album-section .live-album {
+    width: 100%;
+    gap: 0.5rem;
   }
   body .main .album-section .live-album .img-reel {
     gap: 0.5rem;
     padding: 0.5rem;
-    border-radius: 0.5rem;
-  }
-  body .main .album-section .live-album .img-reel .img-container {
     border-radius: 0.3rem;
   }
+  body .main .album-section .live-album .img-reel .img-container {
+    border-radius: 0.1rem;
+  }
   body .main .album-section .live-album .carousel {
-    border-radius: 0.5rem;
+    width: 100%;
+    border-radius: 0.3rem;
   }
   body .footer .content {
     flex-direction: column-reverse;

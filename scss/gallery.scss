@@ -317,7 +317,7 @@ body {
                     width: 30%;
 
                     .album-title {
-                        font-size: 1rem;
+                        font-size: 0.8rem;
                     }
                 }
             }
@@ -349,34 +349,43 @@ body {
             }
 
             .album-section {
-                padding: 0.3rem;
+                .albums-container {
+                    flex-wrap: wrap;
+                    row-gap: 1rem;
 
-                .albums-container .album {
-                    width: 30%;
+                    .album {
+                        width: 30%;
+                        min-width: 8rem;
 
-                    .thumbnail {
-                        border-radius: 0.5rem;
-                    }
+                        .thumbnail {
+                            border-radius: 0.5rem;
+                        }
 
-                    .album-title {
-                        font-size: 0.8rem;
+                        .album-title {
+                            font-size: 0.8rem;
+                            margin-bottom: 0.5rem;
+                        }
                     }
                 }
 
                 .live-album {
+                    width: 100%;
+
+                    gap: 0.5rem;
                     .img-reel {
                         gap: 0.5rem;
 
                         padding: 0.5rem;
-                        border-radius: 0.5rem;
+                        border-radius: 0.3rem;
 
                         .img-container {
-                            border-radius: 0.3rem;
+                            border-radius: 0.1rem;
                         }
                     }
 
                     .carousel {
-                        border-radius: 0.5rem;
+                        width: 100%;
+                        border-radius: 0.3rem;
                     }
                 }
             }
