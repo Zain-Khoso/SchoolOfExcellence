@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&family=Titillium+Web:wght@200;300;400;600;700;900&display=swap");
 body {
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   background-color: #fcf7ff;
   overflow-y: auto;
 }
@@ -65,7 +65,7 @@ body .landing-page .navbar .navigation li > .nav-item {
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   color: rgba(252, 247, 255, 0.6);
@@ -94,7 +94,7 @@ body .landing-page .navbar .navigation .dropdown .subnav {
 }
 body .landing-page .navbar .navigation .dropdown .subnav .nav-link {
   pointer-events: none;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 400;
   color: #1e1927;
   transition: opacity 200ms;
@@ -238,7 +238,7 @@ body .landing-page .hero .hero-context .subheading {
   width: 40rem;
   font-size: 1.5rem;
   font-weight: 400;
-  line-height: 1;
+  line-height: 1.2;
   color: rgba(252, 247, 255, 0.4);
 }
 body .landing-page .hero .hero-context .cta-group {
@@ -266,7 +266,7 @@ body .landing-page .hero .hero-context .cta-group .btn:nth-child(1) {
   background-color: #0e1ec4;
 }
 body .landing-page .hero .hero-context .cta-group .btn:nth-child(1) .text {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 400;
   letter-spacing: 1px;
   text-align: center;
@@ -309,7 +309,7 @@ body .landing-page .hero .hero-context .cta-group .btn:nth-child(2) {
   border-radius: 0.8rem;
   outline: 0 solid #0e1ec4;
   transition: all 200ms ease-in;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 400;
   letter-spacing: 1px;
   text-align: center;
@@ -395,7 +395,7 @@ body .main .about .section-main {
 }
 body .main .about .section-main .content-container {
   width: 100%;
-  max-width: 1024px;
+  max-width: 1640px;
 }
 body .main .about .section-main .content-container .heading {
   font-size: 2rem;
@@ -420,7 +420,7 @@ body .main .about .section-main .btn {
   background-color: #0e1ec4;
 }
 body .main .about .section-main .btn .text {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 400;
   letter-spacing: 1px;
   text-align: center;
@@ -535,8 +535,8 @@ body .main .faculty .section-main {
 }
 body .main .faculty .section-main .slider {
   position: relative;
-  width: 80%;
-  max-width: 1920px;
+  width: 100%;
+  max-width: 1640px;
   aspect-ratio: 16/8;
   border-radius: 2rem;
   box-shadow: 0 0 1.5rem rgba(30, 25, 39, 0.3);
@@ -557,14 +557,14 @@ body .main .faculty .section-main .slider .slider-modes .mode {
   border-radius: 0.8rem;
   outline: 0 solid #0e1ec4;
   transition: all 200ms ease-in;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 400;
   letter-spacing: 1px;
   text-align: center;
   color: #0e1ec4;
   width: 20%;
   max-width: 18rem;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 500;
   background-color: #fcf7ff;
   padding-inline: 0;
@@ -686,7 +686,7 @@ body .main .faculty .section-main .slider .slides-container .slide .context-cont
   color: #0e1ec4;
 }
 body .main .faculty .section-main .slider .slides-container .slide .context-container .heading {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-family: "Comfortaa", sans-serif;
   font-weight: 900;
   text-transform: capitalize;
@@ -749,7 +749,7 @@ body .main .cta-section .title {
   font-family: "Comfortaa", sans-serif;
   font-weight: 900;
   text-transform: capitalize;
-  line-height: 8rem;
+  line-height: 1;
   color: #fcf7ff;
   z-index: 3;
 }
@@ -771,7 +771,7 @@ body .main .cta-section .cta {
   z-index: 3;
 }
 body .main .cta-section .cta .text {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 400;
   letter-spacing: 1px;
   text-align: center;
@@ -791,22 +791,12 @@ body .main .cta-section .cta .svg-container > svg {
   fill: #fcf7ff;
   stroke: #fcf7ff;
 }
-body .main .cta-section .cta .text {
-  font-size: 2rem;
-}
 body .main .cta-section .cta:hover {
   background-color: transparent;
   border-color: transparent;
   outline-width: 0.2rem;
   outline-offset: 0.1px;
   cursor: pointer;
-}
-body .main .cta-section .cta:hover .text {
-  color: #fcf7ff;
-}
-body .main .cta-section .cta:hover .svg-container > svg {
-  fill: #fcf7ff;
-  stroke: #fcf7ff;
 }
 body .main .cta-section .cta:hover .text {
   color: #fcf7ff;
@@ -830,11 +820,15 @@ body .main .statistics .section-main {
   margin-top: 3rem;
 }
 body .main .statistics .section-main .counters {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
   width: 100%;
+}
+body .main .statistics .section-main .counters .counter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  float: left;
 }
 body .main .statistics .section-main .counters .counter .number {
   font-size: 3rem;
@@ -844,7 +838,7 @@ body .main .statistics .section-main .counters .counter .number {
   margin: 0 auto;
 }
 body .main .statistics .section-main .counters .counter .label {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 500;
   letter-spacing: 1px;
 }
@@ -857,9 +851,9 @@ body .footer {
 body .footer .content {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   width: 100%;
-  padding: 2rem 0;
+  padding: 3rem;
 }
 body .footer .content .content-list {
   display: flex;
@@ -870,10 +864,9 @@ body .footer .content .content-list .title {
   font-size: 3rem;
   font-weight: 400;
   color: rgba(252, 247, 255, 0.7);
-  margin-bottom: 1rem;
 }
 body .footer .content .content-list .nav-link {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 400;
   color: rgba(0, 180, 255, 0.8);
   padding-left: 5px;
@@ -905,7 +898,7 @@ body .footer .content .content-list .item .svg-container > svg {
   transition: all 200ms;
 }
 body .footer .content .content-list .item .text {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 300;
   color: rgba(252, 247, 255, 0.6);
   padding-left: 5px;
@@ -930,12 +923,14 @@ body .footer .content .content-list .creds-container {
   height: 4rem;
   background-color: rgba(252, 247, 255, 0.9);
   border-radius: 3rem;
+  margin-right: 3px;
   margin-bottom: 3rem;
+  overflow: visible;
 }
 body .footer .content .content-list .creds-container .email {
   flex: 1;
   height: 100%;
-  font-size: xx-large;
+  font-size: 1.8rem;
   font-weight: 400;
   padding: 0.5rem 1.5rem;
 }
@@ -954,9 +949,11 @@ body .footer .content .content-list .creds-container .btn {
   height: 100%;
   padding: 0 1rem;
   border-radius: 0;
+  border-top-right-radius: 3rem;
+  border-bottom-right-radius: 3rem;
 }
 body .footer .content .content-list .creds-container .btn .text {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 400;
   letter-spacing: 1px;
   text-align: center;
@@ -986,16 +983,16 @@ body .footer .content .content-list .creds-container .btn:focus {
 }
 body .footer .content .content-list .creds-container .btn:hover .text,
 body .footer .content .content-list .creds-container .btn:focus .text {
-  color: #fcf7ff;
+  color: #00b4ff;
 }
 body .footer .content .content-list .creds-container .btn:hover .svg-container > svg,
 body .footer .content .content-list .creds-container .btn:focus .svg-container > svg {
-  fill: #fcf7ff;
-  stroke: #fcf7ff;
+  fill: #00b4ff;
+  stroke: #00b4ff;
 }
 body .footer .content .content-list .quote {
   width: 100%;
-  font-size: x-large;
+  font-size: 1.5rem;
   font-weight: 400;
   text-align: center;
   color: rgba(252, 247, 255, 0.6);
@@ -1022,7 +1019,7 @@ body .footer .branding-bar .brand-container .img-container {
   height: fit-content;
 }
 body .footer .branding-bar .brand-container .copyrights {
-  font-size: x-large;
+  font-size: 1.5rem;
   font-weight: 400;
   color: rgba(252, 247, 255, 0.8);
 }
@@ -1049,156 +1046,6 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
 }
 
 @media screen and (max-width: 1640px) {
-  body .main .faculty .section-main {
-    padding: 2rem;
-  }
-  body .main .faculty .section-main .slider {
-    width: 90%;
-  }
-  body .main .faculty .section-main .slider .slider-modes .mode {
-    max-width: 14rem;
-    font-size: 1.5rem;
-  }
-  body .main .faculty .section-main .slider .slider-modes .mode:hover {
-    outline-offset: 0.2rem;
-  }
-  body .main .faculty .section-main .slider .dots {
-    bottom: 1.5rem;
-    gap: 0.5rem;
-  }
-  body .main .faculty .section-main .slider .dots .dot {
-    width: 0.8rem;
-    height: 0.8rem;
-  }
-  body .main .faculty .section-main .slider .control {
-    width: 2.5rem;
-    height: 2.5rem;
-  }
-  body .main .faculty .section-main .slider .prev {
-    left: 1rem;
-  }
-  body .main .faculty .section-main .slider .next {
-    right: 1rem;
-  }
-  body .main .faculty .section-main .slider .slides-container .slide {
-    gap: 1rem;
-    padding: 4rem;
-  }
-  body .main .faculty .section-main .slider .slides-container .slide .pfp-container {
-    width: 10rem;
-  }
-  body .main .faculty .section-main .slider .slides-container .slide .pfp-container .pfp {
-    width: 90%;
-  }
-  body .main .faculty .section-main .slider .slides-container .slide .context-container .subheading {
-    font-size: 1.2rem;
-  }
-  body .main .faculty .section-main .slider .slides-container .slide .context-container .heading {
-    font-size: 2rem;
-  }
-  body .main .faculty .section-main .slider .slides-container .slide .context-container .context {
-    font-size: 1.5rem;
-    margin: 1rem 0;
-  }
-  body .main .faculty .section-main .slider .slides-container .slide .context-container .contacts {
-    gap: 2rem;
-  }
-  body .main .faculty .section-main .slider .slides-container .slide .context-container .contacts .contact {
-    font-size: 1.3rem;
-  }
-  body .footer .content .content-list {
-    gap: 0.5rem;
-  }
-  body .footer .content .content-list .title {
-    font-size: 1.8rem;
-    margin-bottom: 0;
-  }
-  body .footer .content .content-list .nav-link {
-    font-size: 1.2rem;
-  }
-  body .footer .content .content-list .item {
-    gap: 0.2rem;
-  }
-  body .footer .content .content-list .item .svg-container {
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-  body .footer .content .content-list .item .text {
-    font-size: 1.2rem;
-  }
-  body .footer .content .content-list .creds-container {
-    width: 18rem;
-    height: 3rem;
-    border-radius: 2rem;
-    margin-bottom: 1rem;
-  }
-  body .footer .content .content-list .creds-container .email {
-    font-size: 1.2rem;
-    font-weight: 400;
-    padding: 0.3rem 0.8rem;
-  }
-  body .footer .content .content-list .creds-container .btn {
-    padding: 0.8rem 1.2rem;
-    border: 0.2rem solid #00b4ff;
-    border-radius: 0.8rem;
-    outline: 0 solid #00b4ff;
-    transition: all 200ms ease-in;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    background-color: #00b4ff;
-    height: 100%;
-    padding: 0 0.5rem;
-    border-radius: 0;
-  }
-  body .footer .content .content-list .creds-container .btn .text {
-    font-size: 1.5rem;
-    font-weight: 400;
-    letter-spacing: 1px;
-    text-align: center;
-    color: #fcf7ff;
-  }
-  body .footer .content .content-list .creds-container .btn .svg-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-  body .footer .content .content-list .creds-container .btn .svg-container > svg {
-    width: 100%;
-    height: 100%;
-    fill: #fcf7ff;
-    stroke: #fcf7ff;
-  }
-  body .footer .content .content-list .quote {
-    font-size: 1.2rem;
-  }
-  body .footer .branding-bar {
-    min-height: 5rem;
-    padding: 0 2rem;
-  }
-  body .footer .branding-bar .brand-container {
-    gap: 1rem;
-  }
-  body .footer .branding-bar .brand-container .img-container {
-    width: 5rem;
-  }
-  body .footer .branding-bar .brand-container .copyrights {
-    font-size: 1.2rem;
-  }
-  body .footer .branding-bar .socials-container {
-    gap: 1.5rem;
-  }
-  body .footer .branding-bar .socials-container .btn {
-    width: 2rem;
-    height: 2rem;
-  }
-}
-@media screen and (max-width: 1919px) {
   body .landing-page .navbar {
     padding: 1rem 3rem;
   }
@@ -1224,62 +1071,30 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     padding-left: 2rem;
   }
   body .landing-page .hero .hero-context .heading {
-    width: 40rem;
     font-size: 3rem;
-  }
-  body .landing-page .hero .hero-context .subheading {
-    width: 40rem;
-    font-size: 1.5rem;
   }
   body .landing-page .hero .hero-context .cta-group {
     gap: 4rem;
-    width: 40rem;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
   }
   body .landing-page .hero .hero-context .cta-group .btn:nth-child(1) {
     padding: 0.5rem 0.8rem;
     border-radius: 0.5rem;
   }
-  body .landing-page .hero .hero-context .cta-group .btn:nth-child(1) .text {
-    font-size: 1.2rem;
-  }
   body .landing-page .hero .hero-context .cta-group .btn:nth-child(1) .svg-container {
     width: 1.5rem;
     height: 1.5rem;
   }
-  body .landing-page .hero .hero-context .cta-group .btn:nth-child(1):hover,
-  body .landing-page .hero .hero-context .cta-group .btn:nth-child(1):focus {
-    background-color: transparent;
-    border-color: transparent;
-    outline-width: 0.2rem;
-    outline-offset: 0.1px;
-    cursor: pointer;
-  }
-  body .landing-page .hero .hero-context .cta-group .btn:nth-child(1):hover .text,
-  body .landing-page .hero .hero-context .cta-group .btn:nth-child(1):focus .text {
-    color: #fcf7ff;
-  }
-  body .landing-page .hero .hero-context .cta-group .btn:nth-child(1):hover .svg-container > svg,
-  body .landing-page .hero .hero-context .cta-group .btn:nth-child(1):focus .svg-container > svg {
-    fill: #fcf7ff;
-    stroke: #fcf7ff;
+  body .landing-page .hero .hero-context .cta-group .btn:nth-child(1) .text {
+    font-size: 1.5rem;
   }
   body .landing-page .hero .hero-context .cta-group .btn:nth-child(2) {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     padding: 0.5rem 0.8rem;
     border-radius: 0.5rem;
   }
-  body .landing-page .hero .hero-context .cta-group .btn:nth-child(2):hover,
-  body .landing-page .hero .hero-context .cta-group .btn:nth-child(2):focus {
-    color: #fcf7ff;
-    background-color: #0e1ec4;
-    cursor: pointer;
-  }
-  body .main {
-    width: 100%;
-  }
   body .main .section {
-    padding: 1.5rem;
+    padding: 2rem;
   }
   body .main .section .section-header {
     height: 6rem;
@@ -1293,13 +1108,13 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     font-size: 2rem;
   }
   body .main .section .section-header .subtitle {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
   body .main .section .section-main {
     min-height: calc(100vh - 11rem);
   }
   body .main .about .section-main {
-    max-width: 1920px;
+    max-width: 1280px;
   }
   body .main .about .section-main .content-container .heading {
     font-size: 1.8rem;
@@ -1311,20 +1126,19 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     padding: 0.5rem 0.8rem;
     border-radius: 0.5rem;
   }
-  body .main .about .section-main .btn .text {
-    font-size: 1.2rem;
-  }
   body .main .about .section-main .btn .svg-container {
     width: 1.5rem;
     height: 1.5rem;
   }
+  body .main .about .section-main .btn .text {
+    font-size: 1.5rem;
+  }
   body .main .availablity .section-main {
     max-width: 1280px;
     margin-inline: auto;
-    padding: 2rem 0;
   }
   body .main .availablity .section-main .card {
-    width: 23rem;
+    width: 20rem;
     padding: 1rem 2rem;
   }
   body .main .availablity .section-main .card .svg-container {
@@ -1338,26 +1152,69 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
   }
   body .main .availablity .section-main .card .context {
     font-size: 1.5rem;
-    line-height: 2rem;
+    letter-spacing: 0;
+    line-height: 1.5;
     margin-top: 1.5rem;
   }
+  body .main .faculty .section-main .slider .slider-modes .mode {
+    max-width: 15rem;
+    font-size: 1.5rem;
+  }
+  body .main .faculty .section-main .slider .slider-modes .mode:hover {
+    outline-offset: 0.2rem;
+  }
+  body .main .faculty .section-main .slider .control {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  body .main .faculty .section-main .slider .prev {
+    left: 1rem;
+  }
+  body .main .faculty .section-main .slider .next {
+    right: 1rem;
+  }
+  body .main .faculty .section-main .slider .slides-container .slide {
+    gap: 1rem;
+    padding: 5rem;
+  }
+  body .main .faculty .section-main .slider .slides-container .slide .pfp-container {
+    width: 10rem;
+  }
+  body .main .faculty .section-main .slider .slides-container .slide .pfp-container .pfp {
+    width: 90%;
+  }
+  body .main .faculty .section-main .slider .slides-container .slide .context-container .subheading {
+    font-size: 1.5rem;
+  }
+  body .main .faculty .section-main .slider .slides-container .slide .context-container .heading {
+    font-size: 2rem;
+  }
+  body .main .faculty .section-main .slider .slides-container .slide .context-container .context {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+  }
+  body .main .faculty .section-main .slider .slides-container .slide .context-container .contacts {
+    gap: 2rem;
+  }
+  body .main .faculty .section-main .slider .slides-container .slide .context-container .contacts .contact {
+    font-size: 1.5rem;
+  }
   body .main .cta-section {
-    height: 15rem;
+    height: 12rem;
   }
   body .main .cta-section .title {
-    font-size: 4rem;
-    line-height: 6rem;
+    font-size: 3rem;
   }
   body .main .cta-section .cta {
     padding: 0.5rem 0.8rem;
     border-radius: 0.5rem;
   }
-  body .main .cta-section .cta .text {
-    font-size: 1.2rem;
-  }
   body .main .cta-section .cta .svg-container {
     width: 1.5rem;
     height: 1.5rem;
+  }
+  body .main .cta-section .cta .text {
+    font-size: 1.5rem;
   }
   body .main .statistics {
     height: fit-content;
@@ -1367,10 +1224,65 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     min-height: fit-content;
   }
   body .main .statistics .section-main .counters .counter .number {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   body .main .statistics .section-main .counters .counter .label {
     font-size: 1.5rem;
+  }
+  body .footer .content .content-list {
+    gap: 0.5rem;
+  }
+  body .footer .content .content-list .title {
+    font-size: 1.8rem;
+  }
+  body .footer .content .content-list .nav-link {
+    font-size: 1.2rem;
+  }
+  body .footer .content .content-list .item {
+    gap: 0.2rem;
+  }
+  body .footer .content .content-list .item .svg-container {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  body .footer .content .content-list .item .text {
+    font-size: 1.2rem;
+  }
+  body .footer .content .content-list .creds-container {
+    width: 18rem;
+    height: 3rem;
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+  }
+  body .footer .content .content-list .creds-container .email {
+    font-size: 1.2rem;
+    padding: 0.3rem 0.8rem;
+  }
+  body .footer .content .content-list .creds-container .btn {
+    padding: 0 0.5rem;
+  }
+  body .footer .content .content-list .quote {
+    font-size: 1.2rem;
+  }
+  body .footer .branding-bar {
+    min-height: 5rem;
+    padding: 0 2rem;
+  }
+  body .footer .branding-bar .brand-container {
+    gap: 1rem;
+  }
+  body .footer .branding-bar .brand-container .img-container {
+    width: 5rem;
+  }
+  body .footer .branding-bar .brand-container .copyrights {
+    font-size: 1.2rem;
+  }
+  body .footer .branding-bar .socials-container {
+    gap: 1.5rem;
+  }
+  body .footer .branding-bar .socials-container .btn {
+    width: 2rem;
+    height: 2rem;
   }
 }
 @media screen and (max-width: 1280px) {
@@ -1405,17 +1317,14 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
   }
   body .landing-page .hero .hero-context .heading {
     width: 30rem;
-    font-size: 2.5rem;
   }
   body .landing-page .hero .hero-context .subheading {
     width: 30rem;
     font-size: 1rem;
-    line-height: 1.2rem;
   }
   body .landing-page .hero .hero-context .cta-group {
     gap: 4rem;
     width: 30rem;
-    margin-top: 1rem;
     padding-right: 0;
   }
   body .landing-page .hero .hero-context .cta-group .btn:nth-child(1) {
@@ -1439,7 +1348,7 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     width: 100%;
   }
   body .main .section {
-    padding: 1rem;
+    padding: 1.5rem;
   }
   body .main .section .section-header {
     height: 5rem;
@@ -1490,13 +1399,12 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     padding: 0.4rem;
   }
   body .main .availablity .section-main .card .heading {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     margin-top: 2rem;
     margin-bottom: 1rem;
   }
   body .main .availablity .section-main .card .context {
-    font-size: 1.3rem;
-    line-height: 1.5rem;
+    font-size: 1rem;
     margin-top: 1rem;
   }
   body .main .faculty .section-main {
@@ -1507,7 +1415,7 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     width: 95%;
   }
   body .main .faculty .section-main .slider .slider-modes .mode {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   body .main .faculty .section-main .slider .dots {
     bottom: 1rem;
@@ -1541,7 +1449,7 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
   }
   body .main .faculty .section-main .slider .slides-container .slide .context-container .context {
     font-size: 1rem;
-    line-height: 1.2rem;
+    line-height: 1.2;
     margin: 0.8rem 0;
   }
   body .main .faculty .section-main .slider .slides-container .slide .context-container .contacts {
@@ -1551,11 +1459,22 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     font-size: 1rem;
   }
   body .main .cta-section {
-    height: 12rem;
+    height: 10rem;
   }
   body .main .cta-section .title {
-    font-size: 3rem;
-    line-height: 5rem;
+    font-size: 2rem;
+  }
+  body .main .cta-section .cta {
+    padding: 0.4rem 0.5rem;
+    border-width: 0.1rem;
+    border-radius: 0.5rem;
+  }
+  body .main .cta-section .cta .text {
+    font-size: 1rem;
+  }
+  body .main .cta-section .cta .svg-container {
+    width: 1.2rem;
+    height: 1.2rem;
   }
   body .main .statistics {
     height: fit-content;
@@ -1568,13 +1487,13 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     font-size: 1.8rem;
   }
   body .main .statistics .section-main .counters .counter .label {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   body .footer .content .content-list {
     gap: 0.3rem;
   }
   body .footer .content .content-list .title {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   body .footer .content .content-list .nav-link {
     font-size: 1rem;
@@ -1599,41 +1518,7 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     font-size: 1rem;
   }
   body .footer .content .content-list .creds-container .btn {
-    padding: 0.8rem 1.2rem;
-    border: 0.2rem solid #00b4ff;
-    border-radius: 0.8rem;
-    outline: 0 solid #00b4ff;
-    transition: all 200ms ease-in;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    background-color: #00b4ff;
-    height: 100%;
     padding: 0 0.3rem;
-    border-radius: 0;
-  }
-  body .footer .content .content-list .creds-container .btn .text {
-    font-size: 1.5rem;
-    font-weight: 400;
-    letter-spacing: 1px;
-    text-align: center;
-    color: #fcf7ff;
-  }
-  body .footer .content .content-list .creds-container .btn .svg-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-  body .footer .content .content-list .creds-container .btn .svg-container > svg {
-    width: 100%;
-    height: 100%;
-    fill: #fcf7ff;
-    stroke: #fcf7ff;
   }
   body .footer .content .content-list .quote {
     font-size: 1rem;
@@ -1658,7 +1543,7 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     width: 0.5rem;
   }
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   body .landing-page .navbar {
     height: 2.5rem;
     padding: 0.3rem 1.5rem;
@@ -1677,8 +1562,10 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
   }
   body .landing-page .hero .hero-context {
     width: 100%;
+    max-width: 481px;
     padding-left: 0;
     margin-left: 0;
+    margin-inline: auto;
   }
   body .landing-page .hero .hero-context .heading {
     width: 100%;
@@ -1687,15 +1574,13 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
   }
   body .landing-page .hero .hero-context .subheading {
     width: 100%;
-    max-width: 600px;
-    font-size: 0.8rem;
-    line-height: 1rem;
+    font-size: 1rem;
     text-align: center;
   }
   body .landing-page .hero .hero-context .cta-group {
     gap: 4rem;
     width: 100%;
-    max-width: 768px;
+    max-width: 1024px;
     margin-top: 1rem;
     padding-right: 0;
   }
@@ -1704,39 +1589,12 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     padding: 0.3rem 0.5rem;
     border-radius: 0.4rem;
   }
-  body .landing-page .hero .hero-context .cta-group .btn:nth-child(1) .text {
-    font-size: 0.8rem;
-  }
   body .landing-page .hero .hero-context .cta-group .btn:nth-child(1) .svg-container {
     width: 1rem;
     height: 1rem;
   }
-  body .landing-page .hero .hero-context .cta-group .btn:nth-child(1):hover,
-  body .landing-page .hero .hero-context .cta-group .btn:nth-child(1):focus {
-    background-color: transparent;
-    border-color: transparent;
-    outline-width: 0.2rem;
-    outline-offset: 0.1px;
-    cursor: pointer;
-  }
-  body .landing-page .hero .hero-context .cta-group .btn:nth-child(1):hover .text,
-  body .landing-page .hero .hero-context .cta-group .btn:nth-child(1):focus .text {
-    color: #fcf7ff;
-  }
-  body .landing-page .hero .hero-context .cta-group .btn:nth-child(1):hover .svg-container > svg,
-  body .landing-page .hero .hero-context .cta-group .btn:nth-child(1):focus .svg-container > svg {
-    fill: #fcf7ff;
-    stroke: #fcf7ff;
-  }
   body .landing-page .hero .hero-context .cta-group .btn:nth-child(2) {
-    font-size: 0.8rem;
     padding: 0.3rem 0.5rem;
-  }
-  body .landing-page .hero .hero-context .cta-group .btn:nth-child(2):hover,
-  body .landing-page .hero .hero-context .cta-group .btn:nth-child(2):focus {
-    color: #fcf7ff;
-    background-color: #0e1ec4;
-    cursor: pointer;
   }
   body .landing-page .hero .hero-img {
     display: none;
@@ -1746,9 +1604,8 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
   }
   body .main .section .section-header {
     gap: 0;
-    height: 3rem;
+    height: 4rem;
     padding-right: 0;
-    margin-bottom: 0.5rem;
   }
   body .main .section .section-header .title-container {
     gap: 0.5rem;
@@ -1761,40 +1618,32 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     height: 1.8rem;
   }
   body .main .section .section-header .subtitle {
-    font-size: 0.8rem;
-  }
-  body .main .section .section-main {
-    min-height: calc(100vh - 5rem);
-  }
-  body .main .about .section-main {
-    max-width: 480px;
-  }
-  body .main .about .section-main .content-container .heading {
     font-size: 1rem;
   }
+  body .main .section .section-main {
+    min-height: calc(100vh - 8rem);
+  }
+  body .main .about .section-main {
+    max-width: 481px;
+    gap: 3rem;
+  }
+  body .main .about .section-main .content-container .heading {
+    font-size: 1.2rem;
+  }
   body .main .about .section-main .content-container .context {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   body .main .about .section-main .btn {
     gap: 0.3rem;
     padding: 0.3rem 0.5rem;
     border-radius: 0.4rem;
   }
-  body .main .about .section-main .btn .text {
-    font-size: 0.8rem;
-  }
   body .main .about .section-main .btn .svg-container {
     width: 1rem;
     height: 1rem;
   }
-  body .main .availablity .section-main {
-    flex-direction: column;
-    row-gap: 3rem;
-    padding-top: 2.5rem;
-  }
   body .main .availablity .section-main .card {
-    width: 90%;
-    max-width: 18rem;
+    width: 15rem;
   }
   body .main .availablity .section-main .card .svg-container {
     width: 3rem;
@@ -1803,26 +1652,23 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     border-width: 1px;
   }
   body .main .availablity .section-main .card .heading {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-top: 2rem;
     margin-bottom: 1rem;
   }
   body .main .availablity .section-main .card .context {
     font-size: 1rem;
-    line-height: 1.5rem;
   }
   body .main .faculty .section-main {
     padding-top: 1rem;
   }
   body .main .faculty .section-main .slider {
-    width: 70%;
-    min-width: 450px;
-    aspect-ratio: 16/7;
+    aspect-ratio: 16/9;
     border-radius: 1rem;
   }
   body .main .faculty .section-main .slider .slider-modes .mode {
     width: 25%;
-    font-size: 0.8rem;
+    font-size: 1rem;
     letter-spacing: 0;
     padding: 0.3rem;
     border-width: 0.1rem;
@@ -1848,7 +1694,7 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
   }
   body .main .faculty .section-main .slider .slides-container .slide {
     gap: 0.5rem;
-    padding: 1rem 2rem;
+    padding: 1rem 3rem;
   }
   body .main .faculty .section-main .slider .slides-container .slide .pfp-container {
     width: 4rem;
@@ -1857,14 +1703,14 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     border-width: 0.001rem;
   }
   body .main .faculty .section-main .slider .slides-container .slide .context-container .subheading {
-    font-size: 0.6rem;
+    font-size: 0.9rem;
     letter-spacing: 0;
   }
   body .main .faculty .section-main .slider .slides-container .slide .context-container .heading {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   body .main .faculty .section-main .slider .slides-container .slide .context-container .context {
-    font-size: 0.6rem;
+    font-size: 0.9rem;
     letter-spacing: 0;
     line-height: 1;
     margin: 0.4rem 0;
@@ -1873,7 +1719,7 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     gap: 0.4rem;
   }
   body .main .faculty .section-main .slider .slides-container .slide .context-container .contacts .contact {
-    font-size: 0.5rem;
+    font-size: 0.9rem;
     font-weight: 600;
     letter-spacing: 0;
   }
@@ -1881,16 +1727,12 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     height: 8rem;
   }
   body .main .cta-section .title {
-    font-size: 2rem;
-    line-height: 2.5rem;
+    font-size: 1.8rem;
   }
   body .main .cta-section .cta {
     gap: 0.3rem;
     padding: 0.3rem 0.5rem;
     border-radius: 0.4rem;
-  }
-  body .main .cta-section .cta .text {
-    font-size: 0.8rem;
   }
   body .main .cta-section .cta .svg-container {
     width: 1rem;
@@ -1903,35 +1745,48 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
   body .main .statistics .section-main {
     min-height: fit-content;
   }
+  body .main .statistics .section-main .counters .counter {
+    width: 50%;
+  }
   body .main .statistics .section-main .counters .counter .number {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   body .main .statistics .section-main .counters .counter .label {
-    font-size: 0.6rem;
+    font-size: 0.9rem;
+  }
+  body .main .statistics .section-main .counters .counter:nth-last-child(3),
+  body .main .statistics .section-main .counters .counter:nth-last-child(4) {
+    margin-bottom: 1.5rem;
   }
   body .footer .content {
-    padding: 0.5rem;
-    justify-content: space-around;
+    padding: 1rem;
+  }
+  body .footer .content .content-list {
+    gap: 0.1rem;
   }
   body .footer .content .content-list .title {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
   body .footer .content .content-list .nav-link {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
+  }
+  body .footer .content .content-list .item {
+    gap: 0.2rem;
   }
   body .footer .content .content-list .item .svg-container {
     width: 0.8rem;
     height: 1.2rem;
   }
   body .footer .content .content-list .item .text {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
+    padding: 0;
   }
   body .footer .content .content-list .creds-container {
     width: 8rem;
     height: 1.5rem;
   }
   body .footer .content .content-list .creds-container .email {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     padding: 0.3rem 0.5rem;
   }
   body .footer .content .content-list .creds-container .btn {
@@ -1942,7 +1797,7 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     height: 1rem;
   }
   body .footer .content .content-list .quote {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
   }
   body .footer .content .content-list:nth-child(3) {
     display: none;
@@ -1971,42 +1826,70 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     width: 0.2rem;
   }
 }
+@media screen and (max-width: 800px) {
+  body .main .availablity .section-main {
+    flex-direction: column;
+    row-gap: 3rem;
+  }
+  body .main .faculty .section-main {
+    padding-top: 1rem;
+  }
+  body .main .faculty .section-main .slider {
+    aspect-ratio: 16/14;
+    min-height: 25rem;
+    max-height: 25rem;
+  }
+  body .main .faculty .section-main .slider .slider-modes .mode {
+    width: 30%;
+  }
+  body .main .faculty .section-main .slider .slides-container .slide {
+    flex-direction: column;
+    padding: 2rem 3rem;
+  }
+  body .main .faculty .section-main .slider .slides-container .slide .pfp-container {
+    width: 100%;
+    height: 5rem;
+  }
+  body .main .faculty .section-main .slider .slides-container .slide .pfp-container .pfp {
+    width: 4rem;
+  }
+  body .main .faculty .section-main .slider .slides-container .slide .context-container .contacts {
+    flex-direction: column;
+  }
+}
 @media screen and (max-width: 481px) {
   body .landing-page .navbar {
     padding-inline: 1rem;
+  }
+  body .landing-page .hero .hero-context {
+    max-width: 320px;
   }
   body .landing-page .hero .hero-context .heading {
     font-size: 2rem;
     letter-spacing: 0;
   }
   body .landing-page .hero .hero-context .subheading {
-    max-width: 320px;
+    font-size: 0.9rem;
+    padding: 0.5rem;
   }
   body .landing-page .hero .hero-context .cta-group {
     gap: 1rem;
-    max-width: 320px;
   }
   body .landing-page .hero .hero-context .cta-group .btn:nth-child(1) {
     gap: 0.3rem;
     padding: 0.3rem 0.5rem;
     border-radius: 0.4rem;
   }
-  body .landing-page .hero .hero-context .cta-group .btn:nth-child(1) .text {
-    font-size: 0.8rem;
-  }
   body .landing-page .hero .hero-context .cta-group .btn:nth-child(1) .svg-container {
     width: 1rem;
     height: 1rem;
   }
   body .landing-page .hero .hero-context .cta-group .btn:nth-child(2) {
-    font-size: 0.8rem;
     padding: 0.3rem 0.5rem;
-  }
-  body .main .section {
-    padding: 1rem 0.5rem;
   }
   body .main .section .section-header .title-container .title {
     font-size: 1rem;
+    font-weight: 700;
     letter-spacing: 0;
   }
   body .main .section .section-header .title-container .svg-container {
@@ -2014,6 +1897,7 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     height: 1.2rem;
   }
   body .main .section .section-header .subtitle {
+    font-size: 0.9rem;
     letter-spacing: 0;
   }
   body .main .section .section-main {
@@ -2026,24 +1910,16 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     font-size: 0.9rem;
   }
   body .main .about .section-main .content-container .context {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
   body .main .about .section-main .btn {
     gap: 0.3rem;
     padding: 0.3rem 0.5rem;
     border-radius: 0.4rem;
   }
-  body .main .about .section-main .btn .text {
-    font-size: 0.8rem;
-  }
   body .main .about .section-main .btn .svg-container {
     width: 1rem;
     height: 1rem;
-  }
-  body .main .availablity .section-main {
-    flex-direction: column;
-    row-gap: 3rem;
-    padding-top: 2.5rem;
   }
   body .main .availablity .section-main .card {
     width: 90%;
@@ -2055,46 +1931,34 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     border-width: 1px;
   }
   body .main .availablity .section-main .card .heading {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin: 1rem 0;
   }
   body .main .availablity .section-main .card .branch-img {
     margin: 0;
   }
   body .main .availablity .section-main .card .context {
-    font-size: 1rem;
-    line-height: 1.2rem;
+    font-size: 0.9rem;
   }
   body .main .faculty .section-main {
     padding-top: 1rem;
   }
   body .main .faculty .section-main .slider {
-    width: 70%;
-    min-width: 18rem;
-    aspect-ratio: 12/14;
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 9/12;
     border-radius: 1rem;
   }
   body .main .faculty .section-main .slider .slider-modes .mode {
-    width: 25%;
-    font-size: 0.6rem;
-    padding: 0.3rem 0.2rem;
+    width: 30%;
+    font-size: 0.7rem;
+    padding: 0.3rem 0;
     border-width: 0.1rem;
     border-radius: 0.4rem;
   }
-  body .main .faculty .section-main .slider .control {
-    width: 1rem;
-    height: 1rem;
-  }
-  body .main .faculty .section-main .slider .prev {
-    left: 0.5rem;
-  }
-  body .main .faculty .section-main .slider .next {
-    right: 0.5rem;
-  }
   body .main .faculty .section-main .slider .slides-container .slide {
-    flex-direction: column;
     gap: 0;
-    padding: 2rem;
+    padding: 2rem 2.5rem;
   }
   body .main .faculty .section-main .slider .slides-container .slide .pfp-container {
     width: 100%;
@@ -2105,14 +1969,21 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     height: 3rem;
     border-width: 0.001rem;
   }
+  body .main .faculty .section-main .slider .slides-container .slide .context-container .subheading {
+    font-size: 0.7rem;
+  }
+  body .main .faculty .section-main .slider .slides-container .slide .context-container .heading {
+    font-size: 0.9rem;
+  }
   body .main .faculty .section-main .slider .slides-container .slide .context-container .context {
+    font-size: 0.7rem;
     margin: 1rem 0;
   }
   body .main .faculty .section-main .slider .slides-container .slide .context-container .contacts {
     gap: 0.4rem;
   }
   body .main .faculty .section-main .slider .slides-container .slide .context-container .contacts .contact {
-    font-size: 0.5rem;
+    font-size: 0.7rem;
     font-weight: 600;
     letter-spacing: 0;
   }
@@ -2121,7 +1992,6 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
   }
   body .main .cta-section .title {
     font-size: 1.2rem;
-    line-height: 2rem;
   }
   body .main .cta-section .cta {
     gap: 0.1rem;
@@ -2143,57 +2013,56 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     min-height: fit-content;
     margin-top: 2rem;
   }
-  body .main .statistics .section-main .counters {
-    flex-wrap: wrap;
-    row-gap: 1rem;
-  }
   body .main .statistics .section-main .counters .counter {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 8rem;
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  body .main .statistics .section-main .counters .counter .number {
+    font-size: 1rem;
+  }
+  body .main .statistics .section-main .counters .counter .label {
+    font-size: 0.7rem;
   }
   body .footer .content {
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
-    padding: 0.5rem;
+    gap: 2rem;
+    padding: 2rem;
   }
   body .footer .content .content-list {
     justify-content: center;
     align-items: center;
-    gap: 0.5rem;
     width: 100%;
   }
   body .footer .content .content-list .title {
-    font-size: 1.5rem;
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
   }
   body .footer .content .content-list .nav-link {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   body .footer .content .content-list .item .svg-container {
     width: 1.2rem;
     height: 1.2rem;
   }
   body .footer .content .content-list .item .text {
-    font-size: 1rem;
+    font-size: 0.9rem;
     text-align: center;
   }
   body .footer .content .content-list .creds-container {
-    width: 12rem;
+    width: 10rem;
     height: 2rem;
   }
   body .footer .content .content-list .creds-container .email {
-    font-size: 1rem;
+    font-size: 0.9rem;
     padding: 0.3rem 0.8rem;
   }
   body .footer .content .content-list .creds-container .btn {
-    padding: 0.3rem 0.5rem;
+    padding: 0.3rem;
   }
   body .footer .content .content-list .quote {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   body .footer .content .content-list:nth-child(3) {
     display: flex;
