@@ -57,7 +57,7 @@ body {
             height: calc(50vh - 5rem);
 
             .page-title {
-                font-size: 6rem;
+                font-size: $fs-1;
                 font-family: $font-heading;
                 font-weight: 700;
                 letter-spacing: 2px;
@@ -89,6 +89,7 @@ body {
 
             width: 80%;
             height: 80%;
+            max-height: 1000px;
             background-color: $color-light;
             border-radius: 3rem;
             transform: translate(-50%, calc(-50%));
@@ -107,7 +108,7 @@ body {
                 padding: 1rem 3rem;
 
                 .heading {
-                    font-size: 3rem;
+                    font-size: $fs-3;
                     font-weight: 700;
                     font-family: $font-heading;
                     line-height: 1;
@@ -143,7 +144,7 @@ body {
                     .entry {
                         flex: 1;
                         height: 3rem;
-                        font-size: 1.5rem;
+                        font-size: $fs-6;
                         font-weight: 400;
                     }
                 }
@@ -158,7 +159,7 @@ body {
                 .message {
                     width: 80%;
                     resize: none;
-                    font-size: 1.5rem;
+                    font-size: $fs-6;
                     font-weight: 400;
                     padding: 2rem 1.5rem;
                     border-radius: 1.5rem;
@@ -190,7 +191,7 @@ body {
                     }
 
                     .text {
-                        font-size: 1rem;
+                        font-size: $fs-8;
                         font-family: $font-subheading;
                         font-weight: 600;
                     }
@@ -233,14 +234,7 @@ body {
 ////////////// Responsiveness.
 
 /// 1640px
-@media screen and (max-width: 1640px) {
-    body {
-        @include footer-medium;
-    }
-}
-
-/// 1440px
-@media screen and (max-width: calc($breakpoint-medium)) {
+@media screen and (max-width: $breakpoint-medium) {
     body {
         .landing-page {
             @include navbar-medium;
@@ -249,7 +243,7 @@ body {
                 height: calc(50vh - calc(5rem));
 
                 .page-title {
-                    font-size: 4rem;
+                    font-size: $fs-2;
                 }
             }
         }
@@ -267,11 +261,13 @@ body {
                 }
             }
         }
+
+        @include footer-medium;
     }
 }
 
 /// 1280px
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: $breakpoint-small) {
     body {
         .landing-page {
             @include navbar-small;
@@ -280,7 +276,7 @@ body {
                 height: calc(50vh - calc(3rem));
 
                 .page-title {
-                    font-size: 3rem;
+                    font-size: $fs-3;
                 }
             }
         }
@@ -290,62 +286,14 @@ body {
                 .contents {
                     gap: 1rem;
 
-                    .heading {
-                        font-size: 2rem;
-                    }
-
-                    .contact {
-                        gap: 0.8rem;
-
-                        height: 3rem;
-                        padding: 1rem;
-                        border-radius: 0.8rem;
-                        outline-width: 2px;
-
-                        .svg-container {
-                            width: 2rem;
-                            height: 2rem;
-                        }
-
-                        .entry {
-                            height: 2rem;
-                            font-size: 1rem;
-                        }
-                    }
-
-                    .contact:focus-within,
-                    .contact:hover {
-                        outline-offset: 0.2rem;
-                    }
-
-                    .message {
-                        font-size: 1rem;
-                        padding: 1rem;
-                        border-radius: 0.8rem;
-                        outline-width: 2px;
-                    }
-
-                    .message:focus,
-                    .message:hover {
-                        outline-offset: 0.2rem;
-                    }
-
+                    .contact,
+                    .message,
                     .checkbox {
-                        gap: 0.5rem;
-
-                        .entry {
-                            width: 1rem;
-                            height: 1rem;
-                        }
-
-                        .text {
-                            font-size: 0.8rem;
-                        }
+                        width: 100%;
                     }
 
                     .btn {
-                        @include btn-small($color-light, $color-primary);
-                        padding: 0.8rem 0;
+                        @include btn-tablet($color-light, $color-primary);
                     }
                 }
             }
@@ -359,7 +307,7 @@ body {
 }
 
 /// 1024px || Tablet
-@media screen and (max-width: calc($breakpoint-small - 1px)) {
+@media screen and (max-width: $breakpoint-tablet) {
     body {
         .landing-page {
             @include navbar-tablet;
@@ -368,7 +316,7 @@ body {
                 height: calc(50vh - calc(2.5rem / 2));
 
                 .page-title {
-                    font-size: 3rem;
+                    font-size: calc($fs-4 + 0.5rem);
                 }
             }
         }
@@ -376,8 +324,12 @@ body {
         .main {
             .contact-section {
                 padding: 0;
+
                 .contents {
+                    width: 80%;
                     padding: 1rem 2rem;
+                    margin-inline: auto;
+
                     .contact,
                     .message,
                     .checkbox {
@@ -389,36 +341,7 @@ body {
                         width: 60%;
                     }
                 }
-            }
-        }
 
-        @include footer-tablet;
-    }
-    ::-webkit-scrollbar {
-        width: 0.2rem;
-    }
-}
-
-/// 720px || Tablet
-@media screen and (max-width: calc($breakpoint-small - 1px)) {
-    body {
-        .main {
-            .contact-section {
-                .contents {
-                    width: 100%;
-
-                    .contact,
-                    .message,
-                    .checkbox {
-                        width: 60%;
-                        min-width: 20rem;
-                    }
-
-                    .btn {
-                        @include btn-small($color-light, $color-primary);
-                        width: 40%;
-                    }
-                }
                 .img-container {
                     display: none;
                 }
@@ -432,6 +355,41 @@ body {
     }
 }
 
+/// 760px || Tablet
+@media screen and (max-width: 760px) {
+    body {
+        .landing-page {
+            @include navbar-tablet;
+
+            .hero {
+                height: calc(50vh - calc(2.5rem / 2));
+
+                .page-title {
+                    font-size: calc($fs-4 + 0.5rem);
+                }
+            }
+        }
+
+        .main {
+            .contact-section .contents {
+                width: 100%;
+                max-height: 800px;
+
+                .contact,
+                .message,
+                .checkbox {
+                    width: 100%;
+                }
+
+                .btn {
+                    @include btn-small($color-light, $color-primary);
+                    width: 70%;
+                }
+            }
+        }
+    }
+}
+
 /// 481 || Mobile
 @media screen and (max-width: $breakpoint-mobile) {
     body {
@@ -439,36 +397,49 @@ body {
             .navbar {
                 padding-inline: 1rem;
             }
-
-            .hero .page-title {
-                font-size: 2.5rem;
-            }
         }
 
         .main {
             .contact-section {
+                max-height: 600px;
+
                 .contents {
+                    justify-content: center;
+                    gap: 2rem;
+
                     width: 100%;
                     padding: 0.8rem;
 
                     .heading {
-                        font-size: 1.5rem;
+                        font-size: $fs-5;
                     }
 
                     .contact,
                     .message {
-                        padding: 0.5rem 0.8rem;
+                        font-size: $fs-7;
+                        padding: 0.3rem 0.8rem;
                         outline-width: 1.5px;
 
                         .svg-container {
                             width: 1.5rem;
                             height: 1.5rem;
                         }
+
+                        .entry {
+                            font-size: $fs-7;
+                        }
+                    }
+
+                    .message {
+                        padding: 0.5rem 0.8rem;
                     }
 
                     .checkbox {
+                        width: 100%;
+                        min-width: 0;
+
                         .text {
-                            font-size: 0.8rem;
+                            font-size: $fs-9;
                         }
                     }
 
@@ -480,7 +451,7 @@ body {
                     }
 
                     .btn {
-                        @include btn-small($color-light, $color-primary);
+                        @include btn-tablet($color-light, $color-primary);
                         width: 60%;
                     }
                 }
