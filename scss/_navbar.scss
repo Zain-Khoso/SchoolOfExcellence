@@ -37,7 +37,7 @@
                     flex-direction: row;
                     align-items: center;
 
-                    font-size: 2rem;
+                    font-size: $fs-5;
                     font-family: $font-text;
                     font-weight: 400;
                     color: rgba($color-light, 0.6);
@@ -72,7 +72,7 @@
 
                     .nav-link {
                         pointer-events: none;
-                        font-size: 2rem;
+                        font-size: $fs-5;
                         font-weight: 400;
                         color: $color-dark;
                         transition: opacity 200ms;
@@ -220,17 +220,17 @@
             gap: 2rem;
 
             li > .nav-item {
-                font-size: 1.5rem;
+                font-size: $fs-6;
                 font-weight: 400;
             }
 
             .dropdown {
                 .nav-item::after {
-                    font-size: 1.2rem;
+                    font-size: $fs-7;
                 }
 
                 .subnav .nav-link {
-                    font-size: 1.5rem;
+                    font-size: $fs-6;
                 }
             }
         }
@@ -250,19 +250,20 @@
             gap: 2rem;
 
             li > .nav-item {
-                font-size: 1.2rem;
+                font-size: $fs-7;
             }
 
             .dropdown {
                 .nav-item::after {
-                    font-size: 1rem;
+                    font-size: $fs-8;
                 }
 
                 .subnav {
                     gap: 0.5rem;
                     padding: 1rem;
+
                     .nav-link {
-                        font-size: 1.2rem;
+                        font-size: $fs-7;
                     }
                 }
             }
