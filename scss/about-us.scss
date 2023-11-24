@@ -5,7 +5,7 @@
 
 body {
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
     background-color: $color-light;
     overflow-y: auto;
 
@@ -57,7 +57,7 @@ body {
             height: calc(50vh - 5rem);
 
             .page-title {
-                font-size: 6rem;
+                font-size: $fs-1;
                 font-family: $font-heading;
                 font-weight: 700;
                 letter-spacing: 2px;
@@ -81,19 +81,18 @@ body {
                 flex-direction: column;
                 justify-content: space-around;
                 align-items: center;
-                gap: 5rem;
 
                 .content-container {
                     width: 100%;
-                    max-width: $breakpoint-small;
+                    max-width: $breakpoint-medium;
 
                     .heading {
-                        font-size: 2rem;
+                        font-size: $fs-4;
                         font-weight: 500;
                         color: $color-primary;
                     }
                     .context {
-                        font-size: 1.8rem;
+                        font-size: $fs-5;
                         font-weight: 400;
                     }
                 }
@@ -110,10 +109,7 @@ body {
                 align-items: center;
                 gap: 3rem;
 
-                width: 100%;
                 max-width: $breakpoint-medium;
-                height: fit-content;
-                margin: auto;
                 overflow: visible;
 
                 .card {
@@ -131,20 +127,20 @@ body {
                         gap: 1rem;
 
                         .picture {
-                            width: 8rem;
+                            width: 6rem;
                             border-radius: 50%;
                         }
 
                         .headings {
                             .heading {
-                                font-size: 1.5rem;
+                                font-size: $fs-6;
                                 font-weight: 400;
                                 line-height: 1;
                                 text-transform: uppercase;
                                 color: $color-secondary;
                             }
                             .name {
-                                font-size: 2.5rem;
+                                font-size: $fs-4;
                                 font-weight: 600;
                                 line-height: 1;
                                 letter-spacing: 2px;
@@ -156,11 +152,11 @@ body {
 
                     .context {
                         width: 100%;
-                        font-size: 1.5rem;
+                        font-size: $fs-6;
                         font-weight: 400;
                         text-transform: capitalize;
                         letter-spacing: 1px;
-                        line-height: 2rem;
+                        line-height: 1;
                         color: $color-light;
                         margin-top: 1rem;
                     }
@@ -224,7 +220,7 @@ body {
                         }
 
                         .text {
-                            font-size: 1.8rem;
+                            font-size: $fs-5;
                             font-weight: 500;
                             color: $color-light;
                         }
@@ -253,14 +249,7 @@ body {
 ////////////// Responsiveness.
 
 /// 1640px
-@media screen and (max-width: 1640px) {
-    body {
-        @include footer-medium;
-    }
-}
-
-/// 1440px
-@media screen and (max-width: calc($breakpoint-medium)) {
+@media screen and (max-width: $breakpoint-medium) {
     body {
         .landing-page {
             @include navbar-medium;
@@ -269,7 +258,7 @@ body {
                 height: calc(50vh - calc(5rem));
 
                 .page-title {
-                    font-size: 4rem;
+                    font-size: $fs-2;
                 }
             }
         }
@@ -279,38 +268,38 @@ body {
                 @include section-medium;
             }
 
-            .about-section .section-main .content-container {
-                .heading {
-                    font-size: 1.8rem;
-                }
-                .context {
-                    font-size: 1.5rem;
+            .about-section .section-main {
+                max-width: $breakpoint-small;
+
+                .content-container {
+                    .heading {
+                        font-size: $fs-5;
+                    }
+                    .context {
+                        font-size: $fs-6;
+                    }
                 }
             }
 
             .authorities-section .section-main .card {
-                padding: 1rem 2rem;
+                padding: 2rem;
 
                 .head {
                     gap: 1rem;
 
-                    .picture {
-                        width: 6rem;
-                    }
-
                     .headings {
                         .heading {
-                            font-size: 1.2rem;
+                            font-size: $fs-6;
                         }
                         .name {
-                            font-size: 2rem;
+                            font-size: $fs-4;
                         }
                     }
                 }
 
                 .context {
-                    font-size: 1.2rem;
-                    line-height: 1.5rem;
+                    font-size: $fs-6;
+                    line-height: 1.5;
                 }
             }
 
@@ -322,7 +311,7 @@ body {
                     border-radius: 1rem;
 
                     .text {
-                        font-size: 1.5rem;
+                        font-size: $fs-6;
                     }
                 }
 
@@ -331,21 +320,24 @@ body {
                 }
             }
         }
+
+        @include footer-medium;
     }
 }
 
 /// 1280px
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: $breakpoint-small) {
     body {
         @include footer-small;
     }
+
     ::-webkit-scrollbar {
         width: 0.5rem;
     }
 }
 
 /// 1024px || Tablet
-@media screen and (max-width: calc($breakpoint-small - 1px)) {
+@media screen and (max-width: $breakpoint-tablet) {
     body {
         .landing-page {
             @include navbar-tablet;
@@ -354,7 +346,7 @@ body {
                 height: calc(50vh - calc(2.5rem / 2));
 
                 .page-title {
-                    font-size: 3rem;
+                    font-size: $fs-3;
                 }
             }
         }
@@ -366,18 +358,20 @@ body {
 
             .about-section .section-main {
                 gap: 2rem;
+
                 .content-container {
                     .heading {
-                        font-size: 1rem;
+                        font-size: $fs-7;
                     }
                     .context {
-                        font-size: 0.8rem;
+                        font-size: $fs-8;
                     }
                 }
             }
 
             .authorities-section .section-main {
-                gap: 1rem;
+                gap: 2rem;
+
                 .card {
                     padding: 1rem;
 
@@ -390,17 +384,16 @@ body {
 
                         .headings {
                             .heading {
-                                font-size: 0.8rem;
+                                font-size: $fs-8;
                             }
                             .name {
-                                font-size: 1.2rem;
+                                font-size: $fs-7;
                             }
                         }
                     }
 
                     .context {
-                        font-size: 0.8rem;
-                        line-height: 1rem;
+                        font-size: $fs-8;
                         margin-top: 0.5rem;
                     }
                 }
@@ -416,7 +409,7 @@ body {
                     border-radius: 0.8rem;
 
                     .text {
-                        font-size: 1rem;
+                        font-size: $fs-8;
                     }
 
                     .svg-container {
@@ -434,6 +427,7 @@ body {
 
         @include footer-tablet;
     }
+
     ::-webkit-scrollbar {
         width: 0.2rem;
     }
@@ -448,21 +442,25 @@ body {
             }
 
             .hero .page-title {
-                font-size: 2.5rem;
+                font-size: calc($fs-4 + 0.5rem);
             }
         }
 
         .main {
             .section {
                 @include section-mobile;
+
+                .section-header .title-container {
+                    gap: 0.1rem;
+                }
             }
 
             .about-section .section-main .content-container {
                 .heading {
-                    font-size: 0.9rem;
+                    font-size: $fs-8;
                 }
                 .context {
-                    font-size: 0.8rem;
+                    font-size: $fs-9;
                 }
             }
 
@@ -476,16 +474,16 @@ body {
 
                     .headings {
                         .heading {
-                            font-size: 0.8rem;
+                            font-size: $fs-10;
                         }
                         .name {
-                            font-size: 1rem;
+                            font-size: $fs-7;
                         }
                     }
                 }
 
                 .context {
-                    font-size: 0.8rem;
+                    font-size: $fs-9;
                 }
             }
 
