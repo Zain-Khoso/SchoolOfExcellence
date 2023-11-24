@@ -91,7 +91,7 @@ const goToSlide = function (event) {
     const targetElem = event.target.closest(".img-container");
     const elem_slides = Array.from(elem_carousel.querySelectorAll("img"));
 
-    // Hadling event bubbling properly.
+    // Handling event bubbling properly.
     if (!reelImgs.includes(targetElem)) return;
 
     // Getting the index of slides which were moved.
@@ -112,7 +112,7 @@ const goToSlide = function (event) {
             elem_carousel.appendChild(elem);
         });
     } else {
-        const elem_removed = elem_slides.slice(numOfMovedSlides + 1);
+        const elem_removed = elem_slides.slice(numOfMovedSlides + 1).reverse();
 
         elem_removed.forEach((elem) => {
             elem.remove();
