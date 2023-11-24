@@ -146,7 +146,7 @@ body .landing-page .offcanvas .heading {
   align-items: center;
   gap: 1rem;
   width: 100%;
-  background-color: #1e1927;
+  background-color: #0e1ec4;
   padding: 0.6rem 0.8rem;
 }
 body .landing-page .offcanvas .heading .brand {
@@ -167,24 +167,26 @@ body .landing-page .offcanvas .navigation {
   flex-direction: column;
   gap: 1.5rem;
   width: 100%;
-  padding: 2rem 0;
+  padding: 2rem 1rem;
 }
-body .landing-page .offcanvas .navigation .container {
+body .landing-page .offcanvas .navigation .item {
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
+  width: 100%;
+  padding-bottom: 1rem;
+  border-bottom: 3px solid #1e1927;
+  border-radius: 2px;
 }
-body .landing-page .offcanvas .navigation .container .sublink {
-  font-size: 1rem;
-  font-weight: 400;
-  color: #007eb3;
-  padding-left: 1.5rem;
+body .landing-page .offcanvas .navigation .item .link {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: black;
 }
-body .landing-page .offcanvas .navigation .link {
+body .landing-page .offcanvas .navigation .item .sublink {
   font-size: 1.2rem;
-  font-weight: 500;
-  color: #007eb3;
-  padding-left: 1rem;
+  font-weight: 400;
+  color: #005a80;
 }
 body .landing-page .offcanvas-active {
   left: 0;
@@ -382,7 +384,6 @@ body .main .section .section-header .subtitle {
 }
 body .main .section .section-main {
   width: 100%;
-  max-width: 1920px;
   height: fit-content;
   min-height: calc(100vh - 16rem);
   margin: auto;
