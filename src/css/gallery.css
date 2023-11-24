@@ -65,7 +65,7 @@ body .landing-page .navbar .navigation li > .nav-item {
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   color: rgba(252, 247, 255, 0.6);
@@ -94,7 +94,7 @@ body .landing-page .navbar .navigation .dropdown .subnav {
 }
 body .landing-page .navbar .navigation .dropdown .subnav .nav-link {
   pointer-events: none;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 400;
   color: #1e1927;
   transition: opacity 200ms;
@@ -276,7 +276,6 @@ body .main .section .section-header .subtitle {
 }
 body .main .section .section-main {
   width: 100%;
-  max-width: 1920px;
   height: fit-content;
   min-height: calc(100vh - 16rem);
   margin: auto;
@@ -325,6 +324,7 @@ body .main .album-section .live-album {
   align-items: center;
   width: 100%;
   height: 70vh;
+  max-height: 30rem;
   margin: auto;
 }
 body .main .album-section .live-album .img-reel {
@@ -377,9 +377,9 @@ body .footer {
 body .footer .content {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   width: 100%;
-  padding: 2rem 0;
+  padding: 3rem;
 }
 body .footer .content .content-list {
   display: flex;
@@ -390,10 +390,9 @@ body .footer .content .content-list .title {
   font-size: 3rem;
   font-weight: 400;
   color: rgba(252, 247, 255, 0.7);
-  margin-bottom: 1rem;
 }
 body .footer .content .content-list .nav-link {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 400;
   color: rgba(0, 180, 255, 0.8);
   padding-left: 5px;
@@ -425,7 +424,7 @@ body .footer .content .content-list .item .svg-container > svg {
   transition: all 200ms;
 }
 body .footer .content .content-list .item .text {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 300;
   color: rgba(252, 247, 255, 0.6);
   padding-left: 5px;
@@ -450,12 +449,14 @@ body .footer .content .content-list .creds-container {
   height: 4rem;
   background-color: rgba(252, 247, 255, 0.9);
   border-radius: 3rem;
+  margin-right: 3px;
   margin-bottom: 3rem;
+  overflow: visible;
 }
 body .footer .content .content-list .creds-container .email {
   flex: 1;
   height: 100%;
-  font-size: xx-large;
+  font-size: 1.8rem;
   font-weight: 400;
   padding: 0.5rem 1.5rem;
 }
@@ -474,9 +475,11 @@ body .footer .content .content-list .creds-container .btn {
   height: 100%;
   padding: 0 1rem;
   border-radius: 0;
+  border-top-right-radius: 3rem;
+  border-bottom-right-radius: 3rem;
 }
 body .footer .content .content-list .creds-container .btn .text {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 400;
   letter-spacing: 1px;
   text-align: center;
@@ -506,16 +509,16 @@ body .footer .content .content-list .creds-container .btn:focus {
 }
 body .footer .content .content-list .creds-container .btn:hover .text,
 body .footer .content .content-list .creds-container .btn:focus .text {
-  color: #fcf7ff;
+  color: #00b4ff;
 }
 body .footer .content .content-list .creds-container .btn:hover .svg-container > svg,
 body .footer .content .content-list .creds-container .btn:focus .svg-container > svg {
-  fill: #fcf7ff;
-  stroke: #fcf7ff;
+  fill: #00b4ff;
+  stroke: #00b4ff;
 }
 body .footer .content .content-list .quote {
   width: 100%;
-  font-size: x-large;
+  font-size: 1.5rem;
   font-weight: 400;
   text-align: center;
   color: rgba(252, 247, 255, 0.6);
@@ -542,7 +545,7 @@ body .footer .branding-bar .brand-container .img-container {
   height: fit-content;
 }
 body .footer .branding-bar .brand-container .copyrights {
-  font-size: x-large;
+  font-size: 1.5rem;
   font-weight: 400;
   color: rgba(252, 247, 255, 0.8);
 }
@@ -569,99 +572,6 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
 }
 
 @media screen and (max-width: 1640px) {
-  body .footer .content .content-list {
-    gap: 0.5rem;
-  }
-  body .footer .content .content-list .title {
-    font-size: 1.8rem;
-    margin-bottom: 0;
-  }
-  body .footer .content .content-list .nav-link {
-    font-size: 1.2rem;
-  }
-  body .footer .content .content-list .item {
-    gap: 0.2rem;
-  }
-  body .footer .content .content-list .item .svg-container {
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-  body .footer .content .content-list .item .text {
-    font-size: 1.2rem;
-  }
-  body .footer .content .content-list .creds-container {
-    width: 18rem;
-    height: 3rem;
-    border-radius: 2rem;
-    margin-bottom: 1rem;
-  }
-  body .footer .content .content-list .creds-container .email {
-    font-size: 1.2rem;
-    font-weight: 400;
-    padding: 0.3rem 0.8rem;
-  }
-  body .footer .content .content-list .creds-container .btn {
-    padding: 0.8rem 1.2rem;
-    border: 0.2rem solid #00b4ff;
-    border-radius: 0.8rem;
-    outline: 0 solid #00b4ff;
-    transition: all 200ms ease-in;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    background-color: #00b4ff;
-    height: 100%;
-    padding: 0 0.5rem;
-    border-radius: 0;
-  }
-  body .footer .content .content-list .creds-container .btn .text {
-    font-size: 1.5rem;
-    font-weight: 400;
-    letter-spacing: 1px;
-    text-align: center;
-    color: #fcf7ff;
-  }
-  body .footer .content .content-list .creds-container .btn .svg-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-  body .footer .content .content-list .creds-container .btn .svg-container > svg {
-    width: 100%;
-    height: 100%;
-    fill: #fcf7ff;
-    stroke: #fcf7ff;
-  }
-  body .footer .content .content-list .quote {
-    font-size: 1.2rem;
-  }
-  body .footer .branding-bar {
-    min-height: 5rem;
-    padding: 0 2rem;
-  }
-  body .footer .branding-bar .brand-container {
-    gap: 1rem;
-  }
-  body .footer .branding-bar .brand-container .img-container {
-    width: 5rem;
-  }
-  body .footer .branding-bar .brand-container .copyrights {
-    font-size: 1.2rem;
-  }
-  body .footer .branding-bar .socials-container {
-    gap: 1.5rem;
-  }
-  body .footer .branding-bar .socials-container .btn {
-    width: 2rem;
-    height: 2rem;
-  }
-}
-@media screen and (max-width: 1440px) {
   body .landing-page .navbar {
     padding: 1rem 3rem;
   }
@@ -688,7 +598,7 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     font-size: 4rem;
   }
   body .main .section {
-    padding: 1.5rem;
+    padding: 2rem;
   }
   body .main .section .section-header {
     height: 6rem;
@@ -702,7 +612,7 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     font-size: 2rem;
   }
   body .main .section .section-header .subtitle {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
   body .main .section .section-main {
     min-height: calc(100vh - 11rem);
@@ -723,6 +633,61 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
   body .main .album-section .live-album .img-reel {
     gap: 1rem;
     padding: 1rem 0;
+  }
+  body .footer .content .content-list {
+    gap: 0.5rem;
+  }
+  body .footer .content .content-list .title {
+    font-size: 1.8rem;
+  }
+  body .footer .content .content-list .nav-link {
+    font-size: 1.2rem;
+  }
+  body .footer .content .content-list .item {
+    gap: 0.2rem;
+  }
+  body .footer .content .content-list .item .svg-container {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  body .footer .content .content-list .item .text {
+    font-size: 1.2rem;
+  }
+  body .footer .content .content-list .creds-container {
+    width: 18rem;
+    height: 3rem;
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+  }
+  body .footer .content .content-list .creds-container .email {
+    font-size: 1.2rem;
+    padding: 0.3rem 0.8rem;
+  }
+  body .footer .content .content-list .creds-container .btn {
+    padding: 0 0.5rem;
+  }
+  body .footer .content .content-list .quote {
+    font-size: 1.2rem;
+  }
+  body .footer .branding-bar {
+    min-height: 5rem;
+    padding: 0 2rem;
+  }
+  body .footer .branding-bar .brand-container {
+    gap: 1rem;
+  }
+  body .footer .branding-bar .brand-container .img-container {
+    width: 5rem;
+  }
+  body .footer .branding-bar .brand-container .copyrights {
+    font-size: 1.2rem;
+  }
+  body .footer .branding-bar .socials-container {
+    gap: 1.5rem;
+  }
+  body .footer .branding-bar .socials-container .btn {
+    width: 2rem;
+    height: 2rem;
   }
 }
 @media screen and (max-width: 1280px) {
@@ -752,96 +717,61 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
   body .main .album-section .live-album .carousel {
     width: 80%;
   }
-  .footer .content .content-list {
+  body .footer .content .content-list {
     gap: 0.3rem;
   }
-  .footer .content .content-list .title {
-    font-size: 1.5rem;
+  body .footer .content .content-list .title {
+    font-size: 1.2rem;
   }
-  .footer .content .content-list .nav-link {
+  body .footer .content .content-list .nav-link {
     font-size: 1rem;
   }
-  .footer .content .content-list .item {
+  body .footer .content .content-list .item {
     gap: 0.2rem;
   }
-  .footer .content .content-list .item .svg-container {
+  body .footer .content .content-list .item .svg-container {
     width: 1.2rem;
     height: 1.2rem;
   }
-  .footer .content .content-list .item .text {
+  body .footer .content .content-list .item .text {
     font-size: 1rem;
   }
-  .footer .content .content-list .creds-container {
+  body .footer .content .content-list .creds-container {
     width: 15rem;
     height: 2.5rem;
     border-radius: 2rem;
     margin-bottom: 0.5rem;
   }
-  .footer .content .content-list .creds-container .email {
+  body .footer .content .content-list .creds-container .email {
     font-size: 1rem;
   }
-  .footer .content .content-list .creds-container .btn {
-    padding: 0.8rem 1.2rem;
-    border: 0.2rem solid #00b4ff;
-    border-radius: 0.8rem;
-    outline: 0 solid #00b4ff;
-    transition: all 200ms ease-in;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    background-color: #00b4ff;
-    height: 100%;
+  body .footer .content .content-list .creds-container .btn {
     padding: 0 0.3rem;
-    border-radius: 0;
   }
-  .footer .content .content-list .creds-container .btn .text {
-    font-size: 1.5rem;
-    font-weight: 400;
-    letter-spacing: 1px;
-    text-align: center;
-    color: #fcf7ff;
-  }
-  .footer .content .content-list .creds-container .btn .svg-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-  .footer .content .content-list .creds-container .btn .svg-container > svg {
-    width: 100%;
-    height: 100%;
-    fill: #fcf7ff;
-    stroke: #fcf7ff;
-  }
-  .footer .content .content-list .quote {
+  body .footer .content .content-list .quote {
     font-size: 1rem;
   }
-  .footer .branding-bar .brand-container {
+  body .footer .branding-bar .brand-container {
     gap: 0.5rem;
   }
-  .footer .branding-bar .brand-container .img-container {
+  body .footer .branding-bar .brand-container .img-container {
     width: 4rem;
   }
-  .footer .branding-bar .brand-container .copyrights {
+  body .footer .branding-bar .brand-container .copyrights {
     font-size: 1rem;
   }
-  .footer .branding-bar .socials-container {
+  body .footer .branding-bar .socials-container {
     gap: 1rem;
   }
-  .footer .branding-bar .socials-container .btn {
+  body .footer .branding-bar .socials-container .btn {
     width: 1.5rem;
     height: 1.5rem;
   }
+  ::-webkit-scrollbar {
+    width: 0.5rem;
+  }
 }
-::-webkit-scrollbar {
-  width: 0.5rem;
-}
-
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   body .landing-page .navbar {
     height: 2.5rem;
     padding: 0.3rem 1.5rem;
@@ -866,9 +796,8 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
   }
   body .main .section .section-header {
     gap: 0;
-    height: 3rem;
+    height: 4rem;
     padding-right: 0;
-    margin-bottom: 0.5rem;
   }
   body .main .section .section-header .title-container {
     gap: 0.5rem;
@@ -881,43 +810,55 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     height: 1.8rem;
   }
   body .main .section .section-header .subtitle {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   body .main .section .section-main {
-    min-height: calc(100vh - 5rem);
+    min-height: calc(100vh - 8rem);
   }
   body .main .album-section {
     padding: 0.5rem;
   }
+  body .main .album-section .albums-container {
+    flex-wrap: wrap;
+    column-gap: 1rem;
+    row-gap: 1rem;
+  }
   body .main .album-section .albums-container .album {
     width: 30%;
+    min-width: 10rem;
   }
   body .main .album-section .albums-container .album .album-title {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
   body .footer .content {
-    padding: 0.5rem;
-    justify-content: space-around;
+    padding: 1rem;
+  }
+  body .footer .content .content-list {
+    gap: 0.1rem;
   }
   body .footer .content .content-list .title {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
   body .footer .content .content-list .nav-link {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
+  }
+  body .footer .content .content-list .item {
+    gap: 0.2rem;
   }
   body .footer .content .content-list .item .svg-container {
     width: 0.8rem;
     height: 1.2rem;
   }
   body .footer .content .content-list .item .text {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
+    padding: 0;
   }
   body .footer .content .content-list .creds-container {
     width: 8rem;
     height: 1.5rem;
   }
   body .footer .content .content-list .creds-container .email {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     padding: 0.3rem 0.5rem;
   }
   body .footer .content .content-list .creds-container .btn {
@@ -928,7 +869,7 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     height: 1rem;
   }
   body .footer .content .content-list .quote {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
   }
   body .footer .content .content-list:nth-child(3) {
     display: none;
@@ -964,11 +905,9 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
   body .landing-page .hero .page-title {
     font-size: 2.5rem;
   }
-  body .main .section {
-    padding: 1rem 0.5rem;
-  }
   body .main .section .section-header .title-container .title {
     font-size: 1rem;
+    font-weight: 700;
     letter-spacing: 0;
   }
   body .main .section .section-header .title-container .svg-container {
@@ -976,24 +915,16 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     height: 1.2rem;
   }
   body .main .section .section-header .subtitle {
+    font-size: 0.9rem;
     letter-spacing: 0;
   }
   body .main .section .section-main {
     min-height: calc(100vh - 5rem);
   }
-  body .main .album-section .albums-container {
-    flex-wrap: wrap;
-    row-gap: 1rem;
-  }
-  body .main .album-section .albums-container .album {
-    width: 30%;
-    min-width: 8rem;
-  }
   body .main .album-section .albums-container .album .thumbnail {
     border-radius: 0.5rem;
   }
   body .main .album-section .albums-container .album .album-title {
-    font-size: 0.8rem;
     margin-bottom: 0.5rem;
   }
   body .main .album-section .live-album {
@@ -1016,42 +947,42 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
-    padding: 0.5rem;
+    gap: 2rem;
+    padding: 2rem;
   }
   body .footer .content .content-list {
     justify-content: center;
     align-items: center;
-    gap: 0.5rem;
     width: 100%;
   }
   body .footer .content .content-list .title {
-    font-size: 1.5rem;
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
   }
   body .footer .content .content-list .nav-link {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   body .footer .content .content-list .item .svg-container {
     width: 1.2rem;
     height: 1.2rem;
   }
   body .footer .content .content-list .item .text {
-    font-size: 1rem;
+    font-size: 0.9rem;
     text-align: center;
   }
   body .footer .content .content-list .creds-container {
-    width: 12rem;
+    width: 10rem;
     height: 2rem;
   }
   body .footer .content .content-list .creds-container .email {
-    font-size: 1rem;
+    font-size: 0.9rem;
     padding: 0.3rem 0.8rem;
   }
   body .footer .content .content-list .creds-container .btn {
-    padding: 0.3rem 0.5rem;
+    padding: 0.3rem;
   }
   body .footer .content .content-list .quote {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   body .footer .content .content-list:nth-child(3) {
     display: flex;
