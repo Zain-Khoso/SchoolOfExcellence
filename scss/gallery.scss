@@ -161,7 +161,8 @@ body {
                     }
                 }
 
-                .img-reel::-webkit-scrollbar {
+                .img-reel::-webkit-scrollbar,
+                ::-moz-scrollbar {
                     display: none;
                 }
 
@@ -282,7 +283,8 @@ body {
         @include footer-small;
     }
 
-    ::-webkit-scrollbar {
+    ::-webkit-scrollbar,
+    ::-moz-scrollbar {
         width: 0.5rem;
     }
 }
@@ -330,7 +332,8 @@ body {
         @include footer-tablet;
     }
 
-    ::-webkit-scrollbar {
+    ::-webkit-scrollbar,
+    ::-moz-scrollbar {
         width: 0.2rem;
     }
 }

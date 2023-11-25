@@ -769,7 +769,8 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     width: 1.5rem;
     height: 1.5rem;
   }
-  ::-webkit-scrollbar {
+  ::-webkit-scrollbar,
+  ::-moz-scrollbar {
     width: 0.5rem;
   }
 }
@@ -908,7 +909,8 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     width: 1rem;
     height: 1rem;
   }
-  ::-webkit-scrollbar {
+  ::-webkit-scrollbar,
+  ::-moz-scrollbar {
     width: 0.2rem;
   }
 }

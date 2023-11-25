@@ -353,7 +353,8 @@ body .main .album-section .live-album .img-reel .img-container:hover {
 body .main .album-section .live-album .img-reel .img-container-active {
   border: 1px solid white;
 }
-body .main .album-section .live-album .img-reel::-webkit-scrollbar {
+body .main .album-section .live-album .img-reel::-webkit-scrollbar,
+body .main .album-section .live-album ::-moz-scrollbar {
   display: none;
 }
 body .main .album-section .live-album .carousel {
@@ -768,7 +769,8 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     width: 1.5rem;
     height: 1.5rem;
   }
-  ::-webkit-scrollbar {
+  ::-webkit-scrollbar,
+  ::-moz-scrollbar {
     width: 0.5rem;
   }
 }
@@ -895,7 +897,8 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     width: 1rem;
     height: 1rem;
   }
-  ::-webkit-scrollbar {
+  ::-webkit-scrollbar,
+  ::-moz-scrollbar {
     width: 0.2rem;
   }
 }
