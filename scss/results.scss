@@ -226,30 +226,39 @@ body {
                 @include section-tablet;
             }
 
-            .results .result-filters-container {
-                gap: 0.5rem;
-
-                .context {
-                    font-size: $fs-6;
-                }
-
-                .result-filters {
-                    justify-content: center;
-                    align-items: center;
+            .results {
+                .result-filters-container {
                     gap: 0.5rem;
-                    flex-wrap: wrap;
 
-                    .selection {
-                        @include btn-outline-tablet($color-dark, $color-dark);
+                    .context {
+                        font-size: $fs-6;
+                    }
 
-                        .option {
-                            font-size: $fs-8;
+                    .result-filters {
+                        justify-content: center;
+                        align-items: center;
+                        gap: 0.5rem;
+                        flex-wrap: wrap;
+
+                        .selection {
+                            @include btn-outline-tablet(
+                                $color-dark,
+                                $color-dark
+                            );
+
+                            .option {
+                                font-size: $fs-8;
+                            }
+                        }
+
+                        .filter-btn {
+                            @include btn-svg-tablet($color-light, $color-dark);
                         }
                     }
+                }
 
-                    .filter-btn {
-                        @include btn-svg-tablet($color-light, $color-dark);
-                    }
+                .pdf-view-container .pdf-view {
+                    border-radius: 1rem;
                 }
             }
         }
