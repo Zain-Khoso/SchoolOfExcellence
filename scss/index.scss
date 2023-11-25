@@ -143,6 +143,7 @@ body {
                 flex-direction: column;
                 justify-content: space-around;
                 align-items: center;
+                gap: 2rem;
 
                 .content-container {
                     width: 100%;
@@ -152,11 +153,13 @@ body {
                         font-size: $fs-4;
                         font-weight: 500;
                         color: $color-primary;
+                        line-height: 1.5;
                     }
 
                     .context {
                         font-size: $fs-5;
                         font-weight: 400;
+                        line-height: 1.5;
                     }
                 }
 
@@ -442,7 +445,7 @@ body {
                                     font-size: $fs-5;
                                     font-weight: 400;
                                     word-spacing: 2px;
-                                    line-height: 2rem;
+                                    line-height: 1.2;
                                     margin: 2rem 0;
                                 }
                                 .contacts {
@@ -907,7 +910,6 @@ body {
                             }
                             .context {
                                 font-size: $fs-8;
-                                line-height: 1.2;
                                 margin: 0.8rem 0;
                             }
                             .contacts {
@@ -1124,7 +1126,6 @@ body {
                             .context {
                                 font-size: $fs-9;
                                 letter-spacing: 0;
-                                line-height: 1;
                                 margin: 0.4rem 0;
                             }
                             .contacts {
@@ -1199,9 +1200,8 @@ body {
             padding-top: 1rem;
 
             .slider {
-                aspect-ratio: 16/14;
+                aspect-ratio: 16/20;
                 min-height: 25rem;
-                max-height: 25rem;
 
                 .slider-modes .mode {
                     width: 30%;
@@ -1213,10 +1213,10 @@ body {
 
                     .pfp-container {
                         width: 100%;
-                        height: 5rem;
+                        height: 6rem;
 
                         .pfp {
-                            width: 4rem;
+                            width: 5rem;
                         }
                     }
 
@@ -1348,7 +1348,7 @@ body {
 
                         .pfp-container {
                             width: 100%;
-                            height: 4rem;
+                            height: 5rem;
 
                             .pfp {
                                 width: 3rem;
@@ -1366,6 +1366,7 @@ body {
                             }
                             .context {
                                 font-size: $fs-10;
+                                line-height: 1.4;
                                 margin: 1rem 0;
                             }
                             .contacts {
