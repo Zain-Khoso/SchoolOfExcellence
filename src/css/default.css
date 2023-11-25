@@ -33,19 +33,24 @@ img {
   object-position: center;
 }
 
-::-webkit-scrollbar {
+::-webkit-scrollbar,
+::-moz-scrollbar,
+::-moz-scrollbar {
   width: 1rem;
 }
 
-::-webkit-scrollbar-track {
+::-webkit-scrollbar-track,
+::-moz-scrollbar-track {
   background: #1e1927;
 }
 
-::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb,
+::-moz-scrollbar-thumb {
   background: #1022dc;
 }
 
-::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover,
+::-moz-scrollbar-thumb:hover {
   background: #0c1aac;
 }
 

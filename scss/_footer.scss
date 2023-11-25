@@ -8,10 +8,10 @@
         .content {
             display: flex;
             flex-direction: row;
-            justify-content: space-evenly;
+            justify-content: space-between;
 
             width: 100%;
-            padding: 2rem 0;
+            padding: 3rem;
 
             .content-list {
                 display: flex;
@@ -19,14 +19,13 @@
                 gap: 0.8rem;
 
                 .title {
-                    font-size: 3rem;
+                    font-size: $fs-3;
                     font-weight: 400;
                     color: rgba($color-light, 0.7);
-                    margin-bottom: 1rem;
                 }
 
                 .nav-link {
-                    font-size: 1.7rem;
+                    font-size: $fs-6;
                     font-weight: 400;
                     color: rgba($color-secondary, 0.8);
                     padding-left: 5px;
@@ -62,7 +61,7 @@
                     }
 
                     .text {
-                        font-size: 1.7rem;
+                        font-size: $fs-6;
                         font-weight: 300;
                         color: rgba($color-light, 0.6);
                         padding-left: 5px;
@@ -94,14 +93,16 @@
                     width: 25rem;
                     height: 4rem;
                     background-color: rgba($color-light, 0.9);
-                    border-radius: 3rem;
+                    border-radius: $fs-3;
+                    margin-right: 3px;
                     margin-bottom: 3rem;
+                    overflow: visible;
 
                     .email {
                         flex: 1;
 
                         height: 100%;
-                        font-size: xx-large;
+                        font-size: $fs-5;
                         font-weight: 400;
                         padding: 0.5rem 1.5rem;
                     }
@@ -111,16 +112,18 @@
                         height: 100%;
                         padding: 0 1rem;
                         border-radius: 0;
+                        border-top-right-radius: $fs-3;
+                        border-bottom-right-radius: $fs-3;
                     }
                     .btn:hover,
                     .btn:focus {
-                        @include btn-svg-hover($color-light);
+                        @include btn-svg-hover($color-secondary);
                     }
                 }
 
                 .quote {
                     width: 100%;
-                    font-size: x-large;
+                    font-size: $fs-6;
                     font-weight: 400;
                     text-align: center;
                     color: rgba($color-light, 0.6);
@@ -152,7 +155,7 @@
                 }
 
                 .copyrights {
-                    font-size: x-large;
+                    font-size: $fs-6;
                     font-weight: 400;
                     color: rgba($color-light, 0.8);
                 }
@@ -193,12 +196,11 @@
             gap: 0.5rem;
 
             .title {
-                font-size: 1.8rem;
-                margin-bottom: 0;
+                font-size: $fs-5;
             }
 
             .nav-link {
-                font-size: 1.2rem;
+                font-size: $fs-7;
             }
 
             .item {
@@ -210,7 +212,7 @@
                 }
 
                 .text {
-                    font-size: 1.2rem;
+                    font-size: $fs-7;
                 }
             }
 
@@ -221,21 +223,17 @@
                 margin-bottom: 1rem;
 
                 .email {
-                    font-size: 1.2rem;
-                    font-weight: 400;
+                    font-size: $fs-7;
                     padding: 0.3rem 0.8rem;
                 }
 
                 .btn {
-                    @include btn-svg($color-light, $color-secondary);
-                    height: 100%;
                     padding: 0 0.5rem;
-                    border-radius: 0;
                 }
             }
 
             .quote {
-                font-size: 1.2rem;
+                font-size: $fs-7;
             }
         }
 
@@ -251,7 +249,7 @@
                 }
 
                 .copyrights {
-                    font-size: 1.2rem;
+                    font-size: $fs-7;
                 }
             }
 
@@ -273,11 +271,11 @@
             gap: 0.3rem;
 
             .title {
-                font-size: 1.5rem;
+                font-size: $fs-7;
             }
 
             .nav-link {
-                font-size: 1rem;
+                font-size: $fs-8;
             }
 
             .item {
@@ -289,7 +287,7 @@
                 }
 
                 .text {
-                    font-size: 1rem;
+                    font-size: $fs-8;
                 }
             }
 
@@ -300,19 +298,16 @@
                 margin-bottom: 0.5rem;
 
                 .email {
-                    font-size: 1rem;
+                    font-size: $fs-8;
                 }
 
                 .btn {
-                    @include btn-svg($color-light, $color-secondary);
-                    height: 100%;
                     padding: 0 0.3rem;
-                    border-radius: 0;
                 }
             }
 
             .quote {
-                font-size: 1rem;
+                font-size: $fs-8;
             }
         }
 
@@ -325,7 +320,7 @@
                 }
 
                 .copyrights {
-                    font-size: 1rem;
+                    font-size: $fs-8;
                 }
             }
 
@@ -344,26 +339,28 @@
 @mixin footer-tablet {
     .footer {
         .content {
-            padding: 0.5rem;
-            justify-content: space-around;
+            padding: 1rem;
 
             .content-list {
+                gap: 0.1rem;
                 .title {
-                    font-size: 0.8rem;
+                    font-size: $fs-9;
                 }
 
                 .nav-link {
-                    font-size: 0.6rem;
+                    font-size: $fs-10;
                 }
 
                 .item {
+                    gap: 0.2rem;
                     .svg-container {
                         width: 0.8rem;
                         height: 1.2rem;
                     }
 
                     .text {
-                        font-size: 0.6rem;
+                        font-size: $fs-10;
+                        padding: 0;
                     }
                 }
                 .creds-container {
@@ -371,7 +368,7 @@
                     height: 1.5rem;
 
                     .email {
-                        font-size: 0.8rem;
+                        font-size: $fs-10;
                         padding: 0.3rem 0.5rem;
                     }
 
@@ -385,7 +382,7 @@
                     }
                 }
                 .quote {
-                    font-size: 0.6rem;
+                    font-size: $fs-10;
                 }
             }
 
@@ -428,21 +425,21 @@
             flex-direction: column-reverse;
             justify-content: center;
             align-items: center;
-            gap: 3rem;
-            padding: 0.5rem;
+            gap: 2rem;
+            padding: 2rem;
 
             .content-list {
                 justify-content: center;
                 align-items: center;
-                gap: 0.5rem;
                 width: 100%;
 
                 .title {
-                    font-size: 1.5rem;
+                    font-size: $fs-8;
+                    margin-bottom: 0.3rem;
                 }
 
                 .nav-link {
-                    font-size: 1rem;
+                    font-size: $fs-9;
                 }
 
                 .item {
@@ -452,25 +449,27 @@
                     }
 
                     .text {
-                        font-size: 1rem;
+                        font-size: $fs-9;
                         text-align: center;
                     }
                 }
+
                 .creds-container {
-                    width: 12rem;
+                    width: 10rem;
                     height: 2rem;
 
                     .email {
-                        font-size: 1rem;
+                        font-size: $fs-9;
                         padding: 0.3rem 0.8rem;
                     }
 
                     .btn {
-                        padding: 0.3rem 0.5rem;
+                        padding: 0.3rem;
                     }
                 }
+
                 .quote {
-                    font-size: 1rem;
+                    font-size: $fs-9;
                 }
             }
 

@@ -91,7 +91,7 @@ const goToSlide = function (event) {
     const targetElem = event.target.closest(".img-container");
     const elem_slides = Array.from(elem_carousel.querySelectorAll("img"));
 
-    // Hadling event bubbling properly.
+    // Handling event bubbling properly.
     if (!reelImgs.includes(targetElem)) return;
 
     // Getting the index of slides which were moved.
@@ -112,7 +112,7 @@ const goToSlide = function (event) {
             elem_carousel.appendChild(elem);
         });
     } else {
-        const elem_removed = elem_slides.slice(numOfMovedSlides + 1);
+        const elem_removed = elem_slides.slice(numOfMovedSlides + 1).reverse();
 
         elem_removed.forEach((elem) => {
             elem.remove();
@@ -164,7 +164,10 @@ const handleTouch = function (event) {
     repositionTheSlides(firstTouch - lastTouch);
 
     if (event.type === "touchend") {
-        firstTouch > lastTouch ? goToNextSlide() : goToPrevSlide();
+        if (firstTouch > lastTouch) goToNextSlide();
+        else if (firstTouch < lastTouch) goToPrevSlide();
+        else repositionTheSlides();
+
         sliderTouches.splice(0, sliderTouches.length);
     }
 

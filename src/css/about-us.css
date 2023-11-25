@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&family=Titillium+Web:wght@200;300;400;600;700;900&display=swap");
 body {
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   background-color: #fcf7ff;
   overflow-y: auto;
 }
@@ -65,7 +65,7 @@ body .landing-page .navbar .navigation li > .nav-item {
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   color: rgba(252, 247, 255, 0.6);
@@ -94,7 +94,7 @@ body .landing-page .navbar .navigation .dropdown .subnav {
 }
 body .landing-page .navbar .navigation .dropdown .subnav .nav-link {
   pointer-events: none;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 400;
   color: #1e1927;
   transition: opacity 200ms;
@@ -146,7 +146,7 @@ body .landing-page .offcanvas .heading {
   align-items: center;
   gap: 1rem;
   width: 100%;
-  background-color: #1e1927;
+  background-color: #0e1ec4;
   padding: 0.6rem 0.8rem;
 }
 body .landing-page .offcanvas .heading .brand {
@@ -167,24 +167,26 @@ body .landing-page .offcanvas .navigation {
   flex-direction: column;
   gap: 1.5rem;
   width: 100%;
-  padding: 2rem 0;
+  padding: 2rem 1rem;
 }
-body .landing-page .offcanvas .navigation .container {
+body .landing-page .offcanvas .navigation .item {
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
+  width: 100%;
+  padding-bottom: 1rem;
+  border-bottom: 3px solid #1e1927;
+  border-radius: 2px;
 }
-body .landing-page .offcanvas .navigation .container .sublink {
-  font-size: 1rem;
-  font-weight: 400;
-  color: #007eb3;
-  padding-left: 1.5rem;
+body .landing-page .offcanvas .navigation .item .link {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: black;
 }
-body .landing-page .offcanvas .navigation .link {
+body .landing-page .offcanvas .navigation .item .sublink {
   font-size: 1.2rem;
-  font-weight: 500;
-  color: #007eb3;
-  padding-left: 1rem;
+  font-weight: 400;
+  color: #005a80;
 }
 body .landing-page .offcanvas-active {
   left: 0;
@@ -276,7 +278,6 @@ body .main .section .section-header .subtitle {
 }
 body .main .section .section-main {
   width: 100%;
-  max-width: 1920px;
   height: fit-content;
   min-height: calc(100vh - 16rem);
   margin: auto;
@@ -286,11 +287,10 @@ body .main .about-section .section-main {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  gap: 5rem;
 }
 body .main .about-section .section-main .content-container {
   width: 100%;
-  max-width: 1024px;
+  max-width: 1640px;
 }
 body .main .about-section .section-main .content-container .heading {
   font-size: 2rem;
@@ -310,10 +310,7 @@ body .main .authorities-section .section-main {
   justify-content: space-evenly;
   align-items: center;
   gap: 3rem;
-  width: 100%;
-  max-width: 1440px;
-  height: fit-content;
-  margin: auto;
+  max-width: 1640px;
   overflow: visible;
 }
 body .main .authorities-section .section-main .card {
@@ -331,7 +328,7 @@ body .main .authorities-section .section-main .card .head {
   gap: 1rem;
 }
 body .main .authorities-section .section-main .card .head .picture {
-  width: 8rem;
+  width: 6rem;
   border-radius: 50%;
 }
 body .main .authorities-section .section-main .card .head .headings .heading {
@@ -342,7 +339,7 @@ body .main .authorities-section .section-main .card .head .headings .heading {
   color: #00b4ff;
 }
 body .main .authorities-section .section-main .card .head .headings .name {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 600;
   line-height: 1;
   letter-spacing: 2px;
@@ -355,7 +352,7 @@ body .main .authorities-section .section-main .card .context {
   font-weight: 400;
   text-transform: capitalize;
   letter-spacing: 1px;
-  line-height: 2rem;
+  line-height: 1;
   color: #fcf7ff;
   margin-top: 1rem;
 }
@@ -370,7 +367,7 @@ body .main .facilities-section .section-main {
   justify-content: space-evenly;
   align-items: center;
   gap: 2rem;
-  max-width: 1440px;
+  max-width: 1640px;
   margin: 0 auto;
   overflow: visible;
 }
@@ -430,7 +427,7 @@ body .main .facilities-section .section-main .btn {
   background-color: #0e1ec4;
 }
 body .main .facilities-section .section-main .btn .text {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 400;
   letter-spacing: 1px;
   text-align: center;
@@ -476,9 +473,9 @@ body .footer {
 body .footer .content {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   width: 100%;
-  padding: 2rem 0;
+  padding: 3rem;
 }
 body .footer .content .content-list {
   display: flex;
@@ -489,10 +486,9 @@ body .footer .content .content-list .title {
   font-size: 3rem;
   font-weight: 400;
   color: rgba(252, 247, 255, 0.7);
-  margin-bottom: 1rem;
 }
 body .footer .content .content-list .nav-link {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 400;
   color: rgba(0, 180, 255, 0.8);
   padding-left: 5px;
@@ -524,7 +520,7 @@ body .footer .content .content-list .item .svg-container > svg {
   transition: all 200ms;
 }
 body .footer .content .content-list .item .text {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 300;
   color: rgba(252, 247, 255, 0.6);
   padding-left: 5px;
@@ -549,12 +545,14 @@ body .footer .content .content-list .creds-container {
   height: 4rem;
   background-color: rgba(252, 247, 255, 0.9);
   border-radius: 3rem;
+  margin-right: 3px;
   margin-bottom: 3rem;
+  overflow: visible;
 }
 body .footer .content .content-list .creds-container .email {
   flex: 1;
   height: 100%;
-  font-size: xx-large;
+  font-size: 1.8rem;
   font-weight: 400;
   padding: 0.5rem 1.5rem;
 }
@@ -573,9 +571,11 @@ body .footer .content .content-list .creds-container .btn {
   height: 100%;
   padding: 0 1rem;
   border-radius: 0;
+  border-top-right-radius: 3rem;
+  border-bottom-right-radius: 3rem;
 }
 body .footer .content .content-list .creds-container .btn .text {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 400;
   letter-spacing: 1px;
   text-align: center;
@@ -605,16 +605,16 @@ body .footer .content .content-list .creds-container .btn:focus {
 }
 body .footer .content .content-list .creds-container .btn:hover .text,
 body .footer .content .content-list .creds-container .btn:focus .text {
-  color: #fcf7ff;
+  color: #00b4ff;
 }
 body .footer .content .content-list .creds-container .btn:hover .svg-container > svg,
 body .footer .content .content-list .creds-container .btn:focus .svg-container > svg {
-  fill: #fcf7ff;
-  stroke: #fcf7ff;
+  fill: #00b4ff;
+  stroke: #00b4ff;
 }
 body .footer .content .content-list .quote {
   width: 100%;
-  font-size: x-large;
+  font-size: 1.5rem;
   font-weight: 400;
   text-align: center;
   color: rgba(252, 247, 255, 0.6);
@@ -641,7 +641,7 @@ body .footer .branding-bar .brand-container .img-container {
   height: fit-content;
 }
 body .footer .branding-bar .brand-container .copyrights {
-  font-size: x-large;
+  font-size: 1.5rem;
   font-weight: 400;
   color: rgba(252, 247, 255, 0.8);
 }
@@ -668,99 +668,6 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
 }
 
 @media screen and (max-width: 1640px) {
-  body .footer .content .content-list {
-    gap: 0.5rem;
-  }
-  body .footer .content .content-list .title {
-    font-size: 1.8rem;
-    margin-bottom: 0;
-  }
-  body .footer .content .content-list .nav-link {
-    font-size: 1.2rem;
-  }
-  body .footer .content .content-list .item {
-    gap: 0.2rem;
-  }
-  body .footer .content .content-list .item .svg-container {
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-  body .footer .content .content-list .item .text {
-    font-size: 1.2rem;
-  }
-  body .footer .content .content-list .creds-container {
-    width: 18rem;
-    height: 3rem;
-    border-radius: 2rem;
-    margin-bottom: 1rem;
-  }
-  body .footer .content .content-list .creds-container .email {
-    font-size: 1.2rem;
-    font-weight: 400;
-    padding: 0.3rem 0.8rem;
-  }
-  body .footer .content .content-list .creds-container .btn {
-    padding: 0.8rem 1.2rem;
-    border: 0.2rem solid #00b4ff;
-    border-radius: 0.8rem;
-    outline: 0 solid #00b4ff;
-    transition: all 200ms ease-in;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    background-color: #00b4ff;
-    height: 100%;
-    padding: 0 0.5rem;
-    border-radius: 0;
-  }
-  body .footer .content .content-list .creds-container .btn .text {
-    font-size: 1.5rem;
-    font-weight: 400;
-    letter-spacing: 1px;
-    text-align: center;
-    color: #fcf7ff;
-  }
-  body .footer .content .content-list .creds-container .btn .svg-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-  body .footer .content .content-list .creds-container .btn .svg-container > svg {
-    width: 100%;
-    height: 100%;
-    fill: #fcf7ff;
-    stroke: #fcf7ff;
-  }
-  body .footer .content .content-list .quote {
-    font-size: 1.2rem;
-  }
-  body .footer .branding-bar {
-    min-height: 5rem;
-    padding: 0 2rem;
-  }
-  body .footer .branding-bar .brand-container {
-    gap: 1rem;
-  }
-  body .footer .branding-bar .brand-container .img-container {
-    width: 5rem;
-  }
-  body .footer .branding-bar .brand-container .copyrights {
-    font-size: 1.2rem;
-  }
-  body .footer .branding-bar .socials-container {
-    gap: 1.5rem;
-  }
-  body .footer .branding-bar .socials-container .btn {
-    width: 2rem;
-    height: 2rem;
-  }
-}
-@media screen and (max-width: 1440px) {
   body .landing-page .navbar {
     padding: 1rem 3rem;
   }
@@ -787,7 +694,7 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     font-size: 4rem;
   }
   body .main .section {
-    padding: 1.5rem;
+    padding: 2rem;
   }
   body .main .section .section-header {
     height: 6rem;
@@ -801,10 +708,13 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     font-size: 2rem;
   }
   body .main .section .section-header .subtitle {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
   body .main .section .section-main {
     min-height: calc(100vh - 11rem);
+  }
+  body .main .about-section .section-main {
+    max-width: 1280px;
   }
   body .main .about-section .section-main .content-container .heading {
     font-size: 1.8rem;
@@ -813,23 +723,20 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     font-size: 1.5rem;
   }
   body .main .authorities-section .section-main .card {
-    padding: 1rem 2rem;
+    padding: 2rem;
   }
   body .main .authorities-section .section-main .card .head {
     gap: 1rem;
   }
-  body .main .authorities-section .section-main .card .head .picture {
-    width: 6rem;
-  }
   body .main .authorities-section .section-main .card .head .headings .heading {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
   body .main .authorities-section .section-main .card .head .headings .name {
     font-size: 2rem;
   }
   body .main .authorities-section .section-main .card .context {
-    font-size: 1.2rem;
-    line-height: 1.5rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
   }
   body .main .facilities-section .section-main .feature-tags-container .feature-tag {
     gap: 0.5rem;
@@ -843,12 +750,67 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     padding: 0.5rem 0.8rem;
     border-radius: 0.5rem;
   }
-  body .main .facilities-section .section-main .btn .text {
-    font-size: 1.2rem;
-  }
   body .main .facilities-section .section-main .btn .svg-container {
     width: 1.5rem;
     height: 1.5rem;
+  }
+  body .main .facilities-section .section-main .btn .text {
+    font-size: 1.5rem;
+  }
+  body .footer .content .content-list {
+    gap: 0.5rem;
+  }
+  body .footer .content .content-list .title {
+    font-size: 1.8rem;
+  }
+  body .footer .content .content-list .nav-link {
+    font-size: 1.2rem;
+  }
+  body .footer .content .content-list .item {
+    gap: 0.2rem;
+  }
+  body .footer .content .content-list .item .svg-container {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  body .footer .content .content-list .item .text {
+    font-size: 1.2rem;
+  }
+  body .footer .content .content-list .creds-container {
+    width: 18rem;
+    height: 3rem;
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+  }
+  body .footer .content .content-list .creds-container .email {
+    font-size: 1.2rem;
+    padding: 0.3rem 0.8rem;
+  }
+  body .footer .content .content-list .creds-container .btn {
+    padding: 0 0.5rem;
+  }
+  body .footer .content .content-list .quote {
+    font-size: 1.2rem;
+  }
+  body .footer .branding-bar {
+    min-height: 5rem;
+    padding: 0 2rem;
+  }
+  body .footer .branding-bar .brand-container {
+    gap: 1rem;
+  }
+  body .footer .branding-bar .brand-container .img-container {
+    width: 5rem;
+  }
+  body .footer .branding-bar .brand-container .copyrights {
+    font-size: 1.2rem;
+  }
+  body .footer .branding-bar .socials-container {
+    gap: 1.5rem;
+  }
+  body .footer .branding-bar .socials-container .btn {
+    width: 2rem;
+    height: 2rem;
   }
 }
 @media screen and (max-width: 1280px) {
@@ -856,7 +818,7 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     gap: 0.3rem;
   }
   body .footer .content .content-list .title {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   body .footer .content .content-list .nav-link {
     font-size: 1rem;
@@ -881,41 +843,7 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     font-size: 1rem;
   }
   body .footer .content .content-list .creds-container .btn {
-    padding: 0.8rem 1.2rem;
-    border: 0.2rem solid #00b4ff;
-    border-radius: 0.8rem;
-    outline: 0 solid #00b4ff;
-    transition: all 200ms ease-in;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    background-color: #00b4ff;
-    height: 100%;
     padding: 0 0.3rem;
-    border-radius: 0;
-  }
-  body .footer .content .content-list .creds-container .btn .text {
-    font-size: 1.5rem;
-    font-weight: 400;
-    letter-spacing: 1px;
-    text-align: center;
-    color: #fcf7ff;
-  }
-  body .footer .content .content-list .creds-container .btn .svg-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-  body .footer .content .content-list .creds-container .btn .svg-container > svg {
-    width: 100%;
-    height: 100%;
-    fill: #fcf7ff;
-    stroke: #fcf7ff;
   }
   body .footer .content .content-list .quote {
     font-size: 1rem;
@@ -936,11 +864,12 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     width: 1.5rem;
     height: 1.5rem;
   }
-  ::-webkit-scrollbar {
+  ::-webkit-scrollbar,
+  ::-moz-scrollbar {
     width: 0.5rem;
   }
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   body .landing-page .navbar {
     height: 2.5rem;
     padding: 0.3rem 1.5rem;
@@ -965,9 +894,8 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
   }
   body .main .section .section-header {
     gap: 0;
-    height: 3rem;
+    height: 4rem;
     padding-right: 0;
-    margin-bottom: 0.5rem;
   }
   body .main .section .section-header .title-container {
     gap: 0.5rem;
@@ -980,22 +908,22 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     height: 1.8rem;
   }
   body .main .section .section-header .subtitle {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   body .main .section .section-main {
-    min-height: calc(100vh - 5rem);
+    min-height: calc(100vh - 8rem);
   }
   body .main .about-section .section-main {
     gap: 2rem;
   }
   body .main .about-section .section-main .content-container .heading {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   body .main .about-section .section-main .content-container .context {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   body .main .authorities-section .section-main {
-    gap: 1rem;
+    gap: 2rem;
   }
   body .main .authorities-section .section-main .card {
     padding: 1rem;
@@ -1007,14 +935,13 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     width: 4rem;
   }
   body .main .authorities-section .section-main .card .head .headings .heading {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   body .main .authorities-section .section-main .card .head .headings .name {
     font-size: 1.2rem;
   }
   body .main .authorities-section .section-main .card .context {
-    font-size: 0.8rem;
-    line-height: 1rem;
+    font-size: 1rem;
     margin-top: 0.5rem;
   }
   body .main .facilities-section .section-main .feature-tags-container .feature-tag {
@@ -1045,28 +972,34 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     height: 1.2rem;
   }
   body .footer .content {
-    padding: 0.5rem;
-    justify-content: space-around;
+    padding: 1rem;
+  }
+  body .footer .content .content-list {
+    gap: 0.1rem;
   }
   body .footer .content .content-list .title {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
   body .footer .content .content-list .nav-link {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
+  }
+  body .footer .content .content-list .item {
+    gap: 0.2rem;
   }
   body .footer .content .content-list .item .svg-container {
     width: 0.8rem;
     height: 1.2rem;
   }
   body .footer .content .content-list .item .text {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
+    padding: 0;
   }
   body .footer .content .content-list .creds-container {
     width: 8rem;
     height: 1.5rem;
   }
   body .footer .content .content-list .creds-container .email {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     padding: 0.3rem 0.5rem;
   }
   body .footer .content .content-list .creds-container .btn {
@@ -1077,7 +1010,7 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     height: 1rem;
   }
   body .footer .content .content-list .quote {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
   }
   body .footer .content .content-list:nth-child(3) {
     display: none;
@@ -1102,7 +1035,8 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     width: 1rem;
     height: 1rem;
   }
-  ::-webkit-scrollbar {
+  ::-webkit-scrollbar,
+  ::-moz-scrollbar {
     width: 0.2rem;
   }
 }
@@ -1113,11 +1047,9 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
   body .landing-page .hero .page-title {
     font-size: 2.5rem;
   }
-  body .main .section {
-    padding: 1rem 0.5rem;
-  }
   body .main .section .section-header .title-container .title {
     font-size: 1rem;
+    font-weight: 700;
     letter-spacing: 0;
   }
   body .main .section .section-header .title-container .svg-container {
@@ -1125,16 +1057,20 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     height: 1.2rem;
   }
   body .main .section .section-header .subtitle {
+    font-size: 0.9rem;
     letter-spacing: 0;
   }
   body .main .section .section-main {
     min-height: calc(100vh - 5rem);
   }
+  body .main .section .section-header .title-container {
+    gap: 0.1rem;
+  }
   body .main .about-section .section-main .content-container .heading {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   body .main .about-section .section-main .content-container .context {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
   body .main .authorities-section .section-main .card .head {
     gap: 0.5rem;
@@ -1143,13 +1079,13 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     width: 3rem;
   }
   body .main .authorities-section .section-main .card .head .headings .heading {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
   body .main .authorities-section .section-main .card .head .headings .name {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   body .main .authorities-section .section-main .card .context {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
   body .main .facilities-section .section-main .feature-tags-container .feature-tag {
     flex-basis: 90%;
@@ -1159,9 +1095,6 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     padding: 0.3rem 0.5rem;
     border-radius: 0.4rem;
   }
-  body .main .facilities-section .section-main .btn .text {
-    font-size: 0.8rem;
-  }
   body .main .facilities-section .section-main .btn .svg-container {
     width: 1rem;
     height: 1rem;
@@ -1170,42 +1103,42 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
-    padding: 0.5rem;
+    gap: 2rem;
+    padding: 2rem;
   }
   body .footer .content .content-list {
     justify-content: center;
     align-items: center;
-    gap: 0.5rem;
     width: 100%;
   }
   body .footer .content .content-list .title {
-    font-size: 1.5rem;
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
   }
   body .footer .content .content-list .nav-link {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   body .footer .content .content-list .item .svg-container {
     width: 1.2rem;
     height: 1.2rem;
   }
   body .footer .content .content-list .item .text {
-    font-size: 1rem;
+    font-size: 0.9rem;
     text-align: center;
   }
   body .footer .content .content-list .creds-container {
-    width: 12rem;
+    width: 10rem;
     height: 2rem;
   }
   body .footer .content .content-list .creds-container .email {
-    font-size: 1rem;
+    font-size: 0.9rem;
     padding: 0.3rem 0.8rem;
   }
   body .footer .content .content-list .creds-container .btn {
-    padding: 0.3rem 0.5rem;
+    padding: 0.3rem;
   }
   body .footer .content .content-list .quote {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   body .footer .content .content-list:nth-child(3) {
     display: flex;

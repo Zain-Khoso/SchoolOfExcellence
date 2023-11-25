@@ -65,7 +65,7 @@ body .landing-page .navbar .navigation li > .nav-item {
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   color: rgba(252, 247, 255, 0.6);
@@ -94,7 +94,7 @@ body .landing-page .navbar .navigation .dropdown .subnav {
 }
 body .landing-page .navbar .navigation .dropdown .subnav .nav-link {
   pointer-events: none;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 400;
   color: #1e1927;
   transition: opacity 200ms;
@@ -146,7 +146,7 @@ body .landing-page .offcanvas .heading {
   align-items: center;
   gap: 1rem;
   width: 100%;
-  background-color: #1e1927;
+  background-color: #0e1ec4;
   padding: 0.6rem 0.8rem;
 }
 body .landing-page .offcanvas .heading .brand {
@@ -167,24 +167,26 @@ body .landing-page .offcanvas .navigation {
   flex-direction: column;
   gap: 1.5rem;
   width: 100%;
-  padding: 2rem 0;
+  padding: 2rem 1rem;
 }
-body .landing-page .offcanvas .navigation .container {
+body .landing-page .offcanvas .navigation .item {
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
+  width: 100%;
+  padding-bottom: 1rem;
+  border-bottom: 3px solid #1e1927;
+  border-radius: 2px;
 }
-body .landing-page .offcanvas .navigation .container .sublink {
-  font-size: 1rem;
-  font-weight: 400;
-  color: #007eb3;
-  padding-left: 1.5rem;
+body .landing-page .offcanvas .navigation .item .link {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: black;
 }
-body .landing-page .offcanvas .navigation .link {
+body .landing-page .offcanvas .navigation .item .sublink {
   font-size: 1.2rem;
-  font-weight: 500;
-  color: #007eb3;
-  padding-left: 1rem;
+  font-weight: 400;
+  color: #005a80;
 }
 body .landing-page .offcanvas-active {
   left: 0;
@@ -241,6 +243,7 @@ body .main .contact-section {
   align-items: center;
   width: 80%;
   height: 80%;
+  max-height: 1000px;
   background-color: #fcf7ff;
   border-radius: 3rem;
   transform: translate(-50%, -50%);
@@ -303,7 +306,7 @@ body .main .contact-section .contents .message {
   resize: none;
   font-size: 1.5rem;
   font-weight: 400;
-  padding: 2rem 1.5rem;
+  padding: 1.5rem;
   border-radius: 1.5rem;
   outline: 3px solid transparent;
   box-shadow: 0 0 0.5rem rgba(30, 25, 39, 0.2);
@@ -338,7 +341,7 @@ body .main .contact-section .contents .btn {
   border-radius: 0.8rem;
   outline: 0 solid #0e1ec4;
   transition: all 200ms ease-in;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 400;
   letter-spacing: 1px;
   text-align: center;
@@ -379,9 +382,9 @@ body .footer {
 body .footer .content {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   width: 100%;
-  padding: 2rem 0;
+  padding: 3rem;
 }
 body .footer .content .content-list {
   display: flex;
@@ -392,10 +395,9 @@ body .footer .content .content-list .title {
   font-size: 3rem;
   font-weight: 400;
   color: rgba(252, 247, 255, 0.7);
-  margin-bottom: 1rem;
 }
 body .footer .content .content-list .nav-link {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 400;
   color: rgba(0, 180, 255, 0.8);
   padding-left: 5px;
@@ -427,7 +429,7 @@ body .footer .content .content-list .item .svg-container > svg {
   transition: all 200ms;
 }
 body .footer .content .content-list .item .text {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 300;
   color: rgba(252, 247, 255, 0.6);
   padding-left: 5px;
@@ -452,12 +454,14 @@ body .footer .content .content-list .creds-container {
   height: 4rem;
   background-color: rgba(252, 247, 255, 0.9);
   border-radius: 3rem;
+  margin-right: 3px;
   margin-bottom: 3rem;
+  overflow: visible;
 }
 body .footer .content .content-list .creds-container .email {
   flex: 1;
   height: 100%;
-  font-size: xx-large;
+  font-size: 1.8rem;
   font-weight: 400;
   padding: 0.5rem 1.5rem;
 }
@@ -476,9 +480,11 @@ body .footer .content .content-list .creds-container .btn {
   height: 100%;
   padding: 0 1rem;
   border-radius: 0;
+  border-top-right-radius: 3rem;
+  border-bottom-right-radius: 3rem;
 }
 body .footer .content .content-list .creds-container .btn .text {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 400;
   letter-spacing: 1px;
   text-align: center;
@@ -508,16 +514,16 @@ body .footer .content .content-list .creds-container .btn:focus {
 }
 body .footer .content .content-list .creds-container .btn:hover .text,
 body .footer .content .content-list .creds-container .btn:focus .text {
-  color: #fcf7ff;
+  color: #00b4ff;
 }
 body .footer .content .content-list .creds-container .btn:hover .svg-container > svg,
 body .footer .content .content-list .creds-container .btn:focus .svg-container > svg {
-  fill: #fcf7ff;
-  stroke: #fcf7ff;
+  fill: #00b4ff;
+  stroke: #00b4ff;
 }
 body .footer .content .content-list .quote {
   width: 100%;
-  font-size: x-large;
+  font-size: 1.5rem;
   font-weight: 400;
   text-align: center;
   color: rgba(252, 247, 255, 0.6);
@@ -544,7 +550,7 @@ body .footer .branding-bar .brand-container .img-container {
   height: fit-content;
 }
 body .footer .branding-bar .brand-container .copyrights {
-  font-size: x-large;
+  font-size: 1.5rem;
   font-weight: 400;
   color: rgba(252, 247, 255, 0.8);
 }
@@ -571,99 +577,6 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
 }
 
 @media screen and (max-width: 1640px) {
-  body .footer .content .content-list {
-    gap: 0.5rem;
-  }
-  body .footer .content .content-list .title {
-    font-size: 1.8rem;
-    margin-bottom: 0;
-  }
-  body .footer .content .content-list .nav-link {
-    font-size: 1.2rem;
-  }
-  body .footer .content .content-list .item {
-    gap: 0.2rem;
-  }
-  body .footer .content .content-list .item .svg-container {
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-  body .footer .content .content-list .item .text {
-    font-size: 1.2rem;
-  }
-  body .footer .content .content-list .creds-container {
-    width: 18rem;
-    height: 3rem;
-    border-radius: 2rem;
-    margin-bottom: 1rem;
-  }
-  body .footer .content .content-list .creds-container .email {
-    font-size: 1.2rem;
-    font-weight: 400;
-    padding: 0.3rem 0.8rem;
-  }
-  body .footer .content .content-list .creds-container .btn {
-    padding: 0.8rem 1.2rem;
-    border: 0.2rem solid #00b4ff;
-    border-radius: 0.8rem;
-    outline: 0 solid #00b4ff;
-    transition: all 200ms ease-in;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    background-color: #00b4ff;
-    height: 100%;
-    padding: 0 0.5rem;
-    border-radius: 0;
-  }
-  body .footer .content .content-list .creds-container .btn .text {
-    font-size: 1.5rem;
-    font-weight: 400;
-    letter-spacing: 1px;
-    text-align: center;
-    color: #fcf7ff;
-  }
-  body .footer .content .content-list .creds-container .btn .svg-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-  body .footer .content .content-list .creds-container .btn .svg-container > svg {
-    width: 100%;
-    height: 100%;
-    fill: #fcf7ff;
-    stroke: #fcf7ff;
-  }
-  body .footer .content .content-list .quote {
-    font-size: 1.2rem;
-  }
-  body .footer .branding-bar {
-    min-height: 5rem;
-    padding: 0 2rem;
-  }
-  body .footer .branding-bar .brand-container {
-    gap: 1rem;
-  }
-  body .footer .branding-bar .brand-container .img-container {
-    width: 5rem;
-  }
-  body .footer .branding-bar .brand-container .copyrights {
-    font-size: 1.2rem;
-  }
-  body .footer .branding-bar .socials-container {
-    gap: 1.5rem;
-  }
-  body .footer .branding-bar .socials-container .btn {
-    width: 2rem;
-    height: 2rem;
-  }
-}
-@media screen and (max-width: 1440px) {
   body .landing-page .navbar {
     padding: 1rem 3rem;
   }
@@ -700,6 +613,61 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
   body .main .contact-section .img-container {
     border-radius: 2rem;
   }
+  body .footer .content .content-list {
+    gap: 0.5rem;
+  }
+  body .footer .content .content-list .title {
+    font-size: 1.8rem;
+  }
+  body .footer .content .content-list .nav-link {
+    font-size: 1.2rem;
+  }
+  body .footer .content .content-list .item {
+    gap: 0.2rem;
+  }
+  body .footer .content .content-list .item .svg-container {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  body .footer .content .content-list .item .text {
+    font-size: 1.2rem;
+  }
+  body .footer .content .content-list .creds-container {
+    width: 18rem;
+    height: 3rem;
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+  }
+  body .footer .content .content-list .creds-container .email {
+    font-size: 1.2rem;
+    padding: 0.3rem 0.8rem;
+  }
+  body .footer .content .content-list .creds-container .btn {
+    padding: 0 0.5rem;
+  }
+  body .footer .content .content-list .quote {
+    font-size: 1.2rem;
+  }
+  body .footer .branding-bar {
+    min-height: 5rem;
+    padding: 0 2rem;
+  }
+  body .footer .branding-bar .brand-container {
+    gap: 1rem;
+  }
+  body .footer .branding-bar .brand-container .img-container {
+    width: 5rem;
+  }
+  body .footer .branding-bar .brand-container .copyrights {
+    font-size: 1.2rem;
+  }
+  body .footer .branding-bar .socials-container {
+    gap: 1.5rem;
+  }
+  body .footer .branding-bar .socials-container .btn {
+    width: 2rem;
+    height: 2rem;
+  }
 }
 @media screen and (max-width: 1280px) {
   body .landing-page .navbar {
@@ -734,59 +702,19 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
   body .main .contact-section .contents {
     gap: 1rem;
   }
-  body .main .contact-section .contents .heading {
-    font-size: 2rem;
-  }
-  body .main .contact-section .contents .contact {
-    gap: 0.8rem;
-    height: 3rem;
-    padding: 1rem;
-    border-radius: 0.8rem;
-    outline-width: 2px;
-  }
-  body .main .contact-section .contents .contact .svg-container {
-    width: 2rem;
-    height: 2rem;
-  }
-  body .main .contact-section .contents .contact .entry {
-    height: 2rem;
-    font-size: 1rem;
-  }
-  body .main .contact-section .contents .contact:focus-within,
-  body .main .contact-section .contents .contact:hover {
-    outline-offset: 0.2rem;
-  }
-  body .main .contact-section .contents .message {
-    font-size: 1rem;
-    padding: 1rem;
-    border-radius: 0.8rem;
-    outline-width: 2px;
-  }
-  body .main .contact-section .contents .message:focus,
-  body .main .contact-section .contents .message:hover {
-    outline-offset: 0.2rem;
-  }
+  body .main .contact-section .contents .contact,
+  body .main .contact-section .contents .message,
   body .main .contact-section .contents .checkbox {
-    gap: 0.5rem;
-  }
-  body .main .contact-section .contents .checkbox .entry {
-    width: 1rem;
-    height: 1rem;
-  }
-  body .main .contact-section .contents .checkbox .text {
-    font-size: 0.8rem;
+    width: 100%;
   }
   body .main .contact-section .contents .btn {
-    font-size: 1rem;
-    padding: 0.4rem 0.5rem;
-    border-width: 0.1rem;
-    padding: 0.8rem 0;
+    padding: 0.3rem 0.5rem;
   }
   body .footer .content .content-list {
     gap: 0.3rem;
   }
   body .footer .content .content-list .title {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   body .footer .content .content-list .nav-link {
     font-size: 1rem;
@@ -811,41 +739,7 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     font-size: 1rem;
   }
   body .footer .content .content-list .creds-container .btn {
-    padding: 0.8rem 1.2rem;
-    border: 0.2rem solid #00b4ff;
-    border-radius: 0.8rem;
-    outline: 0 solid #00b4ff;
-    transition: all 200ms ease-in;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    background-color: #00b4ff;
-    height: 100%;
     padding: 0 0.3rem;
-    border-radius: 0;
-  }
-  body .footer .content .content-list .creds-container .btn .text {
-    font-size: 1.5rem;
-    font-weight: 400;
-    letter-spacing: 1px;
-    text-align: center;
-    color: #fcf7ff;
-  }
-  body .footer .content .content-list .creds-container .btn .svg-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-  body .footer .content .content-list .creds-container .btn .svg-container > svg {
-    width: 100%;
-    height: 100%;
-    fill: #fcf7ff;
-    stroke: #fcf7ff;
   }
   body .footer .content .content-list .quote {
     font-size: 1rem;
@@ -866,11 +760,12 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     width: 1.5rem;
     height: 1.5rem;
   }
-  ::-webkit-scrollbar {
+  ::-webkit-scrollbar,
+  ::-moz-scrollbar {
     width: 0.5rem;
   }
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   body .landing-page .navbar {
     height: 2.5rem;
     padding: 0.3rem 1.5rem;
@@ -888,13 +783,15 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     height: calc(50vh - 1.25rem);
   }
   body .landing-page .hero .page-title {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   body .main .contact-section {
     padding: 0;
   }
   body .main .contact-section .contents {
+    width: 80%;
     padding: 1rem 2rem;
+    margin-inline: auto;
   }
   body .main .contact-section .contents .contact,
   body .main .contact-section .contents .message,
@@ -907,110 +804,38 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     border-width: 0.1rem;
     width: 60%;
   }
-  body .footer .content {
-    padding: 0.5rem;
-    justify-content: space-around;
-  }
-  body .footer .content .content-list .title {
-    font-size: 0.8rem;
-  }
-  body .footer .content .content-list .nav-link {
-    font-size: 0.6rem;
-  }
-  body .footer .content .content-list .item .svg-container {
-    width: 0.8rem;
-    height: 1.2rem;
-  }
-  body .footer .content .content-list .item .text {
-    font-size: 0.6rem;
-  }
-  body .footer .content .content-list .creds-container {
-    width: 8rem;
-    height: 1.5rem;
-  }
-  body .footer .content .content-list .creds-container .email {
-    font-size: 0.8rem;
-    padding: 0.3rem 0.5rem;
-  }
-  body .footer .content .content-list .creds-container .btn {
-    padding: 0;
-  }
-  body .footer .content .content-list .creds-container .btn .svg-container {
-    width: 1rem;
-    height: 1rem;
-  }
-  body .footer .content .content-list .quote {
-    font-size: 0.6rem;
-  }
-  body .footer .content .content-list:nth-child(3) {
-    display: none;
-  }
-  body .footer .branding-bar {
-    min-height: 3rem;
-    padding: 0.5rem 1rem;
-  }
-  body .footer .branding-bar .brand-container {
-    gap: 0.5rem;
-  }
-  body .footer .branding-bar .brand-container .img-container {
-    width: 2rem;
-  }
-  body .footer .branding-bar .brand-container .copyrights {
-    font-size: 0.6rem;
-  }
-  body .footer .branding-bar .socials-container {
-    gap: 0.5rem;
-  }
-  body .footer .branding-bar .socials-container .btn {
-    width: 1rem;
-    height: 1rem;
-  }
-  ::-webkit-scrollbar {
-    width: 0.2rem;
-  }
-}
-@media screen and (max-width: 1023px) {
-  body .main .contact-section .contents {
-    width: 100%;
-  }
-  body .main .contact-section .contents .contact,
-  body .main .contact-section .contents .message,
-  body .main .contact-section .contents .checkbox {
-    width: 60%;
-    min-width: 20rem;
-  }
-  body .main .contact-section .contents .btn {
-    font-size: 1rem;
-    padding: 0.4rem 0.5rem;
-    border-width: 0.1rem;
-    width: 40%;
-  }
   body .main .contact-section .img-container {
     display: none;
   }
   body .footer .content {
-    padding: 0.5rem;
-    justify-content: space-around;
+    padding: 1rem;
+  }
+  body .footer .content .content-list {
+    gap: 0.1rem;
   }
   body .footer .content .content-list .title {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
   body .footer .content .content-list .nav-link {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
+  }
+  body .footer .content .content-list .item {
+    gap: 0.2rem;
   }
   body .footer .content .content-list .item .svg-container {
     width: 0.8rem;
     height: 1.2rem;
   }
   body .footer .content .content-list .item .text {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
+    padding: 0;
   }
   body .footer .content .content-list .creds-container {
     width: 8rem;
     height: 1.5rem;
   }
   body .footer .content .content-list .creds-container .email {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     padding: 0.3rem 0.5rem;
   }
   body .footer .content .content-list .creds-container .btn {
@@ -1021,7 +846,7 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     height: 1rem;
   }
   body .footer .content .content-list .quote {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
   }
   body .footer .content .content-list:nth-child(3) {
     display: none;
@@ -1046,36 +871,92 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     width: 1rem;
     height: 1rem;
   }
-  ::-webkit-scrollbar {
+  ::-webkit-scrollbar,
+  ::-moz-scrollbar {
     width: 0.2rem;
   }
 }
-@media screen and (max-width: 481px) {
+@media screen and (max-width: 760px) {
   body .landing-page .navbar {
-    padding-inline: 1rem;
+    height: 2.5rem;
+    padding: 0.3rem 1.5rem;
+  }
+  body .landing-page .navbar a .brand-img {
+    width: 3rem;
+  }
+  body .landing-page .navbar .navigation {
+    display: none;
+  }
+  body .landing-page .navbar .offcanvas-trigger {
+    display: flex;
+  }
+  body .landing-page .hero {
+    height: calc(50vh - 1.25rem);
   }
   body .landing-page .hero .page-title {
     font-size: 2.5rem;
   }
   body .main .contact-section .contents {
     width: 100%;
+    max-height: 800px;
+  }
+  body .main .contact-section .contents .contact,
+  body .main .contact-section .contents .message,
+  body .main .contact-section .contents .checkbox {
+    width: 100%;
+  }
+  body .main .contact-section .contents .btn {
+    font-size: 1rem;
+    padding: 0.4rem 0.5rem;
+    border-width: 0.1rem;
+    width: 70%;
+  }
+}
+@media screen and (max-width: 481px) {
+  body .landing-page .navbar {
+    padding-inline: 1rem;
+  }
+  body .main .contact-section {
+    max-height: 600px;
+  }
+  body .main .contact-section .contents {
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
     padding: 0.8rem;
   }
   body .main .contact-section .contents .heading {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
   body .main .contact-section .contents .contact,
   body .main .contact-section .contents .message {
-    padding: 0.5rem 0.8rem;
+    font-size: 1.2rem;
+    padding: 0.3rem 0.8rem;
     outline-width: 1.5px;
+    border-radius: 0.8rem;
   }
   body .main .contact-section .contents .contact .svg-container,
   body .main .contact-section .contents .message .svg-container {
     width: 1.5rem;
     height: 1.5rem;
   }
+  body .main .contact-section .contents .contact .entry,
+  body .main .contact-section .contents .message .entry {
+    height: 2rem;
+    font-size: 1.2rem;
+  }
+  body .main .contact-section .contents .contact {
+    height: 2.5rem;
+  }
+  body .main .contact-section .contents .message {
+    padding: 0.5rem 0.8rem;
+  }
+  body .main .contact-section .contents .checkbox {
+    width: 100%;
+    min-width: 0;
+  }
   body .main .contact-section .contents .checkbox .text {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
   body .main .contact-section .contents .contact,
   body .main .contact-section .contents .message,
@@ -1084,51 +965,49 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     min-width: 0;
   }
   body .main .contact-section .contents .btn {
-    font-size: 1rem;
-    padding: 0.4rem 0.5rem;
-    border-width: 0.1rem;
+    padding: 0.3rem 0.5rem;
     width: 60%;
   }
   body .footer .content {
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
-    padding: 0.5rem;
+    gap: 2rem;
+    padding: 2rem;
   }
   body .footer .content .content-list {
     justify-content: center;
     align-items: center;
-    gap: 0.5rem;
     width: 100%;
   }
   body .footer .content .content-list .title {
-    font-size: 1.5rem;
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
   }
   body .footer .content .content-list .nav-link {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   body .footer .content .content-list .item .svg-container {
     width: 1.2rem;
     height: 1.2rem;
   }
   body .footer .content .content-list .item .text {
-    font-size: 1rem;
+    font-size: 0.9rem;
     text-align: center;
   }
   body .footer .content .content-list .creds-container {
-    width: 12rem;
+    width: 10rem;
     height: 2rem;
   }
   body .footer .content .content-list .creds-container .email {
-    font-size: 1rem;
+    font-size: 0.9rem;
     padding: 0.3rem 0.8rem;
   }
   body .footer .content .content-list .creds-container .btn {
-    padding: 0.3rem 0.5rem;
+    padding: 0.3rem;
   }
   body .footer .content .content-list .quote {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   body .footer .content .content-list:nth-child(3) {
     display: flex;

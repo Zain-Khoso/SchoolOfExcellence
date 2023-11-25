@@ -57,7 +57,7 @@ body {
             height: calc(50vh - 5rem);
 
             .page-title {
-                font-size: 6rem;
+                font-size: $fs-1;
                 font-family: $font-heading;
                 font-weight: 700;
                 letter-spacing: 2px;
@@ -90,7 +90,7 @@ body {
                 overflow: visible;
 
                 .context {
-                    font-size: xx-large;
+                    font-size: $fs-4;
                     font-weight: 600;
                 }
 
@@ -106,7 +106,7 @@ body {
                         @include btn-outline($color-dark, $color-dark);
 
                         .option {
-                            font-size: 2rem;
+                            font-size: $fs-5;
                             font-weight: 400;
                         }
                     }
@@ -132,11 +132,13 @@ body {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+
                 width: 100%;
 
                 .pdf-view {
                     width: 50%;
                     aspect-ratio: 9/10;
+                    border-radius: 2rem;
                     margin: auto;
                 }
             }
@@ -149,14 +151,7 @@ body {
 ////////////// Responsiveness.
 
 /// 1640px
-@media screen and (max-width: 1640px) {
-    body {
-        @include footer-medium;
-    }
-}
-
-/// 1440px
-@media screen and (max-width: calc($breakpoint-medium)) {
+@media screen and (max-width: $breakpoint-medium) {
     body {
         .landing-page {
             @include navbar-medium;
@@ -165,7 +160,7 @@ body {
                 height: calc(50vh - calc(5rem));
 
                 .page-title {
-                    font-size: 4rem;
+                    font-size: $fs-2;
                 }
             }
         }
@@ -175,46 +170,44 @@ body {
                 @include section-medium;
             }
 
-            .results {
-                .result-filters-container {
-                    .context {
-                        font-size: 1.5rem;
+            .results .result-filters-container {
+                .context {
+                    font-size: $fs-5;
+                }
+
+                .result-filters {
+                    .selection {
+                        @include btn-outline-medium($color-dark, $color-dark);
+
+                        .option {
+                            font-size: $fs-6;
+                        }
                     }
 
-                    .result-filters {
-                        .selection {
-                            @include btn-outline-medium(
-                                $color-dark,
-                                $color-dark
-                            );
-
-                            .option {
-                                font-size: 1.5rem;
-                            }
-                        }
-
-                        .filter-btn {
-                            @include btn-svg-medium($color-light, $color-dark);
-                        }
+                    .filter-btn {
+                        @include btn-svg-medium($color-light, $color-dark);
                     }
                 }
             }
         }
+
+        @include footer-medium;
     }
 }
 
 /// 1280px
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: $breakpoint-small) {
     body {
         @include footer-small;
     }
-    ::-webkit-scrollbar {
+    ::-webkit-scrollbar,
+    ::-moz-scrollbar {
         width: 0.5rem;
     }
 }
 
 /// 1024px || Tablet
-@media screen and (max-width: calc($breakpoint-small - 1px)) {
+@media screen and (max-width: $breakpoint-tablet) {
     body {
         .landing-page {
             @include navbar-tablet;
@@ -223,7 +216,7 @@ body {
                 height: calc(50vh - calc(2.5rem / 2));
 
                 .page-title {
-                    font-size: 3rem;
+                    font-size: $fs-3;
                 }
             }
         }
@@ -233,34 +226,29 @@ body {
                 @include section-tablet;
             }
 
-            .results {
-                .result-filters-container {
-                    gap: 0.5rem;
+            .results .result-filters-container {
+                gap: 0.5rem;
 
-                    .context {
-                        font-size: 0.8rem;
+                .context {
+                    font-size: $fs-6;
+                }
+
+                .result-filters {
+                    justify-content: center;
+                    align-items: center;
+                    gap: 0.5rem;
+                    flex-wrap: wrap;
+
+                    .selection {
+                        @include btn-outline-tablet($color-dark, $color-dark);
+
+                        .option {
+                            font-size: $fs-8;
+                        }
                     }
 
-                    .result-filters {
-                        justify-content: center;
-                        align-items: center;
-                        gap: 0.5rem;
-                        flex-wrap: wrap;
-
-                        .selection {
-                            @include btn-outline-tablet(
-                                $color-dark,
-                                $color-dark
-                            );
-
-                            .option {
-                                font-size: 0.8rem;
-                            }
-                        }
-
-                        .filter-btn {
-                            @include btn-svg-tablet($color-light, $color-dark);
-                        }
+                    .filter-btn {
+                        @include btn-svg-tablet($color-light, $color-dark);
                     }
                 }
             }
@@ -268,7 +256,9 @@ body {
 
         @include footer-tablet;
     }
-    ::-webkit-scrollbar {
+
+    ::-webkit-scrollbar,
+    ::-moz-scrollbar {
         width: 0.2rem;
     }
 }
@@ -282,7 +272,7 @@ body {
             }
 
             .hero .page-title {
-                font-size: 2.5rem;
+                font-size: calc($fs-4 + 0.5rem);
             }
         }
 
@@ -291,48 +281,32 @@ body {
                 @include section-mobile;
             }
 
-            .results {
-                .result-filters-container {
-                    margin: 1.5rem 0;
+            .results .result-filters-container {
+                margin: 1.5rem 0;
 
-                    .context {
-                        font-size: 0.9rem;
-                        text-align: center;
+                .context {
+                    font-size: $fs-8;
+                    text-align: center;
+                }
+
+                .result-filters {
+                    .selection {
+                        @include btn-outline-mobile($color-dark, $color-dark);
+
+                        border-width: 1.5px;
+
+                        .option {
+                            font-size: $fs-9;
+                        }
                     }
 
-                    .result-filters {
-                        .selection {
-                            @include btn-outline-mobile(
-                                $color-dark,
-                                $color-dark
-                            );
-
-                            border-width: 1.5px;
-
-                            .option {
-                                font-size: 0.6rem;
-                            }
-                        }
-
-                        .filter-btn {
-                            @include btn-svg-mobile($color-light, $color-dark);
-                        }
+                    .filter-btn {
+                        @include btn-svg-mobile($color-light, $color-dark);
                     }
                 }
             }
         }
 
         @include footer-mobile;
-    }
-}
-
-/// Orientation
-@media screen and (orientation: portrait) {
-    body .main .section {
-        min-height: fit-content;
-
-        .section-main {
-            min-height: fit-content;
-        }
     }
 }
