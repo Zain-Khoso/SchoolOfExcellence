@@ -145,8 +145,6 @@ const handleTouch = function (event) {
         firstTouch > lastTouch ? goToNextSlide() : goToPrevSlide();
         sliderTouches.splice(0, sliderTouches.length);
     }
-
-    resetSliderInterval();
 };
 
 // Getting the slides data and setting up the default slides.
