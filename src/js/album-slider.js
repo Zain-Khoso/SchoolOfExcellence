@@ -164,7 +164,10 @@ const handleTouch = function (event) {
     repositionTheSlides(firstTouch - lastTouch);
 
     if (event.type === "touchend") {
-        firstTouch > lastTouch ? goToNextSlide() : goToPrevSlide();
+        if (firstTouch > lastTouch) goToNextSlide();
+        else if (firstTouch < lastTouch) goToPrevSlide();
+        else repositionTheSlides();
+
         sliderTouches.splice(0, sliderTouches.length);
     }
 

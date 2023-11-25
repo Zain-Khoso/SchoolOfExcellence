@@ -12,17 +12,19 @@ const elem_sliderModes = Array.from(
 const elem_dotsContainer = document.querySelector(".dots");
 
 // Variables.
+const rectOfCarousel = elem_slider.getBoundingClientRect();
 const slidesData = {};
 const touchData = [];
 const sliderTouches = [];
+let currSlideIndex = 0;
 
 // Functions.
-const repositionTheSlides = function (currSlideIndex) {
+const repositionTheSlides = function (positionAdj = 0) {
     // Positioning all the slides correctly to their new position.
     elem_slidesContainer.querySelectorAll(".slide").forEach((slide, index) => {
         slide.style.transform = `translateX(${
-            100 * (index - currSlideIndex)
-        }%)`;
+            rectOfCarousel.width * (index - currSlideIndex) - positionAdj
+        }px)`;
         currSlideIndex === index
             ? slide.classList.add("active")
             : slide.classList.remove("active");
@@ -80,29 +82,28 @@ const loadSlides = function (slides) {
     });
 
     // Positioning the slides properly.
-    repositionTheSlides(0);
+    currSlideIndex = 0;
+    repositionTheSlides();
 };
 
 const goToNextSlide = function () {
     const elem_slides = elem_slidesContainer.querySelectorAll(".slide");
     const elem_currActiveSlide = elem_slidesContainer.querySelector(".active");
-    let nextSlideIndex =
-        Array.from(elem_slides).indexOf(elem_currActiveSlide) + 1;
+    currSlideIndex = Array.from(elem_slides).indexOf(elem_currActiveSlide) + 1;
 
-    if (nextSlideIndex === elem_slides.length) nextSlideIndex = 0;
+    if (currSlideIndex === elem_slides.length) currSlideIndex = 0;
 
-    repositionTheSlides(nextSlideIndex);
+    repositionTheSlides();
 };
 
 const goToPrevSlide = function () {
     const elem_slides = elem_slidesContainer.querySelectorAll(".slide");
     const elem_currActiveSlide = elem_slidesContainer.querySelector(".active");
-    let prevSlideIndex =
-        Array.from(elem_slides).indexOf(elem_currActiveSlide) - 1;
+    currSlideIndex = Array.from(elem_slides).indexOf(elem_currActiveSlide) - 1;
 
-    if (prevSlideIndex < 0) prevSlideIndex = elem_slides.length - 1;
+    if (currSlideIndex < 0) currSlideIndex = elem_slides.length - 1;
 
-    repositionTheSlides(prevSlideIndex);
+    repositionTheSlides();
 };
 
 const goToSlide = function (event) {
@@ -111,7 +112,9 @@ const goToSlide = function (event) {
 
     if (!dots.includes(targetElem)) return;
 
-    repositionTheSlides(dots.indexOf(targetElem));
+    currSlideIndex = dots.indexOf(targetElem);
+
+    repositionTheSlides();
 };
 
 const changeSlides = function (event) {
@@ -141,8 +144,13 @@ const handleTouch = function (event) {
     const firstTouch = sliderTouches.at(0);
     const lastTouch = sliderTouches.at(-1);
 
+    repositionTheSlides(firstTouch - lastTouch);
+
     if (event.type === "touchend") {
-        firstTouch > lastTouch ? goToNextSlide() : goToPrevSlide();
+        if (firstTouch > lastTouch) goToNextSlide();
+        else if (firstTouch < lastTouch) goToPrevSlide();
+        else repositionTheSlides();
+
         sliderTouches.splice(0, sliderTouches.length);
     }
 };
