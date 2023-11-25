@@ -10,12 +10,19 @@
             href="/assets/favicon.jpeg"
             type="image/x-icon" />
 
+        <!-- EmailJs -->
+        <script
+            defer
+            type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
         <!-- CSS -->
         <link rel="stylesheet" href="/src/css/default.css" />
         <link rel="stylesheet" href="/src/css/contact-us.css" />
 
         <!-- JS -->
         <script defer src="/src/js/navbar.js"></script>
+        <script defer src="/src/js/contact.js"></script>
 
         <title>Contact | School Of Excellence</title>
     </head>
@@ -213,7 +220,7 @@
 
         <main class="main">
             <!-- Contact Section -->
-            <section class="contact-section">
+            <form action="#" class="contact-section">
                 <div class="contents">
                     <h1 class="heading">Get In Touch</h1>
                     <div class="contact">
@@ -238,7 +245,12 @@
                                 </g>
                             </svg>
                         </div>
-                        <input type="text" placeholder="Name" class="entry" />
+                        <input
+                            type="text"
+                            placeholder="Name"
+                            name="user_name"
+                            class="entry"
+                            required />
                     </div>
                     <div class="contact">
                         <div class="svg-container">
@@ -265,25 +277,34 @@
                                 </g>
                             </svg>
                         </div>
-                        <input type="email" placeholder="Email" class="entry" />
+                        <input
+                            type="email"
+                            placeholder="Email"
+                            name="user_email"
+                            class="entry"
+                            required />
                     </div>
                     <textarea
                         rows="3"
                         placeholder="Message"
-                        class="message"></textarea>
+                        name="message"
+                        class="message"
+                        required></textarea>
                     <div class="checkbox">
-                        <input type="checkbox" class="entry" />
-                        <span class="text">Job Application</span>
+                        <input type="checkbox" id="applicant" class="entry" />
+                        <label for="applicant" class="text"
+                            >Job Application</label
+                        >
                     </div>
 
-                    <button class="btn">Send Mail</button>
+                    <button type="submit" class="btn">Send Mail</button>
                 </div>
                 <div class="img-container">
                     <img
                         src="/assets/branch_sen.jpg"
                         alt="School Of Excellence" />
                 </div>
-            </section>
+            </form>
         </main>
 
         <!-- Footer -->

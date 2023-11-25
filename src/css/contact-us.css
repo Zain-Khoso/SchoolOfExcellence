@@ -306,7 +306,7 @@ body .main .contact-section .contents .message {
   resize: none;
   font-size: 1.5rem;
   font-weight: 400;
-  padding: 2rem 1.5rem;
+  padding: 1.5rem;
   border-radius: 1.5rem;
   outline: 3px solid transparent;
   box-shadow: 0 0 0.5rem rgba(30, 25, 39, 0.2);
@@ -931,6 +931,7 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
     font-size: 1.2rem;
     padding: 0.3rem 0.8rem;
     outline-width: 1.5px;
+    border-radius: 0.8rem;
   }
   body .main .contact-section .contents .contact .svg-container,
   body .main .contact-section .contents .message .svg-container {
@@ -939,7 +940,11 @@ body .footer .branding-bar .socials-container .btn:hover > svg {
   }
   body .main .contact-section .contents .contact .entry,
   body .main .contact-section .contents .message .entry {
+    height: 2rem;
     font-size: 1.2rem;
+  }
+  body .main .contact-section .contents .contact {
+    height: 2.5rem;
   }
   body .main .contact-section .contents .message {
     padding: 0.5rem 0.8rem;

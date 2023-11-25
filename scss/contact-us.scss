@@ -161,7 +161,7 @@ body {
                     resize: none;
                     font-size: $fs-6;
                     font-weight: 400;
-                    padding: 2rem 1.5rem;
+                    padding: 1.5rem;
                     border-radius: 1.5rem;
                     outline: 3px solid transparent;
                     box-shadow: 0 0 0.5rem rgba($color-dark, 0.2);
@@ -419,6 +419,7 @@ body {
                         font-size: $fs-7;
                         padding: 0.3rem 0.8rem;
                         outline-width: 1.5px;
+                        border-radius: 0.8rem;
 
                         .svg-container {
                             width: 1.5rem;
@@ -426,8 +427,13 @@ body {
                         }
 
                         .entry {
+                            height: 2rem;
                             font-size: $fs-7;
                         }
+                    }
+
+                    .contact {
+                        height: 2.5rem;
                     }
 
                     .message {
