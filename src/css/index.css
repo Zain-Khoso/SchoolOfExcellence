@@ -9,7 +9,7 @@ body {
 body .landing-page {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
   margin: auto;
 }
 body .landing-page .background {
