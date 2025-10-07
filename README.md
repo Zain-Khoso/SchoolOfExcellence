@@ -1,36 +1,22 @@
-# School Of Excellence (SOE)
+# School Of Excellence
 
 ![SOE Logo](/assets/logo.png)
 
 ## Overview
 
-SOE (School Of Excellence) is a recreation of my school's website, bringing a modern touch to the online representation of the institution. This project includes various features to enhance user experience, such as responsiveness, animation on scroll using the Intersection Observer API, counting animations, a tabbed component, sliders, and an auto email sending feature with Emailjs.
+I created this project when I was still fairly new to web development. It’s a recreation of my school’s website at the time. I challenged myself to avoid using libraries and relied purely on vanilla JavaScript.
+
+Through this project, my understanding of JavaScript deepened significantly — I learned about the Intersection Observer API, built a custom slider component from scratch, and gained a lot of confidence as a developer.
+
+This project required real effort and patience, and it helped me grow into a more capable and prepared developer.
 
 ## Features
 
--   **Responsiveness:** Ensures a seamless experience across different devices.
--   **Intersection Observer API:** Animates sections dynamically as users scroll through the site.
--   **Counting Animation:** Engaging animations for counting elements on the page.
--   **Tabbed Component:** Easy navigation through different sections of the website.
--   **Sliders:** Interactive sliders for showcasing content.
--   **Auto Email Sending:** Streamlines communication with the auto email sending feature using Emailjs.
-
-## Technologies Used
-
--   Adobe XD
--   HTML
--   SASS
--   JavaScript
--   Emailjs
-
-## Usage
-
-Visit the live website at [SOE - School Of Excellence](https://soe-sukkur.netlify.app) to explore the recreation of my school's website.
-
-## About
-
-This project is a personal endeavor to modernize the online representation of my school. If you have any suggestions or feedback, feel free to [contact me](zain.khoso.dev@gmail.com).
+1. Responsiveness.
+2. Intersection Observer API.
+3. Sliders.
+4. Auto Email Sending.
 
 ---
 
-Crafted with ❤️ by [Zain Khoso](https://github.com/Zain-Khoso)
+Crafted with Problem Solving by [Zain Khoso](linkedin.com/in/zain-khoso)
