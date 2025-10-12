@@ -19,4 +19,4 @@ This project required real effort and patience, and it helped me grow into a mor
 
 ---
 
-Crafted with Problem Solving by [Zain Khoso](linkedin.com/in/zain-khoso)
+Crafted with Problem Solving by [Zain Khoso](https://zain-khoso.vercel.app)
